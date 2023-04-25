@@ -1,4 +1,5 @@
-# Disaster Way
+**<h1 align="center">Disaster Way</h1>**
+<img width="1383" alt="image" src="./banner.svg">
 
 ***Idioma***
 - 🇲🇽 Spanish

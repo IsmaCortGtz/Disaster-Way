@@ -23,7 +23,7 @@ _global_script_class_icons={
 config/name="Disaster Way"
 run/main_scene="res://scenes/Title/Title.tscn"
 run/low_processor_mode=true
-config/icon="res://icon.png"
+config/icon="res://assets/images/app-icon/icon_64.png"
 
 [autoload]
 
@@ -132,6 +132,10 @@ touch_right={
 
 test="en"
 translation_remaps={
+"res://assets/icons/modes-buttons/back.svg": PoolStringArray( "res://assets/icons/modes-buttons/back.en.svg:en" ),
+"res://assets/icons/modes-buttons/exit.svg": PoolStringArray( "res://assets/icons/modes-buttons/exit.en.svg:en" ),
+"res://assets/icons/modes-buttons/more.svg": PoolStringArray( "res://assets/icons/modes-buttons/more.en.svg:en" ),
+"res://assets/icons/modes-buttons/settings.svg": PoolStringArray( "res://assets/icons/modes-buttons/settings.en.svg:en" )
 }
 translations=PoolStringArray( "res://assets/translate/translation.en.translation", "res://assets/translate/translation.es.translation" )
 

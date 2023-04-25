@@ -2,10 +2,10 @@
 
 [ext_resource path="res://scenes/GameMode/Gamemodes.gd" type="Script" id=1]
 [ext_resource path="res://assets/themes/buttons.tres" type="Theme" id=2]
-[ext_resource path="res://assets/icons/more.svg" type="Texture" id=3]
-[ext_resource path="res://assets/icons/settings.svg" type="Texture" id=4]
-[ext_resource path="res://assets/icons/exit.svg" type="Texture" id=5]
-[ext_resource path="res://assets/icons/back.svg" type="Texture" id=6]
+[ext_resource path="res://assets/images/icons/modes-buttons/more.svg" type="Texture" id=3]
+[ext_resource path="res://assets/images/icons/modes-buttons/settings.svg" type="Texture" id=4]
+[ext_resource path="res://assets/images/icons/modes-buttons/exit.svg" type="Texture" id=5]
+[ext_resource path="res://assets/images/icons/modes-buttons/back.svg" type="Texture" id=6]
 
 [node name="Gamemodes" type="Control"]
 anchor_right = 1.0
