@@ -1,0 +1,192 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/GameMode/Gamemodes.gd" type="Script" id=1]
+[ext_resource path="res://assets/themes/buttons.tres" type="Theme" id=2]
+[ext_resource path="res://assets/icons/more.svg" type="Texture" id=3]
+[ext_resource path="res://assets/icons/settings.svg" type="Texture" id=4]
+[ext_resource path="res://assets/icons/exit.svg" type="Texture" id=5]
+[ext_resource path="res://assets/icons/back.svg" type="Texture" id=6]
+
+[node name="Gamemodes" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="GlobalMargin" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 25
+custom_constants/margin_left = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GlobalMargin"]
+margin_left = 25.0
+margin_right = 1475.0
+margin_bottom = 1000.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MainHBox" type="HBoxContainer" parent="GlobalMargin/VBoxContainer"]
+margin_right = 1450.0
+margin_bottom = 498.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginButton" type="MarginContainer" parent="GlobalMargin/VBoxContainer/MainHBox"]
+margin_right = 723.0
+margin_bottom = 498.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+
+[node name="LastStand" type="Button" parent="GlobalMargin/VBoxContainer/MainHBox/MarginButton"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 673.0
+margin_bottom = 448.0
+focus_neighbour_left = NodePath("../../MarginButton2/TimeTrial")
+focus_neighbour_top = NodePath("../../../SecondHBox/MarginContainer3/More")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+text = "GAMEMODE_LAST_STANDING"
+clip_text = true
+
+[node name="MarginButton2" type="MarginContainer" parent="GlobalMargin/VBoxContainer/MainHBox"]
+margin_left = 727.0
+margin_right = 1450.0
+margin_bottom = 498.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+
+[node name="TimeTrial" type="Button" parent="GlobalMargin/VBoxContainer/MainHBox/MarginButton2"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 673.0
+margin_bottom = 448.0
+focus_neighbour_top = NodePath("../../../SecondHBox/MarginContainer5/Back")
+focus_neighbour_right = NodePath("../../MarginButton/LastStand")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+text = "GAMEMODE_TIME_TRIAL"
+clip_text = true
+
+[node name="SecondHBox" type="HBoxContainer" parent="GlobalMargin/VBoxContainer"]
+margin_top = 502.0
+margin_right = 1450.0
+margin_bottom = 1000.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer3" type="MarginContainer" parent="GlobalMargin/VBoxContainer/SecondHBox"]
+margin_right = 359.0
+margin_bottom = 498.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+
+[node name="More" type="Button" parent="GlobalMargin/VBoxContainer/SecondHBox/MarginContainer3"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 309.0
+margin_bottom = 448.0
+focus_neighbour_left = NodePath("../../MarginContainer6/Exit")
+focus_neighbour_bottom = NodePath("../../../MainHBox/MarginButton/LastStand")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+icon = ExtResource( 3 )
+clip_text = true
+icon_align = 1
+expand_icon = true
+
+[node name="MarginContainer4" type="MarginContainer" parent="GlobalMargin/VBoxContainer/SecondHBox"]
+margin_left = 363.0
+margin_right = 723.0
+margin_bottom = 498.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+
+[node name="Settings" type="Button" parent="GlobalMargin/VBoxContainer/SecondHBox/MarginContainer4"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 310.0
+margin_bottom = 448.0
+focus_neighbour_bottom = NodePath("../../../MainHBox/MarginButton/LastStand")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+icon = ExtResource( 4 )
+clip_text = true
+icon_align = 1
+expand_icon = true
+
+[node name="MarginContainer5" type="MarginContainer" parent="GlobalMargin/VBoxContainer/SecondHBox"]
+margin_left = 727.0
+margin_right = 1086.0
+margin_bottom = 498.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+
+[node name="Back" type="Button" parent="GlobalMargin/VBoxContainer/SecondHBox/MarginContainer5"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 309.0
+margin_bottom = 448.0
+focus_neighbour_bottom = NodePath("../../../MainHBox/MarginButton2/TimeTrial")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+icon = ExtResource( 6 )
+clip_text = true
+icon_align = 1
+expand_icon = true
+
+[node name="MarginContainer6" type="MarginContainer" parent="GlobalMargin/VBoxContainer/SecondHBox"]
+margin_left = 1090.0
+margin_right = 1450.0
+margin_bottom = 498.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+
+[node name="Exit" type="Button" parent="GlobalMargin/VBoxContainer/SecondHBox/MarginContainer6"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 310.0
+margin_bottom = 448.0
+focus_neighbour_right = NodePath("../../MarginContainer3/More")
+focus_neighbour_bottom = NodePath("../../../MainHBox/MarginButton2/TimeTrial")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+icon = ExtResource( 5 )
+clip_text = true
+icon_align = 1
+expand_icon = true
+
+[connection signal="pressed" from="GlobalMargin/VBoxContainer/MainHBox/MarginButton/LastStand" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="GlobalMargin/VBoxContainer/MainHBox/MarginButton2/TimeTrial" to="." method="_on_TimeTrial_pressed"]
+[connection signal="pressed" from="GlobalMargin/VBoxContainer/SecondHBox/MarginContainer5/Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="GlobalMargin/VBoxContainer/SecondHBox/MarginContainer6/Exit" to="." method="_on_Exit_pressed"]

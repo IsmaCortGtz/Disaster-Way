@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/sounds/soundtrack/battle.mp3" type="AudioStream" id=1]
+[ext_resource path="res://singleton/Music.gd" type="Script" id=2]
+[ext_resource path="res://assets/sounds/soundtrack/menu.mp3" type="AudioStream" id=3]
+
+[node name="Music" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Battle" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -10.0
+
+[node name="Menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -5.0
