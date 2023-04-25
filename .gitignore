@@ -6,6 +6,11 @@
 export.cfg
 export_presets.cfg
 
+# Sound files
+*.mp3
+*.ogg
+*.wav
+
 # Imported translations (automatically generated from CSV files)
 *.translation
 
