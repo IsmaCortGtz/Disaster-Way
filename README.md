@@ -1,5 +1,5 @@
 **<h1 align="center">Disaster Way</h1>**
-<img width="1383" alt="image" src="./banner.png">
+<img width="1383" alt="image" src="./assets/images/banner.svg">
 
 ***Language***
 - [🇲🇽 Spanish](./README.es.md)
