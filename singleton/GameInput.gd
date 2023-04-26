@@ -3,12 +3,10 @@ extends Node
 var playerColors = [Color8(242, 53, 84), Color8(69, 27, 227), Color8(227, 27, 174), Color8(227, 80, 27)]
 var gamepadDeadzone = 0.5
 var playersNumber = 0
-var usingTouch = false
 #  Input types
 #    -1 = Unsigned
 #     0 = Keyboard
 #     1 = Gamepads (only Dualshock tested)
-#     2 = Touch (for mobile)
 
 #  Input index
 #    -1 = Unsigned
@@ -38,5 +36,3 @@ func get_axis(player):
 		if abs(axis.y) < gamepadDeadzone:
 			axis.y = 0
 		return axis.normalized()
-	if (playersType[player - 1] == 2):
-		return Vector2(float(Input.is_action_pressed("touch_right")) - float(Input.is_action_pressed("touch_left")), float(Input.is_action_pressed("touch_down")) - float(Input.is_action_pressed("touch_up"))).clamped(1)

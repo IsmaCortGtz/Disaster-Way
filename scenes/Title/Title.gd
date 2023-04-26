@@ -7,19 +7,13 @@ var gamemodesScene = preload("res://scenes/GameMode/Gamemodes.tscn")
 
 
 func _input(event):
-	if (event is InputEventScreenTouch):
-		GameInput.new_player(0, 2, 0)
-		GameInput.usingTouch = true
-		get_tree().change_scene_to(gamemodesScene)
 	
 	if (event is InputEventKey):
 		GameInput.new_player(0, 0, 0)
-		GameInput.usingTouch = false
 		get_tree().change_scene_to(gamemodesScene)
 	
 	if (event is InputEventJoypadButton):
 		GameInput.new_player(0, 1, event.device)
-		GameInput.usingTouch = false
 		get_tree().change_scene_to(gamemodesScene)
 
 

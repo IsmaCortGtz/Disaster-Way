@@ -5,7 +5,6 @@ var playerNode = preload("res://objects/Player/Player.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_node("Virtual joystick").visible = GameInput.usingTouch
 	var playersRelativePosition = Vector2((get_viewport().size.x - 400) / 2, (get_viewport().size.y - 400) / 2)
 	var playerPositions = [
 		playersRelativePosition,

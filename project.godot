@@ -8,16 +8,6 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Control",
-"class": "VirtualJoystick",
-"language": "GDScript",
-"path": "res://joystick/virtual_joystick.gd"
-} ]
-_global_script_class_icons={
-"VirtualJoystick": ""
-}
-
 [application]
 
 config/name="Disaster Way"
