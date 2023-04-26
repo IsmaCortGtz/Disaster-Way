@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50"
+   height="50"
+   viewBox="0 0 13.229166 13.229166"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="layer1"
+     transform="scale(2.083327)"
+     style="display:inline">
+    <rect
+       style="display:inline;fill:#464646;fill-opacity:1;stroke:#2c2c2c;stroke-width:0.24423;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4952"
+       width="6.1057887"
+       height="3.8100114"
+       x="0.12211514"
+       y="1.2700038"
+       rx="1.2211504"
+       ry="1.2211504" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.55601px;font-family:'UbuntuMono NF';-inkscape-font-specification:'UbuntuMono NF';display:none;fill:none;fill-opacity:1;stroke:#f2f2f2;stroke-width:0.254001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="1.4272311"
+       y="4.4711752"
+       id="text4580"><tspan
+         id="tspan4578"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.55601px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#f2f2f2;fill-opacity:1;stroke:#f2f2f2;stroke-width:0.254001;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="1.4272311"
+         y="4.4711752">L1</tspan></text>
+    <g
+       aria-label="L1"
+       id="text5289"
+       style="font-size:3.55601px;font-family:'UbuntuMono NF';-inkscape-font-specification:'UbuntuMono NF';display:inline;fill:none;stroke:#f2f2f2;stroke-width:0.254001;stroke-linecap:round;stroke-linejoin:round">
+      <path
+         d="M 2.0424208,1.8788439 H 1.7117119 V 4.4711752 H 3.3225844 V 4.1795824 H 2.0424208 Z"
+         style="font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#f2f2f2"
+         id="path5291" />
+      <path
+         d="M 4.3253783,2.63983 V 4.4711752 H 4.6383072 V 1.90018 H 4.4320586 C 4.3218223,2.2948971 4.2507021,2.3482372 3.7670848,2.4122454 V 2.63983 Z"
+         style="font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#f2f2f2"
+         id="path5293" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50"
+   height="50"
+   viewBox="0 0 13.229166 13.229166"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="layer1"
+     transform="scale(2.083327)"
+     style="display:inline">
+    <rect
+       style="display:inline;fill:#2c2c2c;fill-opacity:1;stroke:#2c2c2c;stroke-width:0.27365;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4952-5"
+       width="6.0763688"
+       height="4.806365"
+       x="0.136825"
+       y="1.406829"
+       rx="1.2152665"
+       ry="1.5404927" />
+    <rect
+       style="display:inline;fill:#464646;fill-opacity:1;stroke:#2c2c2c;stroke-width:0.27365;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4952"
+       width="6.0763688"
+       height="4.806365"
+       x="0.13682513"
+       y="0.136825"
+       rx="1.2152665"
+       ry="1.5404927" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.55601px;font-family:'UbuntuMono NF';-inkscape-font-specification:'UbuntuMono NF';display:none;fill:none;fill-opacity:1;stroke:#f2f2f2;stroke-width:0.254001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="1.9837462"
+       y="3.8361731"
+       id="text4580"><tspan
+         id="tspan4578"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.55601px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#f2f2f2;fill-opacity:1;stroke:#f2f2f2;stroke-width:0.254001;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="0"
+         y="0">A</tspan></text>
+    <g
+       aria-label="A"
+       id="text5423"
+       style="font-size:3.55601px;font-family:'UbuntuMono NF';-inkscape-font-specification:'UbuntuMono NF';display:inline;fill:none;stroke:#f2f2f2;stroke-width:0.254001;stroke-linecap:round;stroke-linejoin:round">
+      <path
+         d="m 3.6692949,3.0574069 0.2667008,0.7787662 h 0.369825 L 3.3954821,1.2438418 H 2.9687609 L 2.0441983,3.8361731 h 0.352045 L 2.6700561,3.0574069 Z M 3.5768387,2.7800381 H 2.7518443 L 3.1785655,1.5994428 Z"
+         style="font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#f2f2f2"
+         id="path5426" />
+    </g>
+  </g>
+</svg>

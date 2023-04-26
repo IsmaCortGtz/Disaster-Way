@@ -1,9 +1,13 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/themes/buttons-blue.tres" type="Theme" id=1]
 [ext_resource path="res://assets/fonts/Rubik-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://objects/Player/player.svg" type="Texture" id=3]
 [ext_resource path="res://objects/SelectablePlayer/SelectablePlayer.gd" type="Script" id=4]
+[ext_resource path="res://assets/images/icons/buttons/xbox.lb.svg" type="Texture" id=5]
+[ext_resource path="res://assets/images/icons/select-arrows/right.svg" type="Texture" id=6]
+[ext_resource path="res://assets/images/icons/select-arrows/right.press.svg" type="Texture" id=7]
+[ext_resource path="res://assets/images/icons/buttons/xbox.rb.svg" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -58,14 +62,29 @@ margin_bottom = 950.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Player-left" type="Button" parent="HBoxContainer/CenterContainer"]
-margin_left = 268.0
+[node name="Player-left" type="TextureButton" parent="HBoxContainer/CenterContainer"]
+margin_left = 271.0
 margin_top = 425.0
-margin_right = 373.0
+margin_right = 371.0
 margin_bottom = 525.0
 focus_mode = 0
 theme = ExtResource( 1 )
-text = "Left"
+enabled_focus_mode = 0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+stretch_mode = 5
+flip_h = true
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/CenterContainer/Player-left"]
+anchor_left = 0.901
+anchor_top = 0.451
+anchor_right = 0.901
+anchor_bottom = 0.451
+margin_left = -50.0
+margin_top = -25.0
+margin_bottom = 25.0
+size_flags_horizontal = 9
+texture = ExtResource( 5 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 margin_left = 646.0
@@ -110,14 +129,27 @@ margin_bottom = 950.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Player-right" type="Button" parent="HBoxContainer/CenterContainer2"]
-margin_left = 253.0
+[node name="Player-right" type="TextureButton" parent="HBoxContainer/CenterContainer2"]
+margin_left = 271.0
 margin_top = 425.0
-margin_right = 390.0
+margin_right = 371.0
 margin_bottom = 525.0
 focus_mode = 0
 theme = ExtResource( 1 )
-text = "Right"
+enabled_focus_mode = 0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/CenterContainer2/Player-right"]
+anchor_left = 0.086
+anchor_top = 0.451
+anchor_right = 0.086
+anchor_bottom = 0.451
+margin_top = -25.0
+margin_right = 50.0
+margin_bottom = 25.0
+texture = ExtResource( 8 )
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 margin_left = 25.0

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50"
+   height="50"
+   viewBox="0 0 13.229166 13.229166"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="layer1"
+     transform="scale(2.083327)">
+    <ellipse
+       style="fill:#464646;fill-opacity:1;stroke:#2c2c2c;stroke-width:0.254;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="path2678"
+       cx="3.175"
+       cy="3.1750002"
+       rx="3.0479999"
+       ry="3.0480001" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.81001px;font-family:'UbuntuMono NF';-inkscape-font-specification:'UbuntuMono NF';display:none;fill:none;fill-opacity:1;stroke:#f2f2f2;stroke-width:0.254001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="1.8986561"
+       y="4.5637579"
+       id="text4580"><tspan
+         id="tspan4578"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.81001px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#f2f2f2;fill-opacity:1;stroke:#f2f2f2;stroke-width:0.254001;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="0"
+         y="0">A</tspan></text>
+    <g
+       aria-label="A"
+       id="text4838"
+       style="font-size:3.81001px;font-family:'UbuntuMono NF';-inkscape-font-specification:'UbuntuMono NF';fill:none;stroke:#f2f2f2;stroke-width:0.254001;stroke-linecap:round;stroke-linejoin:round"
+       transform="translate(0,-0.13525555)">
+      <path
+         d="m 3.7046008,3.7293657 0.2857508,0.8343922 h 0.396241 L 3.4112301,1.7862606 H 2.9540289 L 1.9634263,4.5637579 h 0.377191 L 2.6339881,3.7293657 Z M 3.6055406,3.4321849 H 2.7216183 L 3.1788195,2.1672616 Z"
+         style="font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#f2f2f2"
+         id="path4840" />
+    </g>
+  </g>
+</svg>

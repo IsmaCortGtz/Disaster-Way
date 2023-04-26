@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50"
+   height="50"
+   viewBox="0 0 13.229166 13.229166"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="key.esc.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview6185"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="2.795"
+     inkscape:cx="-29.159213"
+     inkscape:cy="36.314848"
+     inkscape:window-width="1358"
+     inkscape:window-height="728"
+     inkscape:window-x="4"
+     inkscape:window-y="36"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer3" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Layer 1">
+    <rect
+       style="display:inline;fill:#2c2c2c;fill-opacity:1;stroke:#2c2c2c;stroke-width:0.27365;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4952-5"
+       width="6.0763688"
+       height="4.806365"
+       x="0.136825"
+       y="1.406829"
+       rx="1.2152665"
+       ry="1.5404927"
+       transform="scale(2.083327)" />
+    <rect
+       style="display:inline;fill:#464646;fill-opacity:1;stroke:#2c2c2c;stroke-width:0.570102;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4952"
+       width="12.659063"
+       height="10.01323"
+       x="0.28505132"
+       y="0.2850512"
+       rx="2.5317974"
+       ry="3.2093499" />
+    <g
+       aria-label="Esc"
+       id="text4580"
+       style="font-size:5.55625px;font-family:'UbuntuMono NF';-inkscape-font-specification:'UbuntuMono NF';display:inline;fill:none;stroke:#f2f2f2;stroke-width:0.396875;stroke-linecap:round;stroke-linejoin:round">
+      <path
+         d="M 2.8446668,5.4083476 H 5.050498 V 4.9527351 H 2.8446668 V 3.6581289 h 2.289175 V 3.2025164 H 2.3279355 V 7.2530227 H 5.2338543 V 6.7974102 H 2.8446668 Z"
+         style="font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#f2f2f2"
+         id="path6696" />
+      <path
+         d="M 7.9064113,5.1527601 C 7.9008551,4.5804664 7.5230301,4.2582039 6.8507238,4.2582039 c -0.6778625,0 -1.1168063,0.3500437 -1.1168063,0.889 0,0.4556125 0.2333625,0.6723062 0.9223376,0.8389937 l 0.4333875,0.1055688 c 0.3222625,0.077788 0.4500562,0.1944688 0.4500562,0.40005 0,0.2778125 -0.2722562,0.4611688 -0.6778625,0.4611688 -0.2500312,0 -0.4611687,-0.072231 -0.57785,-0.1944688 -0.072231,-0.083344 -0.1055687,-0.1666875 -0.13335,-0.3722687 h -0.48895 c 0.022225,0.6723062 0.40005,0.9945687 1.1612563,0.9945687 0.733425,0 1.20015,-0.3611562 1.20015,-0.9223375 0,-0.4333875 -0.244475,-0.6723063 -0.822325,-0.8112125 l -0.4445,-0.1055688 c -0.377825,-0.0889 -0.5389563,-0.2111375 -0.5389563,-0.4167187 0,-0.2722563 0.2389188,-0.4389438 0.6167438,-0.4389438 0.3722687,0 0.5722937,0.1611313 0.5834062,0.466725 z"
+         style="font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#f2f2f2"
+         id="path6698" />
+      <path
+         d="M 10.867893,5.3194476 C 10.845668,5.0360789 10.784549,4.8527226 10.673424,4.6915914 10.473399,4.4193351 10.123355,4.2582039 9.7177491,4.2582039 c -0.7889875,0 -1.2946063,0.6223 -1.2946063,1.5890875 0,0.9390063 0.5000625,1.533525 1.2890501,1.533525 0.6945311,0 1.1334751,-0.4167187 1.1890371,-1.1279187 h -0.466725 c -0.07779,0.466725 -0.316706,0.7000875 -0.7111996,0.7000875 -0.5111751,0 -0.8167688,-0.4167188 -0.8167688,-1.1056938 0,-0.7278688 0.3000375,-1.1612563 0.8056563,-1.1612563 0.3889371,0 0.6334121,0.2278063 0.6889751,0.6334125 z"
+         style="font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#f2f2f2"
+         id="path6700" />
+    </g>
+  </g>
+</svg>

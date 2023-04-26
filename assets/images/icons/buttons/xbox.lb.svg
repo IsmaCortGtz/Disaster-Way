@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50"
+   height="50"
+   viewBox="0 0 13.229166 13.229166"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="layer1"
+     transform="scale(2.083327)"
+     style="display:inline">
+    <rect
+       style="display:inline;fill:#464646;fill-opacity:1;stroke:#2c2c2c;stroke-width:0.24423;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4952"
+       width="6.1057887"
+       height="3.8100114"
+       x="0.12211514"
+       y="1.2700038"
+       rx="1.2211504"
+       ry="1.2211504" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.55601px;font-family:'UbuntuMono NF';-inkscape-font-specification:'UbuntuMono NF';display:none;fill:none;fill-opacity:1;stroke:#f2f2f2;stroke-width:0.254001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="0.93650162"
+       y="4.4711752"
+       id="text4580"><tspan
+         id="tspan4578"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.55601px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#f2f2f2;fill-opacity:1;stroke:#f2f2f2;stroke-width:0.254001;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="0"
+         y="0">LB</tspan></text>
+    <g
+       aria-label="LB"
+       id="text5219"
+       style="font-size:3.55601px;font-family:'UbuntuMono NF';-inkscape-font-specification:'UbuntuMono NF';display:inline;fill:none;stroke:#f2f2f2;stroke-width:0.254001;stroke-linecap:round;stroke-linejoin:round">
+      <path
+         d="M 1.5516914,1.8788439 H 1.2209824 V 4.4711752 H 2.831855 V 4.1795824 H 1.5516914 Z"
+         style="font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#f2f2f2"
+         id="path5221" />
+      <path
+         d="m 3.1945671,4.4711752 h 1.1699273 c 0.2453647,0 0.4267212,-0.067564 0.5654056,-0.2169166 0.1280163,-0.1351284 0.1991365,-0.3200409 0.1991365,-0.5227335 0,-0.3129289 -0.1422404,-0.5013974 -0.4729493,-0.6294138 0.2382527,-0.1102363 0.359157,-0.2987048 0.359157,-0.5654056 0,-0.1920245 -0.07112,-0.355601 -0.2062486,-0.4765053 C 4.6703112,1.9357401 4.4960667,1.8788439 4.247146,1.8788439 H 3.1945671 Z M 3.525276,2.995431 V 2.1704367 h 0.6400818 c 0.1849125,0 0.2880368,0.024892 0.3769371,0.092456 0.092456,0.07112 0.1422404,0.1778005 0.1422404,0.3200409 0,0.1422404 -0.049784,0.2489207 -0.1422404,0.3200409 -0.0889,0.067564 -0.1920246,0.092456 -0.3769371,0.092456 z m 0,1.1841514 V 3.2870239 h 0.8072143 c 0.2915928,0 0.4658373,0.1671324 0.4658373,0.4480572 0,0.2773688 -0.1742445,0.4445013 -0.4658373,0.4445013 z"
+         style="font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#f2f2f2"
+         id="path5223" />
+    </g>
+  </g>
+</svg>
