@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/explote.svg-eeb14f2b1ba9236513e1d3b47f46ff1c.stex"
+path="res://.import/last-standing.en.svg-b1af3166bc02ea2d7c3465048671ed00.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/Player/Perticles/explote.svg"
-dest_files=[ "res://.import/explote.svg-eeb14f2b1ba9236513e1d3b47f46ff1c.stex" ]
+source_file="res://assets/images/icons/modes-buttons/last-standing.en.svg"
+dest_files=[ "res://.import/last-standing.en.svg-b1af3166bc02ea2d7c3465048671ed00.stex" ]
 
 [params]
 

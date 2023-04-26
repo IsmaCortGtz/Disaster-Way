@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/explote.svg-eeb14f2b1ba9236513e1d3b47f46ff1c.stex"
+path="res://.import/time-trial.svg-d3e54f5e65391d4e234fe4040a9a9f28.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/Player/Perticles/explote.svg"
-dest_files=[ "res://.import/explote.svg-eeb14f2b1ba9236513e1d3b47f46ff1c.stex" ]
+source_file="res://assets/images/icons/modes-buttons/time-trial.svg"
+dest_files=[ "res://.import/time-trial.svg-d3e54f5e65391d4e234fe4040a9a9f28.stex" ]
 
 [params]
 

@@ -6,8 +6,8 @@ var homeScreen = load("res://scenes/Title/Title.tscn")
 var firstUsed = true
 
 func _input(event):
-	if (((event is InputEventJoypadButton) or (event is InputEventJoypadMotion)) and (GameInput.playersType[0] == 1) and firstUsed):
-		get_node("GlobalMargin/VBoxContainer/MainHBox/MarginButton/Contrareloj").grab_focus()
+	if (((event is InputEventJoypadButton) or (event is InputEventJoypadMotion) or (event is InputEventKey) or (event is InputEventScreenTouch)) and firstUsed):
+		get_node("GlobalMargin/VBoxContainer/MainHBox/MarginButton/LastStand").grab_focus()
 		firstUsed = false
 
 

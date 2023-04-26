@@ -1,11 +1,17 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/GameMode/Gamemodes.gd" type="Script" id=1]
-[ext_resource path="res://assets/themes/buttons.tres" type="Theme" id=2]
+[ext_resource path="res://assets/themes/buttons-blue.tres" type="Theme" id=2]
 [ext_resource path="res://assets/images/icons/modes-buttons/more.svg" type="Texture" id=3]
 [ext_resource path="res://assets/images/icons/modes-buttons/settings.svg" type="Texture" id=4]
 [ext_resource path="res://assets/images/icons/modes-buttons/exit.svg" type="Texture" id=5]
 [ext_resource path="res://assets/images/icons/modes-buttons/back.svg" type="Texture" id=6]
+[ext_resource path="res://assets/themes/buttons-red.tres" type="Theme" id=7]
+[ext_resource path="res://assets/themes/buttons-orange.tres" type="Theme" id=8]
+[ext_resource path="res://assets/themes/buttons-green.tres" type="Theme" id=9]
+[ext_resource path="res://assets/themes/buttons-gray.tres" type="Theme" id=10]
+[ext_resource path="res://assets/images/icons/modes-buttons/last-standing.svg" type="Texture" id=11]
+[ext_resource path="res://assets/images/icons/modes-buttons/time-trial.svg" type="Texture" id=12]
 
 [node name="Gamemodes" type="Control"]
 anchor_right = 1.0
@@ -51,8 +57,10 @@ focus_neighbour_top = NodePath("../../../SecondHBox/MarginContainer3/More")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 2 )
-text = "GAMEMODE_LAST_STANDING"
+icon = ExtResource( 11 )
 clip_text = true
+icon_align = 1
+expand_icon = true
 
 [node name="MarginButton2" type="MarginContainer" parent="GlobalMargin/VBoxContainer/MainHBox"]
 margin_left = 727.0
@@ -75,8 +83,10 @@ focus_neighbour_right = NodePath("../../MarginButton/LastStand")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 2 )
-text = "GAMEMODE_TIME_TRIAL"
+icon = ExtResource( 12 )
 clip_text = true
+icon_align = 1
+expand_icon = true
 
 [node name="SecondHBox" type="HBoxContainer" parent="GlobalMargin/VBoxContainer"]
 margin_top = 502.0
@@ -104,7 +114,7 @@ focus_neighbour_left = NodePath("../../MarginContainer6/Exit")
 focus_neighbour_bottom = NodePath("../../../MainHBox/MarginButton/LastStand")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 2 )
+theme = ExtResource( 9 )
 icon = ExtResource( 3 )
 clip_text = true
 icon_align = 1
@@ -129,7 +139,7 @@ margin_bottom = 448.0
 focus_neighbour_bottom = NodePath("../../../MainHBox/MarginButton/LastStand")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 2 )
+theme = ExtResource( 10 )
 icon = ExtResource( 4 )
 clip_text = true
 icon_align = 1
@@ -154,7 +164,7 @@ margin_bottom = 448.0
 focus_neighbour_bottom = NodePath("../../../MainHBox/MarginButton2/TimeTrial")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 2 )
+theme = ExtResource( 8 )
 icon = ExtResource( 6 )
 clip_text = true
 icon_align = 1
@@ -180,7 +190,7 @@ focus_neighbour_right = NodePath("../../MarginContainer3/More")
 focus_neighbour_bottom = NodePath("../../../MainHBox/MarginButton2/TimeTrial")
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 2 )
+theme = ExtResource( 7 )
 icon = ExtResource( 5 )
 clip_text = true
 icon_align = 1

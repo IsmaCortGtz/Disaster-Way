@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://assets/themes/buttons.tres" type="Theme" id=1]
+[ext_resource path="res://assets/themes/buttons-blue.tres" type="Theme" id=1]
 [ext_resource path="res://assets/fonts/Rubik-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://objects/Player/player.svg" type="Texture" id=3]
 [ext_resource path="res://objects/SelectablePlayer/SelectablePlayer.gd" type="Script" id=4]

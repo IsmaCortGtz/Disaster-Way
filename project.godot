@@ -24,6 +24,7 @@ config/name="Disaster Way"
 run/main_scene="res://scenes/Title/Title.tscn"
 run/low_processor_mode=true
 config/icon="res://assets/images/app-icon/icon_64.png"
+config/quit_on_go_back=false
 
 [autoload]
 
@@ -130,14 +131,17 @@ touch_right={
 
 [locale]
 
-test="en"
 translation_remaps={
-"res://assets/icons/modes-buttons/back.svg": PoolStringArray( "res://assets/icons/modes-buttons/back.en.svg:en" ),
-"res://assets/icons/modes-buttons/exit.svg": PoolStringArray( "res://assets/icons/modes-buttons/exit.en.svg:en" ),
-"res://assets/icons/modes-buttons/more.svg": PoolStringArray( "res://assets/icons/modes-buttons/more.en.svg:en" ),
-"res://assets/icons/modes-buttons/settings.svg": PoolStringArray( "res://assets/icons/modes-buttons/settings.en.svg:en" )
+"res://assets/images/icons/modes-buttons/back.svg": PoolStringArray( "res://assets/images/icons/modes-buttons/back.en.svg:en" ),
+"res://assets/images/icons/modes-buttons/exit.svg": PoolStringArray( "res://assets/images/icons/modes-buttons/exit.en.svg:en" ),
+"res://assets/images/icons/modes-buttons/last-standing.svg": PoolStringArray( "res://assets/images/icons/modes-buttons/last-standing.en.svg:en" ),
+"res://assets/images/icons/modes-buttons/more.svg": PoolStringArray( "res://assets/images/icons/modes-buttons/more.en.svg:en" ),
+"res://assets/images/icons/modes-buttons/settings.en.svg": PoolStringArray(  ),
+"res://assets/images/icons/modes-buttons/settings.svg": PoolStringArray( "res://assets/images/icons/modes-buttons/settings.en.svg:en" ),
+"res://assets/images/icons/modes-buttons/time-trial.svg": PoolStringArray( "res://assets/images/icons/modes-buttons/time-trial.en.svg:en" )
 }
 translations=PoolStringArray( "res://assets/translate/translation.en.translation", "res://assets/translate/translation.es.translation" )
+locale_filter=[ 0, [  ] ]
 
 [physics]
 
