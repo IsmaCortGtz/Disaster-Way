@@ -116,7 +116,7 @@ margin_top = -40.0
 [node name="holder" type="Node2D" parent="Right/Down"]
 script = ExtResource( 2 )
 
-[node name="Bullets1" type="Node" parent="."]
+[node name="Bullets" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0.117647 )

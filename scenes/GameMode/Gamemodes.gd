@@ -11,11 +11,6 @@ func _input(event):
 		firstUsed = false
 
 
-
-func _on_Button_pressed():
-	get_tree().change_scene_to(playerSelectScene)
-
-
 func _on_Exit_pressed():
 	get_tree().quit()
 
@@ -25,4 +20,10 @@ func _on_Back_pressed():
 
 
 func _on_TimeTrial_pressed():
+	Level.loade_stage_code("2-800-4500-1500-1800-0.5-3.5-90")
 	get_tree().change_scene_to(playerSelect)
+
+
+func _on_LastStand_pressed():
+	Level.loade_stage_code("1-800-4500-1500-1800-0.5-3.5-90")
+	get_tree().change_scene_to(playerSelectScene)

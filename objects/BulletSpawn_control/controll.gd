@@ -3,14 +3,12 @@ extends Node2D
 var bala = preload("res://objects/Bullet/Bullet.tscn")
 var contador = 0
 var frec = 3
-var time = (randf() * frec) + 0.5
+var time = rand_range(Level.bulletsControllCooldown.x, Level.bulletsControllCooldown.y)
 var playerToShot = int(rand_range(1, GameInput.playersNumber))
+var bulletsNode
 
 func _ready():
-	var aspect_ratio = get_viewport().size.x / get_viewport().size.y
-	if aspect_ratio > 1.77777777778:
-		print("Not 16:9")
-
+	bulletsNode = get_node("/root/GameRoom/Bullets")
 
 func spawnBala():
 	if playerToShot > GameInput.playersNumber: playerToShot = 1
@@ -21,13 +19,13 @@ func spawnBala():
 		newBala.player = playerNode.global_position
 	else:
 		newBala.player = get_viewport().size / 2
-	Level.bulletsNode.add_child(newBala)
+	bulletsNode.add_child(newBala)
 	playerToShot += 1
 
 
 func _process(delta):
 	contador += 1 * delta
-	if (contador >= time) and Level.bulletActivate:
-		time = (randf() * frec) + 0.5
+	if (contador >= time):
+		time = rand_range(Level.bulletsControllCooldown.x, Level.bulletsControllCooldown.y)
 		contador = 0
 		spawnBala()

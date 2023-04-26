@@ -7,13 +7,41 @@
    viewBox="0 0 132.29166 132.29167"
    version="1.1"
    id="svg5"
+   sodipodi:docname="icon.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:export-filename="icon_192.png"
+   inkscape:export-xdpi="36.863998"
+   inkscape:export-ydpi="36.863998"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview32"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="0.39527269"
+     inkscape:cx="-208.71667"
+     inkscape:cy="443.99728"
+     inkscape:window-width="1358"
+     inkscape:window-height="728"
+     inkscape:window-x="4"
+     inkscape:window-y="36"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
   <defs
      id="defs2" />
   <g
      id="layer1"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true"
+     inkscape:label="Back">
     <rect
        style="fill:#30ac95;fill-opacity:1;stroke-width:1.81568;stroke-linecap:round;stroke-linejoin:round"
        id="rect184"
@@ -23,183 +51,114 @@
        y="-3.5527137e-15" />
   </g>
   <g
-     id="layer2"
-     style="display:inline">
-    <rect
-       style="fill:#f23554;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
-       id="rect4582-4"
-       width="7.9375"
-       height="7.9375"
-       x="93.060371"
-       y="119.28934" />
+     id="g427"
+     inkscape:label="Fore">
     <rect
        style="fill:#f23554;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
        id="rect4582-4-7"
        width="7.9375"
        height="7.9375"
-       x="96.3946"
-       y="48.257946" />
-    <rect
-       style="fill:#f23554;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
-       id="rect4582-4-443"
-       width="7.9375"
-       height="7.9375"
-       x="79.71981"
-       y="90.102226" />
-    <rect
-       style="fill:#f23554;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
-       id="rect4582-4-16"
-       width="7.9375"
-       height="7.9375"
-       x="103.63082"
-       y="85.068329" />
-    <rect
-       style="fill:#f23554;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
-       id="rect4582-4-44"
-       width="7.9375"
-       height="7.9375"
-       x="63.674255"
-       y="66.820442" />
-    <rect
-       style="fill:#f23554;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
-       id="rect4582-4-0"
-       width="7.9375"
-       height="7.9375"
-       x="108.97934"
-       y="62.101166" />
-    <rect
-       style="fill:#f23554;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
-       id="rect4582-4-0-3"
-       width="7.9375"
-       height="7.9375"
-       x="102.37142"
-       y="128.62276" />
+       x="111.72865"
+       y="68.246117" />
     <rect
        style="fill:#f23554;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
        id="rect4582-4-03"
        width="7.9375"
        height="7.9375"
-       x="116.84481"
-       y="105.71593" />
-    <rect
-       style="fill:#f66f85;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
-       id="rect4582-4-1"
-       width="7.9375"
-       height="7.9375"
-       x="107.46564"
-       y="124.14811" />
+       x="125.20759"
+       y="121.71884" />
     <rect
        style="fill:#f66f85;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
        id="rect4582-4-1-2"
        width="7.9375"
        height="7.9375"
-       x="118.44952"
-       y="80.838699" />
-    <rect
-       style="fill:#f66f85;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
-       id="rect4582-4-1-0"
-       width="7.9375"
-       height="7.9375"
-       x="74.056671"
-       y="87.585274" />
+       x="128.03018"
+       y="82.900429" />
     <rect
        style="fill:#f66f85;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
        id="rect4582-4-1-1"
        width="7.9375"
        height="7.9375"
-       x="76.573624"
-       y="58.954979" />
+       x="91.907669"
+       y="78.943146" />
     <rect
        style="fill:#f66f85;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
        id="rect4582-4-1-1-6"
        width="7.9375"
        height="7.9375"
-       x="81.459335"
-       y="44.084549" />
+       x="91.75042"
+       y="63.738029" />
     <rect
        style="fill:#f66f85;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
        id="rect4582-4-1-1-1"
        width="7.9375"
        height="7.9375"
-       x="119.724"
-       y="101.48154" />
+       x="111.67767"
+       y="110.87557" />
     <rect
        style="fill:#f66f85;fill-opacity:1;stroke-width:0.145872;stroke-linecap:round;stroke-linejoin:round"
        id="rect4582-4-1-1-4"
        width="8.5667372"
        height="7.9375"
-       x="59.269596"
-       y="72.483574" />
+       x="74.603638"
+       y="92.471741" />
     <rect
        style="fill:#f66f85;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
        id="rect4582-4-1-9"
        width="7.9375"
        height="7.9375"
-       x="101.11388"
-       y="80.978279" />
-    <rect
-       style="fill:#f66f85;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
-       id="rect4582-4-1-11"
-       width="7.9375"
-       height="7.9375"
-       x="91.360695"
-       y="101.4285" />
-    <rect
-       style="fill:#f66f85;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
-       id="rect4582-4-1-11-0"
-       width="7.9375"
-       height="7.9375"
-       x="84.573898"
-       y="128.62276" />
+       x="119.46008"
+       y="100.29708" />
     <rect
        style="fill:#f66f85;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
        id="rect4582-4-1-3"
        width="7.9375"
        height="7.9375"
-       x="102.68697"
-       y="44.1679" />
+       x="107.02719"
+       y="71.098854" />
     <rect
        style="fill:#a82138;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
        id="rect4582-4-4"
        width="7.9375"
        height="7.9375"
-       x="119.02478"
-       y="128.05386" />
+       x="110.87879"
+       y="85.660904" />
     <rect
        style="fill:#a82138;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
        id="rect4582-4-4-7"
        width="7.9375"
        height="7.9375"
-       x="85.068329"
-       y="72.798195" />
+       x="94.60714"
+       y="97.792068" />
     <rect
        style="fill:#a82138;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
        id="rect4582-4-4-3"
        width="7.9375"
        height="7.9375"
-       x="81.2929"
-       y="38.819386" />
+       x="96.626945"
+       y="58.807556" />
     <rect
        style="fill:#a82138;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
        id="rect4582-4-4-3-0"
        width="7.9375"
        height="7.9375"
-       x="65.886505"
-       y="52.983307" />
+       x="81.220551"
+       y="72.971474" />
     <rect
        style="fill:#a82138;fill-opacity:1;stroke-width:0.140413;stroke-linecap:round;stroke-linejoin:round"
        id="rect4582-4-4-5"
        width="7.9375"
        height="7.9375"
-       x="106.02672"
-       y="113.77496" />
+       x="100.82373"
+       y="125.15683"
+       inkscape:label="rect4582-4-4-5" />
     <rect
-       style="fill:#f23554;fill-opacity:1;stroke-width:0.936087;stroke-linecap:round;stroke-linejoin:round"
+       style="display:inline;fill:#f23554;fill-opacity:1;stroke-width:0.936087;stroke-linecap:round;stroke-linejoin:round"
        id="rect4582"
        width="52.916664"
        height="52.916664"
-       x="-39.891624"
-       y="36.228165"
+       x="-49.221493"
+       y="64.274139"
        transform="rotate(-59.083807)" />
   </g>
 </svg>

@@ -5,15 +5,14 @@ var isDestroyed = false
 var isColdown = false
 export var playerIndex = 1
 
-var acel = 4500
-var initAcel = acel
-var maxSpeed = 800
+var initAcel = Level.playerAcel
 var velocity = Vector2.ZERO
 export var playerColor = Color8(242, 53, 84)
 
 
 func destroyed():
 	isDestroyed = true
+	velocity = Vector2.ZERO
 	get_node("RespawnTimer").start()
 	get_node("DestroyParticles").emitting = true
 	get_node("DestroyParticles").restart()
@@ -37,7 +36,7 @@ func use_friction(realAceleration):
 
 func apply_move(aceleration):
 	velocity += aceleration
-	velocity = velocity.limit_length(maxSpeed)
+	velocity = velocity.limit_length(Level.playersMaxSpeed)
 
 func _physics_process(delta):
 	if !GameInput.isPlaying[playerIndex - 1]:
@@ -45,7 +44,7 @@ func _physics_process(delta):
 
 	var direction = GameInput.get_axis(playerIndex) if !isDestroyed else Vector2.ZERO
 	if direction == Vector2.ZERO:
-		use_friction(acel * delta)
+		use_friction(Level.playerAcel * delta)
 	else:
 		$Particles2D.emitting = true
 		apply_move(initAcel * delta * direction)

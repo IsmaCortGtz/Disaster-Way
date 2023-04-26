@@ -2,12 +2,11 @@ extends Area2D
 
 var player = Vector2(0, 0)
 var move = Vector2(0, 0)
-var velRange = Vector2(1500, 1800)
 var vel
 
 
 func _ready():
-	vel = rand_range(velRange.x, velRange.y)
+	vel = rand_range(Level.bulletsVelRange.x, Level.bulletsVelRange.y)
 	look_at(player)
 	
 	var x1 = abs(player.x - position.x)

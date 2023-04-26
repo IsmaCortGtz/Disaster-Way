@@ -1,17 +1,54 @@
 extends Node
 
-var bulletActivate = true
-var bulletsNode
+#### Level propierties
+
+# Example:  1-800-4500-1500-1800-0.5-3.5-90
+
+# === Game modes Types ===
+#   1 = Last standing (Play until all players dead)
+#   2 = Time trial (Play for X time and try to died the minimun times as posible)
+var gameModeType = 1
+var playersMaxSpeed = 800
+var playerAcel = 4500
+var bulletsVelRange = Vector2(1500, 1800)
+var bulletsControllCooldown = Vector2(0.5, 3.5)
+# If gamemode is 2, the duration of the game in seconds
+var gameTimeTrialDuration = 90
 
 
-func restart_level():
-	var bulletOldName = bulletsNode.name
-	get_node("/root/GameRoom/" + bulletOldName).queue_free()
-	var newBullets = Node.new()
-	if (bulletOldName == "Bullets1"):
-		newBullets.name = "Bullets2"
-	else:
-		newBullets.name = "Bullets1"
-	get_node("/root/GameRoom").add_child(newBullets)
-	bulletsNode = get_node("/root/GameRoom/" + newBullets.name)
-	bulletActivate = true
+var validGameModesTypes = [1, 2]
+
+
+func loade_stage_code(code):
+	var splittedCode = code.split("-", false)
+	if !(validGameModesTypes.has(int(splittedCode[0]))):
+		print("error in gamemode")
+		return
+	if (float(splittedCode[1]) <= 0):
+		print("error, playersMaxSpeed need to be up to 0")
+		return
+	if (float(splittedCode[2]) <= 0):
+		print("error, playerAcel need to be up to 0")
+		return
+	if (float(splittedCode[3]) <= 0):
+		print("error, bulletsVelRange.x need to be up to 0")
+		return
+	if (float(splittedCode[4]) <= 0):
+		print("error, bulletsVelRange.y need to be up to 0")
+		return
+	if (float(splittedCode[5]) <= 0):
+		print("error, bulletsControllCooldown.x need to be up to 0")
+		return
+	if (float(splittedCode[6]) <= 0):
+		print("error, bulletsControllCooldown.y need to be up to 0")
+		return
+	if (float(splittedCode[7]) <= 0):
+		print("error, gameTimeTrialDuration need to be up to 0")
+		return
+	
+	gameModeType = int(splittedCode[0])
+	playersMaxSpeed = float(splittedCode[1])
+	playerAcel = float(splittedCode[2])
+	bulletsVelRange = Vector2(float(splittedCode[3]), float(splittedCode[4]))
+	bulletsControllCooldown = Vector2(float(splittedCode[5]), float(splittedCode[6]))
+	gameTimeTrialDuration = float(splittedCode[7])
