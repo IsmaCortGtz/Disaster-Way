@@ -12,19 +12,21 @@ var player4
 var currentPlayers = 1
 
 func _input(event):
-	if ((event is InputEventKey) and (GameInput.playersType[0] != 0) and (currentPlayers <= 3)):
+	if ((event is InputEventKey) and (!GameInput.keyboardUsed) and (currentPlayers <= 3)):
 		currentPlayers += 1
+		GameInput.keyboardUsed = true
 		GameInput.new_player(currentPlayers, 0, 0)
 		add_player(currentPlayers)
 	
 	if ((event is InputEventJoypadButton) and (currentPlayers <= 3) and !GameInput.usedGamepads.has(event.device)):
 		currentPlayers += 1
-		GameInput.usedGamepads.append(event.device)
 		GameInput.new_player(currentPlayers, 1, event.device)
 		add_player(currentPlayers)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_node("MarginContainer/VBoxContainer/Controls/MarginContainer/HBoxContainer/MarginContainer/TextureRect").texture = GameInput.get_button_icon_image("accept")
+	get_node("MarginContainer/VBoxContainer/Controls/MarginContainer2/HBoxContainer/MarginContainer/TextureRect").texture = GameInput.get_button_icon_image("back")
 	player1 = get_node("MarginContainer/VBoxContainer/HBoxContainer/SelectablePlayer1")
 	player2 = get_node("MarginContainer/VBoxContainer/HBoxContainer/SelectablePlayer2")
 	player3 = get_node("MarginContainer/VBoxContainer/HBoxContainer2/SelectablePlayer3")

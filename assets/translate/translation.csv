@@ -1,5 +1,11 @@
-﻿keys,en,es
+keys,en,es
 PRESS_KEY_TO_START,Press a key to start,Presiona un boton para comenzar
 MUSIC_OWNER,Music created by Steven O'Brien,Musica creada por Steven O'Brien
 GAMEMODE_LAST_STANDING,Last Standig,Ultimo en Pie
 GAMEMODE_TIME_TRIAL,Time Trial,Contrarreloj
+PLAYER_WORD_SELECTING,Player,Jugador
+BACK_BUTTON_WORD,Back,Atrás
+SELECT_BUTTON_WORD,Select,Aceptar
+MOVE_BUTTON_WORD,Move,Moverse
+START_TO_JOIN,Press Start to join,Presiona Start para unirte
+PLAYER_READY_LABEL,Ready,Listo

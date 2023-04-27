@@ -1,8 +1,29 @@
 extends Node
 
+# 0 = keyboard
+# 1 = Playstation
+# 2 = Xbox
+var joiyMoveIcon = preload("res://assets/images/icons/buttons/joy.move.svg")
+var buttons = {
+	"accept": [
+		preload("res://assets/images/icons/buttons/key.enter.svg"),
+		preload("res://assets/images/icons/buttons/ps.x.svg"),
+		preload("res://assets/images/icons/buttons/xbox.a.svg")
+	],
+	"move": [
+		preload("res://assets/images/icons/buttons/key.move.svg"),
+		joiyMoveIcon, joiyMoveIcon
+	],
+	"back": [
+		preload("res://assets/images/icons/buttons/key.esc.svg"),
+		preload("res://assets/images/icons/buttons/ps.o.svg"),
+		preload("res://assets/images/icons/buttons/xbox.b.svg")
+	],
+}
+
 var playerColors = [Color8(242, 53, 84), Color8(69, 27, 227), Color8(227, 27, 174), Color8(227, 80, 27)]
 var gamepadDeadzone = 0.5
-var playersNumber = 0
+
 #  Input types
 #    -1 = Unsigned
 #     0 = Keyboard
@@ -12,13 +33,80 @@ var playersNumber = 0
 #    -1 = Unsigned
 #     X = Index
 
+var playersNumber = 0
 var usedGamepads = []
-var playersType = [0, -1, -1, -1]
-var playersIndex = [0, -1, -1, -1]
-var isPlaying = [true, false, false, false]
+var keyboardUsed = false
+var playersType = [-1, -1, -1, -1]
+var playersIndex = [-1, -1, -1, -1]
+var isPlaying = [false, false, false, false]
+
+
+var newKeyLeftEvent
+var newKeyRightEvent
+var newKeyUpEvent
+var newKeyDownEvent
+var newKeyAcceptEvent
+
+var newJoyLeftEvent
+var newJoyRightEvent
+var newJoyUpEvent
+var newJoyDownEvent
+var newJoyAcceptEvent
+
+
+func reset_player():
+	playersNumber = 0
+	usedGamepads = []
+	keyboardUsed = false
+	playersType = [-1, -1, -1, -1]
+	playersIndex = [-1, -1, -1, -1]
+	isPlaying = [false, false, false, false]
+
+
+func reset_player_exept_first():
+	playersNumber = 1
+	isPlaying = [true, false, false, false]
+	if (playersType[0] == 0):
+		usedGamepads = []
+		keyboardUsed = true
+		playersType = [0, -1, -1, -1]
+		playersIndex = [0, -1, -1, -1]
+	else:
+		var tempFirstGamepadIndex = playersIndex[0]
+		usedGamepads = [tempFirstGamepadIndex]
+		keyboardUsed = false
+		playersType = [1, -1, -1, -1]
+		playersIndex = [tempFirstGamepadIndex, -1, -1, -1]
+
+
+func _ready():
+	newKeyLeftEvent = InputEventKey.new()
+	newKeyRightEvent = InputEventKey.new()
+	newKeyUpEvent = InputEventKey.new()
+	newKeyDownEvent = InputEventKey.new()
+	newKeyAcceptEvent = InputEventKey.new()
+	newKeyLeftEvent.set_scancode(KEY_A)
+	newKeyRightEvent.set_scancode(KEY_D)
+	newKeyUpEvent.set_scancode(KEY_W)
+	newKeyDownEvent.set_scancode(KEY_S)
+	newKeyAcceptEvent.set_scancode(KEY_ENTER)
+	
+	newJoyLeftEvent = InputEventJoypadButton.new()
+	newJoyRightEvent = InputEventJoypadButton.new()
+	newJoyUpEvent = InputEventJoypadButton.new()
+	newJoyDownEvent = InputEventJoypadButton.new()
+	newJoyAcceptEvent = InputEventJoypadButton.new()
+	newJoyLeftEvent.set_button_index(14)
+	newJoyRightEvent.set_button_index(15)
+	newJoyUpEvent.set_button_index(12)
+	newJoyDownEvent.set_button_index(13)
+	newJoyAcceptEvent.set_button_index(0)
+
 
 func new_player(index, inputType, inputIndex):
 	playersType[index] = inputType
+	if (inputType == 0): keyboardUsed = true
+	if (inputType == 1): usedGamepads.append(inputIndex)
 	playersIndex[index] = inputIndex
 	isPlaying[index] = true
 	playersNumber = 0
@@ -36,3 +124,41 @@ func get_axis(player):
 		if abs(axis.y) < gamepadDeadzone:
 			axis.y = 0
 		return axis.normalized()
+
+
+func get_button_icon_image(action, index = 0):
+	if (playersType[index] == 0):
+		return buttons[action][0]
+	var name = Input.get_joy_name(playersIndex[index])
+	if (("PS" in name) or ("Playstation" in name)):
+		return buttons[action][1]
+	else:
+		return buttons[action][2]
+
+
+func remap_ui_first_player(newMappedType, gamepadDevice = 0):
+	
+	InputMap.action_erase_events("ui_left")
+	InputMap.action_erase_events("ui_down")
+	InputMap.action_erase_events("ui_up")
+	InputMap.action_erase_events("ui_right")
+	InputMap.action_erase_events("ui_accept")
+	
+	if (newMappedType == 0):
+		InputMap.action_add_event("ui_left", newKeyLeftEvent)
+		InputMap.action_add_event("ui_down", newKeyDownEvent)
+		InputMap.action_add_event("ui_up", newKeyUpEvent)
+		InputMap.action_add_event("ui_right", newKeyRightEvent)
+		InputMap.action_add_event("ui_accept", newKeyAcceptEvent)
+
+	if (newMappedType == 1):
+		newJoyLeftEvent.device = gamepadDevice
+		newJoyRightEvent.device = gamepadDevice
+		newJoyUpEvent.device = gamepadDevice
+		newJoyDownEvent.device = gamepadDevice
+		newJoyAcceptEvent.device = gamepadDevice
+		InputMap.action_add_event("ui_left", newJoyLeftEvent)
+		InputMap.action_add_event("ui_down", newJoyDownEvent)
+		InputMap.action_add_event("ui_up", newJoyUpEvent)
+		InputMap.action_add_event("ui_right", newJoyRightEvent)
+		InputMap.action_add_event("ui_accept", newJoyAcceptEvent)

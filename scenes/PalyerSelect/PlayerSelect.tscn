@@ -79,14 +79,14 @@ margin_right = 1460.0
 margin_bottom = 960.0
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Controls"]
-margin_right = 274.0
+margin_right = 682.0
 margin_bottom = 60.0
 custom_constants/margin_right = 30
 custom_constants/margin_left = 30
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Controls/MarginContainer"]
 margin_left = 30.0
-margin_right = 244.0
+margin_right = 652.0
 margin_bottom = 60.0
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Controls/MarginContainer/HBoxContainer"]
@@ -102,21 +102,24 @@ texture = ExtResource( 4 )
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Controls/MarginContainer/HBoxContainer"]
 margin_left = 74.0
 margin_top = 2.0
-margin_right = 214.0
+margin_right = 622.0
 margin_bottom = 57.0
 theme = SubResource( 2 )
-text = "Ready"
+text = "PLAYER_READY_LABEL"
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/Controls"]
-margin_left = 278.0
-margin_right = 514.0
+margin_left = 686.0
+margin_right = 1319.0
 margin_bottom = 60.0
 custom_constants/margin_right = 30
 custom_constants/margin_left = 30
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Controls/MarginContainer2"]
 margin_left = 30.0
-margin_right = 206.0
+margin_right = 603.0
 margin_bottom = 60.0
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Controls/MarginContainer2/HBoxContainer"]
@@ -132,7 +135,7 @@ texture = ExtResource( 5 )
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Controls/MarginContainer2/HBoxContainer"]
 margin_left = 64.0
 margin_top = 2.0
-margin_right = 176.0
+margin_right = 573.0
 margin_bottom = 57.0
 theme = SubResource( 2 )
-text = "Back"
+text = "BACK_BUTTON_WORD"

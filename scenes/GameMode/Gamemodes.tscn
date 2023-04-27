@@ -13,8 +13,8 @@
 [ext_resource path="res://assets/images/icons/modes-buttons/last-standing.svg" type="Texture" id=11]
 [ext_resource path="res://assets/images/icons/modes-buttons/time-trial.svg" type="Texture" id=12]
 [ext_resource path="res://assets/fonts/Rubik-Bold.ttf" type="DynamicFontData" id=13]
-[ext_resource path="res://assets/images/icons/buttons/ps.x.svg" type="Texture" id=14]
-[ext_resource path="res://assets/images/icons/buttons/xbox.a.svg" type="Texture" id=15]
+[ext_resource path="res://assets/images/icons/buttons/key.enter.svg" type="Texture" id=14]
+[ext_resource path="res://assets/images/icons/buttons/key.move.svg" type="Texture" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 45
@@ -36,20 +36,20 @@ custom_constants/margin_left = 25
 
 [node name="VBoxContainer" type="VBoxContainer" parent="GlobalMargin"]
 margin_left = 25.0
-margin_right = 1475.0
+margin_right = 1549.0
 margin_bottom = 1000.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MainHBox" type="HBoxContainer" parent="GlobalMargin/VBoxContainer"]
-margin_right = 1450.0
-margin_bottom = 453.0
+margin_right = 1524.0
+margin_bottom = 451.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MarginButton" type="MarginContainer" parent="GlobalMargin/VBoxContainer/MainHBox"]
-margin_right = 723.0
-margin_bottom = 453.0
+margin_right = 760.0
+margin_bottom = 451.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 50
@@ -60,8 +60,8 @@ custom_constants/margin_bottom = 50
 [node name="LastStand" type="Button" parent="GlobalMargin/VBoxContainer/MainHBox/MarginButton"]
 margin_left = 50.0
 margin_top = 50.0
-margin_right = 673.0
-margin_bottom = 403.0
+margin_right = 710.0
+margin_bottom = 401.0
 focus_neighbour_left = NodePath("../../MarginButton2/TimeTrial")
 focus_neighbour_top = NodePath("../../../SecondHBox/MarginContainer3/More")
 size_flags_horizontal = 3
@@ -73,9 +73,9 @@ icon_align = 1
 expand_icon = true
 
 [node name="MarginButton2" type="MarginContainer" parent="GlobalMargin/VBoxContainer/MainHBox"]
-margin_left = 727.0
-margin_right = 1450.0
-margin_bottom = 453.0
+margin_left = 764.0
+margin_right = 1524.0
+margin_bottom = 451.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 50
@@ -86,8 +86,8 @@ custom_constants/margin_bottom = 50
 [node name="TimeTrial" type="Button" parent="GlobalMargin/VBoxContainer/MainHBox/MarginButton2"]
 margin_left = 50.0
 margin_top = 50.0
-margin_right = 673.0
-margin_bottom = 403.0
+margin_right = 710.0
+margin_bottom = 401.0
 focus_neighbour_top = NodePath("../../../SecondHBox/MarginContainer5/Back")
 focus_neighbour_right = NodePath("../../MarginButton/LastStand")
 size_flags_horizontal = 3
@@ -99,15 +99,15 @@ icon_align = 1
 expand_icon = true
 
 [node name="SecondHBox" type="HBoxContainer" parent="GlobalMargin/VBoxContainer"]
-margin_top = 457.0
-margin_right = 1450.0
-margin_bottom = 911.0
+margin_top = 455.0
+margin_right = 1524.0
+margin_bottom = 906.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MarginContainer3" type="MarginContainer" parent="GlobalMargin/VBoxContainer/SecondHBox"]
-margin_right = 359.0
-margin_bottom = 454.0
+margin_right = 378.0
+margin_bottom = 451.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 50
@@ -118,8 +118,8 @@ custom_constants/margin_bottom = 50
 [node name="More" type="Button" parent="GlobalMargin/VBoxContainer/SecondHBox/MarginContainer3"]
 margin_left = 50.0
 margin_top = 50.0
-margin_right = 309.0
-margin_bottom = 404.0
+margin_right = 328.0
+margin_bottom = 401.0
 focus_neighbour_left = NodePath("../../MarginContainer6/Exit")
 focus_neighbour_bottom = NodePath("../../../MainHBox/MarginButton/LastStand")
 size_flags_horizontal = 3
@@ -131,9 +131,9 @@ icon_align = 1
 expand_icon = true
 
 [node name="MarginContainer4" type="MarginContainer" parent="GlobalMargin/VBoxContainer/SecondHBox"]
-margin_left = 363.0
-margin_right = 723.0
-margin_bottom = 454.0
+margin_left = 382.0
+margin_right = 760.0
+margin_bottom = 451.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 50
@@ -144,8 +144,8 @@ custom_constants/margin_bottom = 50
 [node name="Settings" type="Button" parent="GlobalMargin/VBoxContainer/SecondHBox/MarginContainer4"]
 margin_left = 50.0
 margin_top = 50.0
-margin_right = 310.0
-margin_bottom = 404.0
+margin_right = 328.0
+margin_bottom = 401.0
 focus_neighbour_bottom = NodePath("../../../MainHBox/MarginButton/LastStand")
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -156,9 +156,9 @@ icon_align = 1
 expand_icon = true
 
 [node name="MarginContainer5" type="MarginContainer" parent="GlobalMargin/VBoxContainer/SecondHBox"]
-margin_left = 727.0
-margin_right = 1086.0
-margin_bottom = 454.0
+margin_left = 764.0
+margin_right = 1142.0
+margin_bottom = 451.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 50
@@ -169,8 +169,8 @@ custom_constants/margin_bottom = 50
 [node name="Back" type="Button" parent="GlobalMargin/VBoxContainer/SecondHBox/MarginContainer5"]
 margin_left = 50.0
 margin_top = 50.0
-margin_right = 309.0
-margin_bottom = 404.0
+margin_right = 328.0
+margin_bottom = 401.0
 focus_neighbour_bottom = NodePath("../../../MainHBox/MarginButton2/TimeTrial")
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -181,9 +181,9 @@ icon_align = 1
 expand_icon = true
 
 [node name="MarginContainer6" type="MarginContainer" parent="GlobalMargin/VBoxContainer/SecondHBox"]
-margin_left = 1090.0
-margin_right = 1450.0
-margin_bottom = 454.0
+margin_left = 1146.0
+margin_right = 1524.0
+margin_bottom = 451.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 50
@@ -194,8 +194,8 @@ custom_constants/margin_bottom = 50
 [node name="Exit" type="Button" parent="GlobalMargin/VBoxContainer/SecondHBox/MarginContainer6"]
 margin_left = 50.0
 margin_top = 50.0
-margin_right = 310.0
-margin_bottom = 404.0
+margin_right = 328.0
+margin_bottom = 401.0
 focus_neighbour_right = NodePath("../../MarginContainer3/More")
 focus_neighbour_bottom = NodePath("../../../MainHBox/MarginButton2/TimeTrial")
 size_flags_horizontal = 3
@@ -207,8 +207,8 @@ icon_align = 1
 expand_icon = true
 
 [node name="MarginContainer" type="MarginContainer" parent="GlobalMargin/VBoxContainer"]
-margin_top = 915.0
-margin_right = 1450.0
+margin_top = 910.0
+margin_right = 1524.0
 margin_bottom = 1000.0
 custom_constants/margin_right = 15
 custom_constants/margin_top = 15
@@ -218,109 +218,58 @@ custom_constants/margin_bottom = 15
 [node name="Controls" type="HBoxContainer" parent="GlobalMargin/VBoxContainer/MarginContainer"]
 margin_left = 15.0
 margin_top = 15.0
-margin_right = 1435.0
-margin_bottom = 70.0
+margin_right = 1509.0
+margin_bottom = 75.0
 alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls"]
-margin_left = 278.0
-margin_right = 695.0
-margin_bottom = 55.0
+margin_right = 798.0
+margin_bottom = 60.0
 custom_constants/margin_right = 35
 custom_constants/margin_left = 35
 
 [node name="HBoxContainer" type="HBoxContainer" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer"]
 margin_left = 35.0
-margin_right = 382.0
-margin_bottom = 55.0
-
-[node name="TextureRect" type="TextureRect" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer/HBoxContainer"]
-margin_right = 50.0
-margin_bottom = 55.0
-texture = ExtResource( 14 )
-
-[node name="Label2" type="Label" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer/HBoxContainer"]
-margin_left = 54.0
-margin_right = 78.0
-margin_bottom = 55.0
-theme = SubResource( 2 )
-text = "/"
-
-[node name="TextureRect2" type="TextureRect" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer/HBoxContainer"]
-margin_left = 82.0
-margin_right = 132.0
-margin_bottom = 55.0
-texture = ExtResource( 14 )
-
-[node name="Label3" type="Label" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer/HBoxContainer"]
-margin_left = 136.0
-margin_right = 160.0
-margin_bottom = 55.0
-theme = SubResource( 2 )
-text = "/"
+margin_right = 763.0
+margin_bottom = 60.0
 
 [node name="TextureRect3" type="TextureRect" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer/HBoxContainer"]
-margin_left = 164.0
-margin_right = 214.0
-margin_bottom = 55.0
-texture = ExtResource( 14 )
+margin_right = 212.0
+margin_bottom = 60.0
+texture = ExtResource( 15 )
 
 [node name="Label" type="Label" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer/HBoxContainer"]
-margin_left = 218.0
-margin_right = 347.0
-margin_bottom = 55.0
+margin_left = 216.0
+margin_top = 2.0
+margin_right = 728.0
+margin_bottom = 57.0
 theme = SubResource( 2 )
-text = " Move"
+text = "MOVE_BUTTON_WORD"
 
 [node name="MarginContainer2" type="MarginContainer" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls"]
-margin_left = 699.0
-margin_right = 1142.0
-margin_bottom = 55.0
+margin_left = 802.0
+margin_right = 1494.0
+margin_bottom = 60.0
 custom_constants/margin_right = 35
 custom_constants/margin_left = 35
 
 [node name="HBoxContainer" type="HBoxContainer" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer2"]
 margin_left = 35.0
-margin_right = 408.0
-margin_bottom = 55.0
-
-[node name="TextureRect" type="TextureRect" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer2/HBoxContainer"]
-margin_right = 50.0
-margin_bottom = 55.0
-texture = ExtResource( 14 )
-
-[node name="Label2" type="Label" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer2/HBoxContainer"]
-margin_left = 54.0
-margin_right = 78.0
-margin_bottom = 55.0
-theme = SubResource( 2 )
-text = "/"
-
-[node name="TextureRect2" type="TextureRect" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer2/HBoxContainer"]
-margin_left = 82.0
-margin_right = 132.0
-margin_bottom = 55.0
-texture = ExtResource( 15 )
-
-[node name="Label3" type="Label" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer2/HBoxContainer"]
-margin_left = 136.0
-margin_right = 160.0
-margin_bottom = 55.0
-theme = SubResource( 2 )
-text = "/"
+margin_right = 657.0
+margin_bottom = 60.0
 
 [node name="TextureRect3" type="TextureRect" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer2/HBoxContainer"]
-margin_left = 164.0
-margin_right = 214.0
-margin_bottom = 55.0
+margin_right = 60.0
+margin_bottom = 60.0
 texture = ExtResource( 14 )
 
 [node name="Label" type="Label" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer2/HBoxContainer"]
-margin_left = 218.0
-margin_right = 373.0
-margin_bottom = 55.0
+margin_left = 64.0
+margin_top = 2.0
+margin_right = 622.0
+margin_bottom = 57.0
 theme = SubResource( 2 )
-text = " Select"
+text = "SELECT_BUTTON_WORD"
 
 [connection signal="pressed" from="GlobalMargin/VBoxContainer/MainHBox/MarginButton/LastStand" to="." method="_on_LastStand_pressed"]
 [connection signal="pressed" from="GlobalMargin/VBoxContainer/MainHBox/MarginButton2/TimeTrial" to="." method="_on_TimeTrial_pressed"]

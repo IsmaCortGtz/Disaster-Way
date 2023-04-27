@@ -10,12 +10,16 @@ func _input(event):
 	
 	if (event is InputEventKey):
 		GameInput.new_player(0, 0, 0)
+		GameInput.remap_ui_first_player(0)
 		get_tree().change_scene_to(gamemodesScene)
 	
 	if (event is InputEventJoypadButton):
 		GameInput.new_player(0, 1, event.device)
+		GameInput.remap_ui_first_player(1, event.device)
 		get_tree().change_scene_to(gamemodesScene)
 
+func _ready():
+	GameInput.reset_player()
 
 func _process(delta):
 	if (adding and contador < contadorLimit.x):

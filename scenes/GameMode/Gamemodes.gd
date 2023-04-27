@@ -10,6 +10,9 @@ func _input(event):
 		get_node("GlobalMargin/VBoxContainer/MainHBox/MarginButton/LastStand").grab_focus()
 		firstUsed = false
 
+func _ready():
+	get_node("GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer2/HBoxContainer/TextureRect3").texture = GameInput.get_button_icon_image("accept")
+	get_node("GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer/HBoxContainer/TextureRect3").texture = GameInput.get_button_icon_image("move")
 
 func _on_Exit_pressed():
 	get_tree().quit()
