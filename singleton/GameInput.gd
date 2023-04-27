@@ -19,6 +19,16 @@ var buttons = {
 		preload("res://assets/images/icons/buttons/ps.o.svg"),
 		preload("res://assets/images/icons/buttons/xbox.b.svg")
 	],
+	"left": [
+		preload("res://assets/images/icons/buttons/key.a.svg"),
+		preload("res://assets/images/icons/buttons/ps.l1.svg"),
+		preload("res://assets/images/icons/buttons/xbox.lb.svg")
+	],
+	"right": [
+		preload("res://assets/images/icons/buttons/key.d.svg"),
+		preload("res://assets/images/icons/buttons/ps.r1.svg"),
+		preload("res://assets/images/icons/buttons/xbox.rb.svg")
+	]
 }
 
 var playerColors = [Color8(242, 53, 84), Color8(69, 27, 227), Color8(227, 27, 174), Color8(227, 80, 27)]
@@ -40,18 +50,24 @@ var playersType = [-1, -1, -1, -1]
 var playersIndex = [-1, -1, -1, -1]
 var isPlaying = [false, false, false, false]
 
+var isReadySelecting = [false, false, false, false]
+var numberPlayersReady = 0
+var readyToStart = false
+
 
 var newKeyLeftEvent
 var newKeyRightEvent
 var newKeyUpEvent
 var newKeyDownEvent
 var newKeyAcceptEvent
+var newKeyCancelEvent
 
 var newJoyLeftEvent
 var newJoyRightEvent
 var newJoyUpEvent
 var newJoyDownEvent
 var newJoyAcceptEvent
+var newJoyCancelEvent
 
 
 func reset_player():
@@ -85,23 +101,31 @@ func _ready():
 	newKeyUpEvent = InputEventKey.new()
 	newKeyDownEvent = InputEventKey.new()
 	newKeyAcceptEvent = InputEventKey.new()
+	newKeyCancelEvent = InputEventKey.new()
 	newKeyLeftEvent.set_scancode(KEY_A)
 	newKeyRightEvent.set_scancode(KEY_D)
 	newKeyUpEvent.set_scancode(KEY_W)
 	newKeyDownEvent.set_scancode(KEY_S)
 	newKeyAcceptEvent.set_scancode(KEY_ENTER)
+	newKeyCancelEvent.set_scancode(KEY_ESCAPE)
 	
 	newJoyLeftEvent = InputEventJoypadButton.new()
 	newJoyRightEvent = InputEventJoypadButton.new()
 	newJoyUpEvent = InputEventJoypadButton.new()
 	newJoyDownEvent = InputEventJoypadButton.new()
 	newJoyAcceptEvent = InputEventJoypadButton.new()
+	newJoyCancelEvent = InputEventJoypadButton.new()
 	newJoyLeftEvent.set_button_index(14)
 	newJoyRightEvent.set_button_index(15)
 	newJoyUpEvent.set_button_index(12)
 	newJoyDownEvent.set_button_index(13)
 	newJoyAcceptEvent.set_button_index(0)
+	newJoyCancelEvent.set_button_index(1)
 
+func get_new_index():
+	for i in range(isPlaying.size()):
+		if (isPlaying[i] == false): return i
+	return -1
 
 func new_player(index, inputType, inputIndex):
 	playersType[index] = inputType
@@ -136,13 +160,15 @@ func get_button_icon_image(action, index = 0):
 		return buttons[action][2]
 
 
-func remap_ui_first_player(newMappedType, gamepadDevice = 0):
-	
+func remap_ui_first_player(playerIndex = 0):
+	var newMappedType = playersType[playerIndex]
+	var gamepadDevice = playersIndex[playerIndex]
 	InputMap.action_erase_events("ui_left")
 	InputMap.action_erase_events("ui_down")
 	InputMap.action_erase_events("ui_up")
 	InputMap.action_erase_events("ui_right")
 	InputMap.action_erase_events("ui_accept")
+	InputMap.action_erase_events("ui_cancel")
 	
 	if (newMappedType == 0):
 		InputMap.action_add_event("ui_left", newKeyLeftEvent)
@@ -150,6 +176,7 @@ func remap_ui_first_player(newMappedType, gamepadDevice = 0):
 		InputMap.action_add_event("ui_up", newKeyUpEvent)
 		InputMap.action_add_event("ui_right", newKeyRightEvent)
 		InputMap.action_add_event("ui_accept", newKeyAcceptEvent)
+		InputMap.action_add_event("ui_cancel", newKeyCancelEvent)
 
 	if (newMappedType == 1):
 		newJoyLeftEvent.device = gamepadDevice
@@ -157,8 +184,10 @@ func remap_ui_first_player(newMappedType, gamepadDevice = 0):
 		newJoyUpEvent.device = gamepadDevice
 		newJoyDownEvent.device = gamepadDevice
 		newJoyAcceptEvent.device = gamepadDevice
+		newJoyCancelEvent.device = gamepadDevice
 		InputMap.action_add_event("ui_left", newJoyLeftEvent)
 		InputMap.action_add_event("ui_down", newJoyDownEvent)
 		InputMap.action_add_event("ui_up", newJoyUpEvent)
 		InputMap.action_add_event("ui_right", newJoyRightEvent)
 		InputMap.action_add_event("ui_accept", newJoyAcceptEvent)
+		InputMap.action_add_event("ui_cancel", newJoyCancelEvent)

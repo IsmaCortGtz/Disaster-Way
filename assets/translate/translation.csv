@@ -9,3 +9,7 @@ SELECT_BUTTON_WORD,Select,Aceptar
 MOVE_BUTTON_WORD,Move,Moverse
 START_TO_JOIN,Press Start to join,Presiona Start para unirte
 PLAYER_READY_LABEL,Ready,Listo
+START_BUTTON_WORD,Start,Iniciar
+GAME_PAUSED_TEXT,Game Paused,Juego Pausado
+GAME_RESUME_BUTTON,Resume,Reanudar
+GAME_EXIT_BUTTON,Go to main menu,Volver al menu

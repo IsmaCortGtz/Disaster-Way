@@ -4,42 +4,53 @@ var contador = 2.0
 var contadorLimit = Vector2(2, 0.4)
 var adding = false
 
+
 var player1
 var player2
 var player3
 var player4
 
-var currentPlayers = 1
-
 func _input(event):
-	if ((event is InputEventKey) and (!GameInput.keyboardUsed) and (currentPlayers <= 3)):
-		currentPlayers += 1
+	var newIndex = GameInput.get_new_index()
+	if ((event is InputEventKey) and (!GameInput.keyboardUsed) and (newIndex != -1) and (event.scancode == KEY_ENTER) and (not event.is_pressed())):
 		GameInput.keyboardUsed = true
-		GameInput.new_player(currentPlayers, 0, 0)
-		add_player(currentPlayers)
+		GameInput.new_player(newIndex, 0, 0)
+		add_player(newIndex)
 	
-	if ((event is InputEventJoypadButton) and (currentPlayers <= 3) and !GameInput.usedGamepads.has(event.device)):
-		currentPlayers += 1
-		GameInput.new_player(currentPlayers, 1, event.device)
-		add_player(currentPlayers)
+	if ((event is InputEventJoypadButton) and (newIndex != -1) and !GameInput.usedGamepads.has(event.device) and (event.button_index == 11) and (not event.is_pressed())):
+		GameInput.new_player(newIndex, 1, event.device)
+		add_player(newIndex)
+	
+	if event.is_action_released("ui_cancel"):
+		if (not GameInput.isReadySelecting[0]):
+			get_tree().change_scene_to(Preloader.scenes_GameMode)
+		else:
+			player1.player_not_ready()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	GameInput.isReadySelecting = [false, false, false, false]
+	GameInput.numberPlayersReady = 0
 	get_node("MarginContainer/VBoxContainer/Controls/MarginContainer/HBoxContainer/MarginContainer/TextureRect").texture = GameInput.get_button_icon_image("accept")
 	get_node("MarginContainer/VBoxContainer/Controls/MarginContainer2/HBoxContainer/MarginContainer/TextureRect").texture = GameInput.get_button_icon_image("back")
 	player1 = get_node("MarginContainer/VBoxContainer/HBoxContainer/SelectablePlayer1")
 	player2 = get_node("MarginContainer/VBoxContainer/HBoxContainer/SelectablePlayer2")
 	player3 = get_node("MarginContainer/VBoxContainer/HBoxContainer2/SelectablePlayer3")
 	player4 = get_node("MarginContainer/VBoxContainer/HBoxContainer2/SelectablePlayer4")
-	player1.player_joined(1)
+	player1.player_joined(0)
+	
+	for i in range(GameInput.isPlaying.size()):
+		if GameInput.isPlaying[i]:
+			add_player(i)
 
 func add_player(playerN):
-	if playerN == 2:
+	if playerN == 1:
 		player2.player_joined(playerN)
-	if playerN == 3:
+	if playerN == 2:
 		player3.player_joined(playerN)
-	if playerN == 4:
+	if playerN == 3:
 		player4.player_joined(playerN)
+	_on_player_ready_signal()
 
 func _process(delta):
 	if (adding and contador < contadorLimit.x):
@@ -57,3 +68,12 @@ func _process(delta):
 	player2.label_alpha(contador / 2.0)
 	player3.label_alpha(contador / 2.0)
 	player4.label_alpha(contador / 2.0)
+
+
+func _on_player_ready_signal():
+	if (GameInput.numberPlayersReady == GameInput.playersNumber):
+		GameInput.readyToStart = true
+		get_node("MarginContainer/VBoxContainer/Controls/MarginContainer/HBoxContainer/Label").text = tr("START_BUTTON_WORD")
+	else:
+		GameInput.readyToStart = false
+		get_node("MarginContainer/VBoxContainer/Controls/MarginContainer/HBoxContainer/Label").text = tr("PLAYER_READY_LABEL")

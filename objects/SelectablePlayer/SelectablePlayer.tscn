@@ -49,6 +49,7 @@ margin_bottom = 975.0
 color = Color( 0, 0, 0, 0.0862745 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+visible = false
 margin_left = 25.0
 margin_top = 25.0
 margin_right = 1475.0
@@ -68,6 +69,7 @@ margin_right = 371.0
 margin_bottom = 525.0
 focus_mode = 0
 theme = ExtResource( 1 )
+toggle_mode = true
 enabled_focus_mode = 0
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 7 )
@@ -84,6 +86,10 @@ margin_top = -25.0
 margin_bottom = 25.0
 size_flags_horizontal = 9
 texture = ExtResource( 8 )
+
+[node name="TimerLeft" type="Timer" parent="HBoxContainer/CenterContainer/Player-left"]
+wait_time = 0.1
+one_shot = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 margin_left = 646.0
@@ -135,6 +141,7 @@ margin_right = 371.0
 margin_bottom = 525.0
 focus_mode = 0
 theme = ExtResource( 1 )
+toggle_mode = true
 enabled_focus_mode = 0
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 7 )
@@ -150,8 +157,11 @@ margin_right = 50.0
 margin_bottom = 25.0
 texture = ExtResource( 5 )
 
+[node name="TimerRight" type="Timer" parent="HBoxContainer/CenterContainer2/Player-right"]
+wait_time = 0.1
+one_shot = true
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
-visible = false
 margin_left = 25.0
 margin_top = 25.0
 margin_right = 1475.0
@@ -207,3 +217,8 @@ align = 1
 valign = 1
 autowrap = true
 clip_text = true
+
+[connection signal="pressed" from="HBoxContainer/CenterContainer/Player-left" to="." method="_on_Playerleft_pressed"]
+[connection signal="timeout" from="HBoxContainer/CenterContainer/Player-left/TimerLeft" to="." method="_on_TimerLeft_timeout"]
+[connection signal="pressed" from="HBoxContainer/CenterContainer2/Player-right" to="." method="_on_Playerright_pressed"]
+[connection signal="timeout" from="HBoxContainer/CenterContainer2/Player-right/TimerRight" to="." method="_on_TimerRight_timeout"]

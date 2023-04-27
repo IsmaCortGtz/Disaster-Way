@@ -25,5 +25,6 @@ func _ready():
 
 
 func _process(delta):
+	if get_tree().paused: return
 	timer += 1 * delta
 	get_node("Label").text = str(int(timer))

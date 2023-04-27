@@ -21,6 +21,7 @@ config/quit_on_go_back=false
 GameInput="*res://singleton/GameInput.gd"
 Level="*res://singleton/Level.gd"
 Music="*res://singleton/Music.tscn"
+Preloader="*res://singleton/Preloader.gd"
 
 [display]
 

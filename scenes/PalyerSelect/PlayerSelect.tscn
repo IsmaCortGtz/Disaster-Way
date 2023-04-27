@@ -139,3 +139,8 @@ margin_right = 573.0
 margin_bottom = 57.0
 theme = SubResource( 2 )
 text = "BACK_BUTTON_WORD"
+
+[connection signal="player_ready_signal" from="MarginContainer/VBoxContainer/HBoxContainer/SelectablePlayer1" to="." method="_on_player_ready_signal"]
+[connection signal="player_ready_signal" from="MarginContainer/VBoxContainer/HBoxContainer/SelectablePlayer2" to="." method="_on_player_ready_signal"]
+[connection signal="player_ready_signal" from="MarginContainer/VBoxContainer/HBoxContainer2/SelectablePlayer3" to="." method="_on_player_ready_signal"]
+[connection signal="player_ready_signal" from="MarginContainer/VBoxContainer/HBoxContainer2/SelectablePlayer4" to="." method="_on_player_ready_signal"]

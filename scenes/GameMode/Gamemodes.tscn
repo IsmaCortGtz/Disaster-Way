@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scenes/GameMode/Gamemodes.gd" type="Script" id=1]
 [ext_resource path="res://assets/themes/buttons-blue.tres" type="Theme" id=2]
@@ -15,13 +15,14 @@
 [ext_resource path="res://assets/fonts/Rubik-Bold.ttf" type="DynamicFontData" id=13]
 [ext_resource path="res://assets/images/icons/buttons/key.enter.svg" type="Texture" id=14]
 [ext_resource path="res://assets/images/icons/buttons/key.move.svg" type="Texture" id=15]
+[ext_resource path="res://assets/images/icons/buttons/key.esc.svg" type="Texture" id=16]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 size = 45
 font_data = ExtResource( 13 )
 
 [sub_resource type="Theme" id=2]
-default_font = SubResource( 1 )
+default_font = SubResource( 3 )
 
 [node name="Gamemodes" type="Control"]
 anchor_right = 1.0
@@ -36,19 +37,19 @@ custom_constants/margin_left = 25
 
 [node name="VBoxContainer" type="VBoxContainer" parent="GlobalMargin"]
 margin_left = 25.0
-margin_right = 1549.0
+margin_right = 2186.0
 margin_bottom = 1000.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MainHBox" type="HBoxContainer" parent="GlobalMargin/VBoxContainer"]
-margin_right = 1524.0
+margin_right = 2161.0
 margin_bottom = 451.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MarginButton" type="MarginContainer" parent="GlobalMargin/VBoxContainer/MainHBox"]
-margin_right = 760.0
+margin_right = 1078.0
 margin_bottom = 451.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -60,7 +61,7 @@ custom_constants/margin_bottom = 50
 [node name="LastStand" type="Button" parent="GlobalMargin/VBoxContainer/MainHBox/MarginButton"]
 margin_left = 50.0
 margin_top = 50.0
-margin_right = 710.0
+margin_right = 1028.0
 margin_bottom = 401.0
 focus_neighbour_left = NodePath("../../MarginButton2/TimeTrial")
 focus_neighbour_top = NodePath("../../../SecondHBox/MarginContainer3/More")
@@ -73,8 +74,8 @@ icon_align = 1
 expand_icon = true
 
 [node name="MarginButton2" type="MarginContainer" parent="GlobalMargin/VBoxContainer/MainHBox"]
-margin_left = 764.0
-margin_right = 1524.0
+margin_left = 1082.0
+margin_right = 2161.0
 margin_bottom = 451.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -86,7 +87,7 @@ custom_constants/margin_bottom = 50
 [node name="TimeTrial" type="Button" parent="GlobalMargin/VBoxContainer/MainHBox/MarginButton2"]
 margin_left = 50.0
 margin_top = 50.0
-margin_right = 710.0
+margin_right = 1029.0
 margin_bottom = 401.0
 focus_neighbour_top = NodePath("../../../SecondHBox/MarginContainer5/Back")
 focus_neighbour_right = NodePath("../../MarginButton/LastStand")
@@ -100,13 +101,13 @@ expand_icon = true
 
 [node name="SecondHBox" type="HBoxContainer" parent="GlobalMargin/VBoxContainer"]
 margin_top = 455.0
-margin_right = 1524.0
+margin_right = 2161.0
 margin_bottom = 906.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MarginContainer3" type="MarginContainer" parent="GlobalMargin/VBoxContainer/SecondHBox"]
-margin_right = 378.0
+margin_right = 537.0
 margin_bottom = 451.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -118,7 +119,7 @@ custom_constants/margin_bottom = 50
 [node name="More" type="Button" parent="GlobalMargin/VBoxContainer/SecondHBox/MarginContainer3"]
 margin_left = 50.0
 margin_top = 50.0
-margin_right = 328.0
+margin_right = 487.0
 margin_bottom = 401.0
 focus_neighbour_left = NodePath("../../MarginContainer6/Exit")
 focus_neighbour_bottom = NodePath("../../../MainHBox/MarginButton/LastStand")
@@ -131,8 +132,8 @@ icon_align = 1
 expand_icon = true
 
 [node name="MarginContainer4" type="MarginContainer" parent="GlobalMargin/VBoxContainer/SecondHBox"]
-margin_left = 382.0
-margin_right = 760.0
+margin_left = 541.0
+margin_right = 1078.0
 margin_bottom = 451.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -144,7 +145,7 @@ custom_constants/margin_bottom = 50
 [node name="Settings" type="Button" parent="GlobalMargin/VBoxContainer/SecondHBox/MarginContainer4"]
 margin_left = 50.0
 margin_top = 50.0
-margin_right = 328.0
+margin_right = 487.0
 margin_bottom = 401.0
 focus_neighbour_bottom = NodePath("../../../MainHBox/MarginButton/LastStand")
 size_flags_horizontal = 3
@@ -156,8 +157,8 @@ icon_align = 1
 expand_icon = true
 
 [node name="MarginContainer5" type="MarginContainer" parent="GlobalMargin/VBoxContainer/SecondHBox"]
-margin_left = 764.0
-margin_right = 1142.0
+margin_left = 1082.0
+margin_right = 1619.0
 margin_bottom = 451.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -169,7 +170,7 @@ custom_constants/margin_bottom = 50
 [node name="Back" type="Button" parent="GlobalMargin/VBoxContainer/SecondHBox/MarginContainer5"]
 margin_left = 50.0
 margin_top = 50.0
-margin_right = 328.0
+margin_right = 487.0
 margin_bottom = 401.0
 focus_neighbour_bottom = NodePath("../../../MainHBox/MarginButton2/TimeTrial")
 size_flags_horizontal = 3
@@ -181,8 +182,8 @@ icon_align = 1
 expand_icon = true
 
 [node name="MarginContainer6" type="MarginContainer" parent="GlobalMargin/VBoxContainer/SecondHBox"]
-margin_left = 1146.0
-margin_right = 1524.0
+margin_left = 1623.0
+margin_right = 2161.0
 margin_bottom = 451.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -194,7 +195,7 @@ custom_constants/margin_bottom = 50
 [node name="Exit" type="Button" parent="GlobalMargin/VBoxContainer/SecondHBox/MarginContainer6"]
 margin_left = 50.0
 margin_top = 50.0
-margin_right = 328.0
+margin_right = 488.0
 margin_bottom = 401.0
 focus_neighbour_right = NodePath("../../MarginContainer3/More")
 focus_neighbour_bottom = NodePath("../../../MainHBox/MarginButton2/TimeTrial")
@@ -208,7 +209,7 @@ expand_icon = true
 
 [node name="MarginContainer" type="MarginContainer" parent="GlobalMargin/VBoxContainer"]
 margin_top = 910.0
-margin_right = 1524.0
+margin_right = 2161.0
 margin_bottom = 1000.0
 custom_constants/margin_right = 15
 custom_constants/margin_top = 15
@@ -218,7 +219,7 @@ custom_constants/margin_bottom = 15
 [node name="Controls" type="HBoxContainer" parent="GlobalMargin/VBoxContainer/MarginContainer"]
 margin_left = 15.0
 margin_top = 15.0
-margin_right = 1509.0
+margin_right = 2146.0
 margin_bottom = 75.0
 alignment = 1
 
@@ -270,6 +271,31 @@ margin_right = 622.0
 margin_bottom = 57.0
 theme = SubResource( 2 )
 text = "SELECT_BUTTON_WORD"
+
+[node name="MarginContainer3" type="MarginContainer" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls"]
+margin_left = 1498.0
+margin_right = 2131.0
+margin_bottom = 60.0
+custom_constants/margin_right = 35
+custom_constants/margin_left = 35
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer3"]
+margin_left = 35.0
+margin_right = 598.0
+margin_bottom = 60.0
+
+[node name="TextureRect3" type="TextureRect" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer3/HBoxContainer"]
+margin_right = 50.0
+margin_bottom = 60.0
+texture = ExtResource( 16 )
+
+[node name="Label" type="Label" parent="GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer3/HBoxContainer"]
+margin_left = 54.0
+margin_top = 2.0
+margin_right = 563.0
+margin_bottom = 57.0
+theme = SubResource( 2 )
+text = "BACK_BUTTON_WORD"
 
 [connection signal="pressed" from="GlobalMargin/VBoxContainer/MainHBox/MarginButton/LastStand" to="." method="_on_LastStand_pressed"]
 [connection signal="pressed" from="GlobalMargin/VBoxContainer/MainHBox/MarginButton2/TimeTrial" to="." method="_on_TimeTrial_pressed"]

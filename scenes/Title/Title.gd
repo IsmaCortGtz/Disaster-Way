@@ -3,20 +3,17 @@ extends Control
 var contador = 2.0
 var contadorLimit = Vector2(2, 0.4)
 var adding = false
-var gamemodesScene = preload("res://scenes/GameMode/Gamemodes.tscn")
 
 
 func _input(event):
 	
-	if (event is InputEventKey):
+	if (event is InputEventKey) and (not event.is_pressed()):
 		GameInput.new_player(0, 0, 0)
-		GameInput.remap_ui_first_player(0)
-		get_tree().change_scene_to(gamemodesScene)
+		get_tree().change_scene_to(Preloader.scenes_GameMode)
 	
-	if (event is InputEventJoypadButton):
+	if (event is InputEventJoypadButton) and (not event.is_pressed()):
 		GameInput.new_player(0, 1, event.device)
-		GameInput.remap_ui_first_player(1, event.device)
-		get_tree().change_scene_to(gamemodesScene)
+		get_tree().change_scene_to(Preloader.scenes_GameMode)
 
 func _ready():
 	GameInput.reset_player()

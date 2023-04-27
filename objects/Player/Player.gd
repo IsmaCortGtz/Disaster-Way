@@ -8,9 +8,18 @@ export var playerIndex = 1
 var initAcel = Level.playerAcel
 var velocity = Vector2.ZERO
 export var playerColor = Color8(242, 53, 84)
+onready var menuNode = get_node("/root/GameRoom/PausedLayer/PausedMenu")
 
+
+func _input(event):
+	if ((event is InputEventKey) and (GameInput.playersType[playerIndex - 1] == 0) and (not get_tree().paused) and (GameInput.keyboardUsed) and (event.scancode == KEY_ESCAPE) and (not event.is_pressed())):
+		menuNode.game_paused(playerIndex - 1)
+	
+	if ((event is InputEventJoypadButton) and (GameInput.playersType[playerIndex - 1] == 1) and (not get_tree().paused) and (GameInput.usedGamepads.has(event.device)) and (event.button_index == 11) and (not event.is_pressed())):
+		menuNode.game_paused(playerIndex - 1)
 
 func destroyed():
+	Music.breakSFX.play()
 	isDestroyed = true
 	velocity = Vector2.ZERO
 	get_node("RespawnTimer").start()
@@ -38,9 +47,10 @@ func apply_move(aceleration):
 	velocity += aceleration
 	velocity = velocity.limit_length(Level.playersMaxSpeed)
 
+
+
 func _physics_process(delta):
-	if !GameInput.isPlaying[playerIndex - 1]:
-		return
+	if !GameInput.isPlaying[playerIndex - 1]: return
 
 	var direction = GameInput.get_axis(playerIndex) if !isDestroyed else Vector2.ZERO
 	if direction == Vector2.ZERO:
