@@ -66,5 +66,9 @@ one_shot = true
 
 [node name="Coldown" type="Timer" parent="."]
 
+[node name="PlayerDeleting" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="RespawnTimer" to="." method="_on_RespawnTimer_timeout"]
 [connection signal="timeout" from="Coldown" to="." method="_on_Coldown_timeout"]
+[connection signal="timeout" from="PlayerDeleting" to="." method="_on_PlayerDeleting_timeout"]

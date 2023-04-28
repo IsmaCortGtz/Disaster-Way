@@ -1,4 +1,4 @@
-keys,en,es
+﻿keys,en,es
 PRESS_KEY_TO_START,Press a key to start,Presiona un boton para comenzar
 MUSIC_OWNER,Music created by Steven O'Brien,Musica creada por Steven O'Brien
 GAMEMODE_LAST_STANDING,Last Standig,Ultimo en Pie
@@ -13,3 +13,8 @@ START_BUTTON_WORD,Start,Iniciar
 GAME_PAUSED_TEXT,Game Paused,Juego Pausado
 GAME_RESUME_BUTTON,Resume,Reanudar
 GAME_EXIT_BUTTON,Go to main menu,Volver al menu
+FIRST_ORDINAL,1st,1.º
+SECOND_ORDINAL,2nd,2.º
+THIRD_ORDINAL,3rd,3.º
+FOURTH_ORDINAL,4th,4.º
+GAME_FINISHED_TITLE,Game Over,Juego Terminado

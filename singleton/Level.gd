@@ -17,6 +17,32 @@ var gameTimeTrialDuration = 90
 
 
 var validGameModesTypes = [1, 2]
+var gameEnded = false
+var playersPoints = [0, 0, 0, 0]
+var positions = []
+# playersNumber
+
+
+func reset_level_data():
+	gameEnded = false
+	playersPoints = [0, 0, 0, 0]
+	positions = []
+
+func restart_level():
+	reset_level_data()
+	get_node("/root/GameRoom").timer = 0
+	get_node("/root/GameRoom").playersAlive = GameInput.playersNumber
+	get_node("/root/GameRoom/PausedLayer/Clasification").visible = false
+	for player in GameInput.playersNumber:
+		get_node("/root/GameRoom/Player" + str(player + 1)).player_reset()
+
+
+func game_end():
+	if (gameModeType == 1):
+		pass
+	
+	elif (gameModeType == 2):
+		pass
 
 
 func loade_stage_code(code):

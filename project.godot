@@ -13,6 +13,8 @@ config_version=4
 config/name="Disaster Way"
 run/main_scene="res://scenes/Title/Title.tscn"
 run/low_processor_mode=true
+boot_splash/image="res://assets/images/splash.png"
+boot_splash/bg_color=Color( 0.0862745, 0.0862745, 0.0862745, 1 )
 config/icon="res://assets/images/app-icon/icon_64.png"
 config/quit_on_go_back=false
 
@@ -27,6 +29,7 @@ Preloader="*res://singleton/Preloader.gd"
 
 window/size/width=1500
 window/size/height=1000
+window/size/fullscreen=true
 window/size/test_width=1024
 window/size/test_height=600
 window/stretch/mode="viewport"
@@ -97,6 +100,10 @@ player_down={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
+
+[input_devices]
+
+pointing/emulate_mouse_from_touch=false
 
 [locale]
 

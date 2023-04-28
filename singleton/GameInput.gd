@@ -31,9 +31,9 @@ var buttons = {
 	]
 }
 
-var playerColors = [Color8(242, 53, 84), Color8(69, 27, 227), Color8(227, 27, 174), Color8(227, 80, 27)]
+var playerColors = [Color8(242, 53, 84), Color8(29, 96, 212), Color8(7, 127, 40), Color8(70, 70, 70)]
 var gamepadDeadzone = 0.5
-
+ 
 #  Input types
 #    -1 = Unsigned
 #     0 = Keyboard
@@ -95,7 +95,9 @@ func reset_player_exept_first():
 		playersIndex = [tempFirstGamepadIndex, -1, -1, -1]
 
 
+
 func _ready():
+
 	newKeyLeftEvent = InputEventKey.new()
 	newKeyRightEvent = InputEventKey.new()
 	newKeyUpEvent = InputEventKey.new()
@@ -191,3 +193,8 @@ func remap_ui_first_player(playerIndex = 0):
 		InputMap.action_add_event("ui_right", newJoyRightEvent)
 		InputMap.action_add_event("ui_accept", newJoyAcceptEvent)
 		InputMap.action_add_event("ui_cancel", newJoyCancelEvent)
+
+
+func _input(event):
+	if (event is InputEventKey) and (event.scancode == KEY_F11) and (not event.is_pressed()):
+		OS.window_fullscreen = !OS.window_fullscreen

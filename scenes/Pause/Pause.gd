@@ -20,4 +20,6 @@ func _on_Resume_pressed():
 
 func _on_Exit_pressed():
 	get_tree().paused = false
+	Music.MenuMusic.play()
+	Music.BattleMusic.stop()
 	if get_tree().change_scene_to(Preloader.scenes_GameMode) != OK: print("Error changing scene")

@@ -12,21 +12,29 @@ onready var menuNode = get_node("/root/GameRoom/PausedLayer/PausedMenu")
 
 
 func _input(event):
-	if ((event is InputEventKey) and (GameInput.playersType[playerIndex - 1] == 0) and (not get_tree().paused) and (GameInput.keyboardUsed) and (event.scancode == KEY_ESCAPE) and (not event.is_pressed())):
+	if ((event is InputEventKey) and (not Level.gameEnded) and (GameInput.playersType[playerIndex - 1] == 0) and (not get_tree().paused) and (GameInput.keyboardUsed) and (event.scancode == KEY_ESCAPE) and (not event.is_pressed())):
 		menuNode.game_paused(playerIndex - 1)
 	
-	if ((event is InputEventJoypadButton) and (GameInput.playersType[playerIndex - 1] == 1) and (not get_tree().paused) and (GameInput.usedGamepads.has(event.device)) and (event.button_index == 11) and (not event.is_pressed())):
+	if ((event is InputEventJoypadButton) and (not Level.gameEnded) and (GameInput.playersType[playerIndex - 1] == 1) and (not get_tree().paused) and (GameInput.usedGamepads.has(event.device)) and (event.button_index == 11) and (not event.is_pressed())):
 		menuNode.game_paused(playerIndex - 1)
 
 func destroyed():
+	if (Level.gameEnded): return
 	Music.breakSFX.play()
 	isDestroyed = true
 	velocity = Vector2.ZERO
-	get_node("RespawnTimer").start()
-	get_node("DestroyParticles").emitting = true
+	get_node("CollisionShape2D").set_deferred("disabled", true)
 	get_node("DestroyParticles").restart()
+	get_node("DestroyParticles").emitting = true
 	get_node("Sprite").visible = false
-
+	if (Level.gameModeType == 2):
+		if Level.playersPoints[playerIndex - 1] == null: Level.playersPoints[playerIndex - 1] = 0
+		Level.playersPoints[playerIndex - 1] += 1
+		get_node("RespawnTimer").start()
+		
+	elif (Level.gameModeType == 1):
+		Level.playersPoints[playerIndex - 1] = get_parent().timer
+		get_parent().player_destroyed_last(playerIndex - 1)
 
 
 func _ready():
@@ -50,6 +58,9 @@ func apply_move(aceleration):
 
 
 func _physics_process(delta):
+	if Level.gameEnded: 
+		$Particles2D.emitting = false
+		return
 	if !GameInput.isPlaying[playerIndex - 1]: return
 
 	var direction = GameInput.get_axis(playerIndex) if !isDestroyed else Vector2.ZERO
@@ -65,10 +76,18 @@ func _physics_process(delta):
 
 
 
-
+func player_reset():
+	position = firstPos
+	get_node("CollisionShape2D").set_deferred("disabled", false)
+	get_node("Sprite").visible = true
+	isDestroyed = false
+	get_node("Sprite").modulate.a = 1
+	get_node("Particles2D").modulate.a = 1
+	isColdown = false
 
 func _on_RespawnTimer_timeout():
 	position = firstPos
+	get_node("CollisionShape2D").set_deferred("disabled", false)
 	get_node("Sprite").visible = true
 	isDestroyed = false
 	get_node("Sprite").modulate.a = 0.5

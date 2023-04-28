@@ -24,6 +24,7 @@ func spawnBala():
 
 
 func _process(delta):
+	if Level.gameEnded: return
 	contador += 1 * delta
 	if (contador >= time):
 		time = rand_range(Level.bulletsControllCooldown.x, Level.bulletsControllCooldown.y)
