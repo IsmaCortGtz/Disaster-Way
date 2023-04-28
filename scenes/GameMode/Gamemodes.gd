@@ -18,10 +18,7 @@ func _on_Exit_pressed():
 
 
 func _on_Back_pressed():
-	if ("es" in TranslationServer.get_locale()):
-		TranslationServer.set_locale("en")
-	else: 
-		TranslationServer.set_locale("es")
+	pass
 
 
 func _on_TimeTrial_pressed():
@@ -32,3 +29,11 @@ func _on_TimeTrial_pressed():
 func _on_LastStand_pressed():
 	Level.loade_stage_code("1-800-4500-1500-1800-0.5-3.5-60")
 	if get_tree().change_scene_to(Preloader.scenes_playerSelect) != OK: print("error changing scene")
+
+
+func _on_Settings_pressed():
+	if get_tree().change_scene_to(Preloader.scenes_Settings) != OK: print("error changing scene")
+
+
+func _on_More_pressed():
+	if get_tree().change_scene_to(Preloader.scenes_More) != OK: print("error changing scene")

@@ -1,6 +1,6 @@
 ﻿keys,en,es
 PRESS_KEY_TO_START,Press a key to start,Presiona un boton para comenzar
-MUSIC_OWNER,Music created by Steven O'Brien,Musica creada por Steven O'Brien
+MUSIC_OWNER,Music created by Steven O'Brien,Música creada por Steven O'Brien
 GAMEMODE_LAST_STANDING,Last Standig,Ultimo en Pie
 GAMEMODE_TIME_TRIAL,Time Trial,Contrarreloj
 PLAYER_WORD_SELECTING,Player,Jugador
@@ -18,3 +18,14 @@ SECOND_ORDINAL,2nd,2.º
 THIRD_ORDINAL,3rd,3.º
 FOURTH_ORDINAL,4th,4.º
 GAME_FINISHED_TITLE,Game Over,Juego Terminado
+SETTINGS_SCREEN_SOUNS,Sound,Sonido
+SETTINGS_SCREEN_INTERFACE,Interface,Interfaz
+SETTINGS_SCREEN_WINDOW,Windows,Ventana
+SETTINGS_GENERAL_VOLUME,General Volume,Volumen General
+SETTINGS_MUSIC_VOLUME,Music Volum,Volumen de Música
+SETTINGS_SFX_VOLUME,SFX Volume,Volumen de SFX
+SETTINGS_LANGUAGE_ENGLISH,English,Inglés
+SETTINGS_LANGUAGE_SPANISH,Spanish,Español
+SETTINGS_FULLSCREEN,Fullscreen,Pantalla completa
+SETTINGS_LANGUAGE_TITLE,Language,Idioma
+SETTING_BACK_DEFAULT,Default settings,Ajustes por defecto

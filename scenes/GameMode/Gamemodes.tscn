@@ -299,5 +299,7 @@ text = "BACK_BUTTON_WORD"
 
 [connection signal="pressed" from="GlobalMargin/VBoxContainer/MainHBox/MarginButton/LastStand" to="." method="_on_LastStand_pressed"]
 [connection signal="pressed" from="GlobalMargin/VBoxContainer/MainHBox/MarginButton2/TimeTrial" to="." method="_on_TimeTrial_pressed"]
+[connection signal="pressed" from="GlobalMargin/VBoxContainer/SecondHBox/MarginContainer3/More" to="." method="_on_More_pressed"]
+[connection signal="pressed" from="GlobalMargin/VBoxContainer/SecondHBox/MarginContainer4/Settings" to="." method="_on_Settings_pressed"]
 [connection signal="pressed" from="GlobalMargin/VBoxContainer/SecondHBox/MarginContainer5/Back" to="." method="_on_Back_pressed"]
 [connection signal="pressed" from="GlobalMargin/VBoxContainer/SecondHBox/MarginContainer6/Exit" to="." method="_on_Exit_pressed"]

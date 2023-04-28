@@ -9,11 +9,11 @@ func _input(event):
 	
 	if (event is InputEventKey) and (not event.is_pressed()):
 		GameInput.new_player(0, 0, 0)
-		get_tree().change_scene_to(Preloader.scenes_GameMode)
+		if get_tree().change_scene_to(Preloader.scenes_GameMode) != OK: print("error changing scene")
 	
 	if (event is InputEventJoypadButton) and (not event.is_pressed()):
 		GameInput.new_player(0, 1, event.device)
-		get_tree().change_scene_to(Preloader.scenes_GameMode)
+		if get_tree().change_scene_to(Preloader.scenes_GameMode) != OK: print("error changing scene")
 
 func _ready():
 	GameInput.reset_player()

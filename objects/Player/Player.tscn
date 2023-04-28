@@ -27,6 +27,7 @@ shape = SubResource( 1 )
 
 [node name="Particles2D" type="CPUParticles2D" parent="."]
 position = Vector2( -16, -16 )
+emitting = false
 amount = 15
 lifetime = 0.3
 local_coords = false

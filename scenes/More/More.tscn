@@ -1,0 +1,248 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/themes/buttons-gray.tres" type="Theme" id=1]
+[ext_resource path="res://assets/fonts/Rubik-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/images/icons/buttons/key.enter.svg" type="Texture" id=3]
+[ext_resource path="res://assets/images/icons/buttons/key.move.svg" type="Texture" id=4]
+[ext_resource path="res://assets/images/icons/buttons/key.esc.svg" type="Texture" id=5]
+[ext_resource path="res://assets/themes/buttons-blue.tres" type="Theme" id=6]
+[ext_resource path="res://assets/themes/Settings-buttons.tres" type="Theme" id=7]
+[ext_resource path="res://scenes/More/More.gd" type="Script" id=8]
+[ext_resource path="res://assets/themes/buttons-green.tres" type="Theme" id=10]
+
+[sub_resource type="DynamicFont" id=13]
+size = 70
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+draw_center = false
+
+[sub_resource type="DynamicFont" id=7]
+size = 70
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=11]
+default_font = SubResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 45
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=12]
+default_font = SubResource( 3 )
+
+[node name="More" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 3333, 204 )
+script = ExtResource( 8 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 2131.0
+margin_bottom = 906.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 5
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+margin_right = 2126.0
+margin_bottom = 906.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 7 )
+follow_focus = true
+scroll_horizontal_enabled = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer"]
+margin_right = 2114.0
+margin_bottom = 970.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Subtitle" type="MarginContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+margin_right = 2114.0
+margin_bottom = 150.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 30
+custom_constants/margin_left = 30
+custom_constants/margin_bottom = 30
+
+[node name="Label" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/Subtitle"]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 2094.0
+margin_bottom = 120.0
+custom_colors/font_color_disabled = Color( 0.862745, 1, 0.862745, 1 )
+custom_colors/font_color_focus = Color( 0.862745, 1, 0.862745, 1 )
+custom_colors/font_color = Color( 0.862745, 1, 0.862745, 1 )
+custom_colors/font_color_hover = Color( 0.862745, 1, 0.862745, 1 )
+custom_colors/font_color_pressed = Color( 0.862745, 1, 0.862745, 1 )
+custom_fonts/font = SubResource( 13 )
+custom_styles/focus = SubResource( 14 )
+disabled = true
+text = "Información"
+flat = true
+align = 0
+
+[node name="ExtraPage" type="MarginContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+margin_top = 154.0
+margin_right = 2114.0
+margin_bottom = 374.0
+rect_min_size = Vector2( 0, 220 )
+custom_constants/margin_right = 15
+custom_constants/margin_top = 15
+custom_constants/margin_left = 15
+custom_constants/margin_bottom = 15
+
+[node name="Button" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ExtraPage"]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 2099.0
+margin_bottom = 205.0
+theme = ExtResource( 1 )
+text = "Guia"
+
+[node name="Subtitle2" type="MarginContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+margin_top = 378.0
+margin_right = 2114.0
+margin_bottom = 522.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 30
+custom_constants/margin_left = 30
+custom_constants/margin_bottom = 30
+
+[node name="Label" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/Subtitle2"]
+modulate = Color( 0.835294, 1, 0.835294, 1 )
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 2094.0
+margin_bottom = 114.0
+theme = SubResource( 11 )
+text = "Escenarios extras"
+valign = 1
+
+[node name="ExtraStage" type="MarginContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+margin_top = 526.0
+margin_right = 2114.0
+margin_bottom = 746.0
+rect_min_size = Vector2( 0, 220 )
+custom_constants/margin_right = 15
+custom_constants/margin_top = 15
+custom_constants/margin_left = 15
+custom_constants/margin_bottom = 15
+
+[node name="Button" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ExtraStage"]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 2099.0
+margin_bottom = 205.0
+theme = ExtResource( 6 )
+text = "Test"
+expand_icon = true
+
+[node name="AddStage" type="MarginContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+margin_top = 750.0
+margin_right = 2114.0
+margin_bottom = 970.0
+rect_min_size = Vector2( 0, 220 )
+custom_constants/margin_right = 15
+custom_constants/margin_top = 15
+custom_constants/margin_left = 15
+custom_constants/margin_bottom = 15
+
+[node name="Button" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/AddStage"]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 2099.0
+margin_bottom = 205.0
+theme = ExtResource( 10 )
+text = "Agregar"
+icon_align = 1
+expand_icon = true
+
+[node name="ControlsMargin" type="MarginContainer" parent="."]
+margin_top = 910.0
+margin_right = 2131.0
+margin_bottom = 1000.0
+custom_constants/margin_top = 15
+custom_constants/margin_bottom = 15
+
+[node name="Controls" type="HBoxContainer" parent="ControlsMargin"]
+margin_top = 15.0
+margin_right = 2131.0
+margin_bottom = 75.0
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="ControlsMargin/Controls"]
+margin_right = 798.0
+margin_bottom = 60.0
+custom_constants/margin_right = 35
+custom_constants/margin_left = 35
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ControlsMargin/Controls/MarginContainer"]
+margin_left = 35.0
+margin_right = 763.0
+margin_bottom = 60.0
+
+[node name="TextureRect3" type="TextureRect" parent="ControlsMargin/Controls/MarginContainer/HBoxContainer"]
+margin_right = 212.0
+margin_bottom = 60.0
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="ControlsMargin/Controls/MarginContainer/HBoxContainer"]
+margin_left = 216.0
+margin_top = 2.0
+margin_right = 728.0
+margin_bottom = 57.0
+theme = SubResource( 12 )
+text = "MOVE_BUTTON_WORD"
+
+[node name="MarginContainer2" type="MarginContainer" parent="ControlsMargin/Controls"]
+margin_left = 802.0
+margin_right = 1494.0
+margin_bottom = 60.0
+custom_constants/margin_right = 35
+custom_constants/margin_left = 35
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ControlsMargin/Controls/MarginContainer2"]
+margin_left = 35.0
+margin_right = 657.0
+margin_bottom = 60.0
+
+[node name="TextureRect3" type="TextureRect" parent="ControlsMargin/Controls/MarginContainer2/HBoxContainer"]
+margin_right = 60.0
+margin_bottom = 60.0
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="ControlsMargin/Controls/MarginContainer2/HBoxContainer"]
+margin_left = 64.0
+margin_top = 2.0
+margin_right = 622.0
+margin_bottom = 57.0
+theme = SubResource( 12 )
+text = "SELECT_BUTTON_WORD"
+
+[node name="MarginContainer3" type="MarginContainer" parent="ControlsMargin/Controls"]
+margin_left = 1498.0
+margin_right = 2131.0
+margin_bottom = 60.0
+custom_constants/margin_right = 35
+custom_constants/margin_left = 35
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ControlsMargin/Controls/MarginContainer3"]
+margin_left = 35.0
+margin_right = 598.0
+margin_bottom = 60.0
+
+[node name="TextureRect3" type="TextureRect" parent="ControlsMargin/Controls/MarginContainer3/HBoxContainer"]
+margin_right = 50.0
+margin_bottom = 60.0
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="ControlsMargin/Controls/MarginContainer3/HBoxContainer"]
+margin_left = 54.0
+margin_top = 2.0
+margin_right = 563.0
+margin_bottom = 57.0
+theme = SubResource( 12 )
+text = "BACK_BUTTON_WORD"
