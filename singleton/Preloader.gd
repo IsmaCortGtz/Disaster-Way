@@ -13,3 +13,7 @@ var character_square = preload("res://objects/Player/square.svg")
 var character_hexagon = preload("res://objects/Player/hexagon.svg")
 var character_pentagon = preload("res://objects/Player/pentagon.svg")
 var characters_sprite = [character_square, character_hexagon, character_pentagon]
+
+var enemie_normalBala = preload("res://objects/Bullet/Bullet.tscn")
+var enemie_demonBala = preload("res://objects/DemonBullet/DemonBullet.tscn")
+var enemie_miniBullet = preload("res://objects/MiniBullet/MiniBullet.tscn")

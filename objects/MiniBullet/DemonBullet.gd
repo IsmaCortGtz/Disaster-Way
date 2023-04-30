@@ -1,4 +1,4 @@
-extends Area2D
+extends Node2D
 
 var player = Vector2(0, 0)
 var move = Vector2(0, 0)
@@ -30,5 +30,9 @@ func _process(delta):
 
 func _on_Bullet_body_entered(body):
 	if (body.isPlayer and !body.isDestroyed and !body.isColdown):
-		if body.thirdSpecial: queue_free()
-		else: body.destroyed()
+		#Level.bulletActivate = false
+		if body.thirdSpecial:
+			queue_free()
+			return
+		body.destroyed()
+		#Level.restart_level()

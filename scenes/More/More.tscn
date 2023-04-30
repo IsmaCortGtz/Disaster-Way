@@ -132,21 +132,21 @@ margin_bottom = 1224.0
 [node name="ExtraStage" parent="MarginContainer/ScrollContainer/VBoxContainer/StageContainer" instance=ExtResource( 6 )]
 margin_right = 2114.0
 margin_bottom = 230.0
-stageCode = "2-800-4500-700-1000-1-5-90-3"
+stageCode = "2-800-4500-700-1000-1-5-90-3-0-0"
 stageName = "Easy Peasy"
 
 [node name="ExtraStage2" parent="MarginContainer/ScrollContainer/VBoxContainer/StageContainer" instance=ExtResource( 6 )]
 margin_top = 234.0
 margin_right = 2114.0
 margin_bottom = 464.0
-stageCode = "2-800-3000-1000-1400-0.6-3.5-60-2"
+stageCode = "2-800-3000-1000-1400-0.8-3.5-60-2-1-10"
 stageName = "Middle"
 
 [node name="ExtraStage3" parent="MarginContainer/ScrollContainer/VBoxContainer/StageContainer" instance=ExtResource( 6 )]
 margin_top = 468.0
 margin_right = 2114.0
 margin_bottom = 698.0
-stageCode = "1-1000-5000-1800-2000-0.5-1.5-10-1"
+stageCode = "1-1000-5000-1800-2000-0.5-1.5-10-1-1-3"
 stageName = "Demon"
 
 [node name="AddStage" type="MarginContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
