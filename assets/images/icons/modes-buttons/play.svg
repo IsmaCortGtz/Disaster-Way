@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="600"
+   height="600"
+   viewBox="0 0 158.75 158.75"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="play.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:lockguides="true"
+     inkscape:zoom="0.42048261"
+     inkscape:cx="-199.77045"
+     inkscape:cy="223.55265"
+     inkscape:window-width="1366"
+     inkscape:window-height="697"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       aria-label=""
+       id="text8286"
+       style="font-size:132.292px;line-height:1.25;word-spacing:0px;fill:#ffffff;stroke-width:0.264583">
+      <path
+         d="m 109.63809,80.73704 -59.040478,32.75002 q -1.033531,0.58136 -1.744084,0.19379 -0.710553,-0.45217 -0.710553,-1.61489 V 46.630507 q 0,-1.162723 0.710553,-1.550297 0.710553,-0.387574 1.744084,0.129191 l 59.040478,32.750024 q 0.96893,0.581361 0.96893,1.421105 0,0.839745 -0.96893,1.35651 z"
+         style="font-family:'Hack Nerd Font Mono';-inkscape-font-specification:'Hack Nerd Font Mono'"
+         id="path9383" />
+    </g>
+  </g>
+</svg>

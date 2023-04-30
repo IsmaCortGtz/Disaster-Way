@@ -1,6 +1,15 @@
-[gd_resource type="Theme" load_steps=7 format=2]
+[gd_resource type="Theme" load_steps=8 format=2]
 
 [ext_resource path="res://assets/fonts/Rubik-Bold.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.403922, 0.572549, 0.447059, 1 )
+border_width_bottom = 40
+border_color = Color( 0.270588, 0.341176, 0.290196, 1 )
+corner_radius_top_left = 70
+corner_radius_top_right = 70
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 1, 0, 0, 1 )
@@ -53,6 +62,7 @@ font_data = ExtResource( 1 )
 
 [resource]
 default_font = SubResource( 5 )
+Button/styles/disabled = SubResource( 6 )
 Button/styles/focus = SubResource( 3 )
 Button/styles/hover = SubResource( 2 )
 Button/styles/normal = SubResource( 1 )

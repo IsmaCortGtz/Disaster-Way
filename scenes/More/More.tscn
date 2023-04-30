@@ -1,14 +1,15 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/themes/buttons-gray.tres" type="Theme" id=1]
 [ext_resource path="res://assets/fonts/Rubik-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/images/icons/buttons/key.enter.svg" type="Texture" id=3]
 [ext_resource path="res://assets/images/icons/buttons/key.move.svg" type="Texture" id=4]
 [ext_resource path="res://assets/images/icons/buttons/key.esc.svg" type="Texture" id=5]
-[ext_resource path="res://assets/themes/buttons-blue.tres" type="Theme" id=6]
+[ext_resource path="res://objects/ExtraStage/ExtraStage.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/themes/Settings-buttons.tres" type="Theme" id=7]
 [ext_resource path="res://scenes/More/More.gd" type="Script" id=8]
 [ext_resource path="res://assets/themes/buttons-green.tres" type="Theme" id=10]
+[ext_resource path="res://assets/images/icons/modes-buttons/guide.svg" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=13]
 size = 70
@@ -24,12 +25,12 @@ font_data = ExtResource( 2 )
 [sub_resource type="Theme" id=11]
 default_font = SubResource( 7 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=15]
 size = 45
 font_data = ExtResource( 2 )
 
 [sub_resource type="Theme" id=12]
-default_font = SubResource( 3 )
+default_font = SubResource( 15 )
 
 [node name="More" type="VBoxContainer"]
 anchor_right = 1.0
@@ -55,7 +56,7 @@ scroll_horizontal_enabled = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer"]
 margin_right = 2114.0
-margin_bottom = 970.0
+margin_bottom = 1448.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -80,7 +81,7 @@ custom_colors/font_color_pressed = Color( 0.862745, 1, 0.862745, 1 )
 custom_fonts/font = SubResource( 13 )
 custom_styles/focus = SubResource( 14 )
 disabled = true
-text = "Información"
+text = "MORE_INFORMATION_TITILE"
 flat = true
 align = 0
 
@@ -100,7 +101,9 @@ margin_top = 15.0
 margin_right = 2099.0
 margin_bottom = 205.0
 theme = ExtResource( 1 )
-text = "Guia"
+icon = ExtResource( 11 )
+icon_align = 1
+expand_icon = true
 
 [node name="Subtitle2" type="MarginContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 margin_top = 378.0
@@ -118,32 +121,38 @@ margin_top = 30.0
 margin_right = 2094.0
 margin_bottom = 114.0
 theme = SubResource( 11 )
-text = "Escenarios extras"
+text = "MORE_EXTRA_STAGES_TITLE"
 valign = 1
 
-[node name="ExtraStage" type="MarginContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+[node name="StageContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 margin_top = 526.0
 margin_right = 2114.0
-margin_bottom = 746.0
-rect_min_size = Vector2( 0, 220 )
-custom_constants/margin_right = 15
-custom_constants/margin_top = 15
-custom_constants/margin_left = 15
-custom_constants/margin_bottom = 15
+margin_bottom = 1224.0
 
-[node name="Button" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ExtraStage"]
-margin_left = 15.0
-margin_top = 15.0
-margin_right = 2099.0
-margin_bottom = 205.0
-theme = ExtResource( 6 )
-text = "Test"
-expand_icon = true
+[node name="ExtraStage" parent="MarginContainer/ScrollContainer/VBoxContainer/StageContainer" instance=ExtResource( 6 )]
+margin_right = 2114.0
+margin_bottom = 230.0
+stageCode = "2-800-4500-700-1000-1-5-90-3"
+stageName = "Easy Peasy"
+
+[node name="ExtraStage2" parent="MarginContainer/ScrollContainer/VBoxContainer/StageContainer" instance=ExtResource( 6 )]
+margin_top = 234.0
+margin_right = 2114.0
+margin_bottom = 464.0
+stageCode = "2-800-3000-1000-1400-0.6-3.5-60-2"
+stageName = "Middle"
+
+[node name="ExtraStage3" parent="MarginContainer/ScrollContainer/VBoxContainer/StageContainer" instance=ExtResource( 6 )]
+margin_top = 468.0
+margin_right = 2114.0
+margin_bottom = 698.0
+stageCode = "1-1000-5000-1800-2000-0.5-1.5-10-1"
+stageName = "Demon"
 
 [node name="AddStage" type="MarginContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
-margin_top = 750.0
+margin_top = 1228.0
 margin_right = 2114.0
-margin_bottom = 970.0
+margin_bottom = 1448.0
 rect_min_size = Vector2( 0, 220 )
 custom_constants/margin_right = 15
 custom_constants/margin_top = 15
@@ -156,6 +165,7 @@ margin_top = 15.0
 margin_right = 2099.0
 margin_bottom = 205.0
 theme = ExtResource( 10 )
+disabled = true
 text = "Agregar"
 icon_align = 1
 expand_icon = true
@@ -246,3 +256,7 @@ margin_right = 563.0
 margin_bottom = 57.0
 theme = SubResource( 12 )
 text = "BACK_BUTTON_WORD"
+
+[connection signal="focus_entered" from="MarginContainer/ScrollContainer/VBoxContainer/ExtraPage/Button" to="." method="_on_Button_focus_entered"]
+[connection signal="pressed" from="MarginContainer/ScrollContainer/VBoxContainer/ExtraPage/Button" to="." method="_on_Button_pressed"]
+[connection signal="focus_entered" from="MarginContainer/ScrollContainer/VBoxContainer/AddStage/Button" to="." method="_on_Button_focus_entered"]

@@ -17,6 +17,7 @@ func load_score():
 		get_node("MarginContainer/VBoxContainer/VBoxContainer/MarginContainer" + str(index)).visible = true
 		get_node("MarginContainer/VBoxContainer/VBoxContainer/MarginContainer" + str(index) + "/HBoxContainer/MarginContainer/Label").text = tr("PLAYER_WORD_SELECTING") + " " + str(Level.positions[index] + 1)
 		get_node("MarginContainer/VBoxContainer/VBoxContainer/MarginContainer" + str(index) + "/HBoxContainer/MarginContainer3/HBoxContainer/MarginContainer/Label").text = currentPoints + unit
+		get_node("MarginContainer/VBoxContainer/VBoxContainer/MarginContainer" + str(index) + "/HBoxContainer/MarginContainer4/TextureRect").texture = Preloader.characters_sprite[Level.playerCharacters[Level.positions[index]]]
 		get_node("MarginContainer/VBoxContainer/VBoxContainer/MarginContainer" + str(index) + "/HBoxContainer/MarginContainer4/TextureRect").modulate = GameInput.playerColors[Level.positions[index]]
 
 func _ready():
@@ -58,6 +59,7 @@ func _on_Clasification_visibility_changed():
 
 
 func _on_Menu_pressed():
+	Music.clickSFX.play()
 	Level.reset_level_data()
 	Music.MenuMusic.play()
 	Music.BattleMusic.stop()
@@ -65,4 +67,9 @@ func _on_Menu_pressed():
 
 
 func _on_PlayAgain_pressed():
+	Music.clickSFX.play()
 	Level.restart_level()
+
+
+func _on_button_focus_entered():
+	Music.moveSFX.play()

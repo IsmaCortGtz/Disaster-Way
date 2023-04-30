@@ -30,7 +30,7 @@ func _process(delta):
 	if get_tree().paused or Level.gameEnded: return
 	timer += 1 * delta
 	get_node("Label").text = str(int(timer))
-	if (timer >= Level.gameTimeTrialDuration): _on_TimeTrialTimer_timeout()
+	if (timer >= Level.gameTimeTrialDuration) and (Level.gameModeType == 2): _on_TimeTrialTimer_timeout()
 
 
 func player_destroyed_last(player):

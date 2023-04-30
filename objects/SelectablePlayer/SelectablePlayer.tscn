@@ -1,13 +1,24 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/themes/buttons-blue.tres" type="Theme" id=1]
 [ext_resource path="res://assets/fonts/Rubik-Bold.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://objects/Player/player.svg" type="Texture" id=3]
+[ext_resource path="res://objects/Player/square.svg" type="Texture" id=3]
 [ext_resource path="res://objects/SelectablePlayer/SelectablePlayer.gd" type="Script" id=4]
 [ext_resource path="res://assets/images/icons/buttons/key.d.svg" type="Texture" id=5]
 [ext_resource path="res://assets/images/icons/select-arrows/right.svg" type="Texture" id=6]
 [ext_resource path="res://assets/images/icons/select-arrows/right.press.svg" type="Texture" id=7]
 [ext_resource path="res://assets/images/icons/buttons/key.a.svg" type="Texture" id=8]
+[ext_resource path="res://assets/sounds/sfx/page.wav" type="AudioStream" id=9]
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0, 0, 0.0862745 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="Theme" id=8]
+Panel/styles/panel = SubResource( 7 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -41,12 +52,12 @@ custom_constants/margin_left = 25
 custom_constants/margin_bottom = 25
 script = ExtResource( 4 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Panel" type="Panel" parent="."]
 margin_left = 25.0
 margin_top = 25.0
 margin_right = 1475.0
 margin_bottom = 975.0
-color = Color( 0, 0, 0, 0.0862745 )
+theme = SubResource( 8 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 visible = false
@@ -57,15 +68,15 @@ margin_bottom = 975.0
 alignment = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
-margin_right = 642.0
+margin_right = 637.0
 margin_bottom = 950.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Player-left" type="TextureButton" parent="HBoxContainer/CenterContainer"]
-margin_left = 271.0
+margin_left = 268.0
 margin_top = 425.0
-margin_right = 371.0
+margin_right = 368.0
 margin_bottom = 525.0
 focus_mode = 0
 theme = ExtResource( 1 )
@@ -92,12 +103,12 @@ wait_time = 0.1
 one_shot = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 646.0
-margin_right = 803.0
+margin_left = 641.0
+margin_right = 809.0
 margin_bottom = 950.0
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
-margin_right = 157.0
+margin_right = 168.0
 margin_bottom = 473.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -109,7 +120,7 @@ custom_constants/margin_bottom = 20
 [node name="Player-image" type="TextureRect" parent="HBoxContainer/VBoxContainer/MarginContainer"]
 margin_left = 20.0
 margin_top = 30.0
-margin_right = 137.0
+margin_right = 148.0
 margin_bottom = 453.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -118,7 +129,7 @@ stretch_mode = 6
 
 [node name="Player Num" type="Label" parent="HBoxContainer/VBoxContainer"]
 margin_top = 477.0
-margin_right = 157.0
+margin_right = 168.0
 margin_bottom = 950.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -128,16 +139,16 @@ align = 1
 valign = 1
 
 [node name="CenterContainer2" type="CenterContainer" parent="HBoxContainer"]
-margin_left = 807.0
+margin_left = 813.0
 margin_right = 1450.0
 margin_bottom = 950.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Player-right" type="TextureButton" parent="HBoxContainer/CenterContainer2"]
-margin_left = 271.0
+margin_left = 268.0
 margin_top = 425.0
-margin_right = 371.0
+margin_right = 368.0
 margin_bottom = 525.0
 focus_mode = 0
 theme = ExtResource( 1 )
@@ -217,6 +228,11 @@ align = 1
 valign = 1
 autowrap = true
 clip_text = true
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = 7.0
+bus = "SFX"
 
 [connection signal="pressed" from="HBoxContainer/CenterContainer/Player-left" to="." method="_on_Playerleft_pressed"]
 [connection signal="timeout" from="HBoxContainer/CenterContainer/Player-left/TimerLeft" to="." method="_on_TimerLeft_timeout"]

@@ -6,9 +6,11 @@ onready var sfxVolumeSlider = get_node("MarginContainer/ScrollContainer/VBoxCont
 onready var exitCheckBox = get_node("MarginContainer/ScrollContainer/VBoxContainer/FullscreenContainer/MarginContainer/CheckButton")
 onready var languageMenu = get_node("MarginContainer/ScrollContainer/VBoxContainer/LanguageContainer/MarginContainer2/HBoxContainer/OptionButton")
 var lagunagesIndex = ["es", "en"]
+var sliderStep = 0.02
 
 func _input(event):
 	if event.is_action_released("ui_cancel"):
+		Music.outSFX.play()
 		if get_tree().change_scene_to(Preloader.scenes_GameMode) != OK: print ("error changing scene")
 
 
@@ -26,6 +28,10 @@ func get_locale():
 
 
 func _ready():
+	if GameInput.playersType[0] == 1: sliderStep = 0.1
+	masterVolumeSlider.step = sliderStep
+	musicVolumeSlider.step = sliderStep
+	sfxVolumeSlider.step = sliderStep
 	get_node("ControlsMargin/Controls/MarginContainer/HBoxContainer/TextureRect3").texture = GameInput.get_button_icon_image("move")
 	get_node("ControlsMargin/Controls/MarginContainer2/HBoxContainer/TextureRect3").texture = GameInput.get_button_icon_image("accept")
 	get_node("ControlsMargin/Controls/MarginContainer3/HBoxContainer/TextureRect3").texture = GameInput.get_button_icon_image("back")
@@ -39,32 +45,44 @@ func load_settings():
 	exitCheckBox.pressed = OS.window_fullscreen
 	languageMenu.selected = lagunagesIndex.find(get_locale())
 
+func _on_button_focus_entered():
+	Music.moveSFX.play()
 
 func _on_General_value_changed(value):
 	Music.set_volume("Master", value)
+	Music.moveSFX.play()
 	Settings.change_value("generalVolume", value)
 
 
 func _on_Music_value_changed(value):
 	Music.set_volume("Music", value)
+	Music.moveSFX.play()
 	Settings.change_value("musicVolume", value)
 
 
 func _on_SFX_value_changed(value):
 	Music.set_volume("SFX", value)
+	Music.moveSFX.play()
 	Settings.change_value("sfxVolume", value)
 
 
 func _on_CheckButton_toggled(button_pressed):
+	Music.pageSFX.play()
 	OS.window_fullscreen = button_pressed
 	Settings.change_value("fullScreen", button_pressed)
 
 
 func _on_OptionButton_item_selected(index):
+	Music.clickSFX.play()
 	TranslationServer.set_locale(lagunagesIndex[index])
 	Settings.change_value("language", lagunagesIndex[index])
 
 
 func _on_DefaultSettings_pressed():
+	Music.clickSFX.play()
 	Settings.default_settings()
 	load_settings()
+
+
+func _on_OptionButton_pressed():
+	Music.clickSFX.play()

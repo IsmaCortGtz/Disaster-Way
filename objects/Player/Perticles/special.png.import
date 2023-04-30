@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player.svg-58061f1c642a2970f13934f978e7d057.stex"
+path="res://.import/special.png-a2b9c7d6352b3aac7a45ac36adcf0a12.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/Player/player.svg"
-dest_files=[ "res://.import/player.svg-58061f1c642a2970f13934f978e7d057.stex" ]
+source_file="res://objects/Player/Perticles/special.png"
+dest_files=[ "res://.import/special.png-a2b9c7d6352b3aac7a45ac36adcf0a12.stex" ]
 
 [params]
 
@@ -24,7 +24,7 @@ flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=false
+process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false

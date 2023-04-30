@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="139.99998"
+   height="140"
+   viewBox="0 0 37.041662 37.041666"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename=".\hexagon.svg"
+   inkscape:export-xdpi="192"
+   inkscape:export-ydpi="192"
+   sodipodi:docname="special.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.6857143"
+     inkscape:cx="49.237288"
+     inkscape:cy="70"
+     inkscape:window-width="1366"
+     inkscape:window-height="697"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <defs
+     id="defs2">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter6296"
+       x="-0.23778068"
+       y="-0.23778068"
+       width="1.4755614"
+       height="1.4755614">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.6699134"
+         id="feGaussianBlur6298" />
+    </filter>
+  </defs>
+  <rect
+     style="display:inline;fill:#c804ff;fill-opacity:0.41958;stroke-width:28.799;stroke-linecap:round;stroke-linejoin:round;filter:url(#filter6296)"
+     id="rect3147-6"
+     width="37.041664"
+     height="37.041664"
+     x="0"
+     y="1.7763568e-15"
+     rx="10.583333"
+     ry="10.583333" />
+</svg>

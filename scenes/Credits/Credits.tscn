@@ -1,0 +1,323 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://assets/images/icons/buttons/key.esc.svg" type="Texture" id=1]
+[ext_resource path="res://assets/fonts/Rubik-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scenes/Credits/Credits.gd" type="Script" id=4]
+[ext_resource path="res://assets/images/icons/buttons/key.a.svg" type="Texture" id=5]
+[ext_resource path="res://assets/themes/buttons-blue.tres" type="Theme" id=6]
+[ext_resource path="res://assets/images/icons/select-arrows/right.svg" type="Texture" id=7]
+[ext_resource path="res://assets/images/icons/select-arrows/right.press.svg" type="Texture" id=8]
+[ext_resource path="res://assets/images/icons/buttons/key.d.svg" type="Texture" id=9]
+[ext_resource path="res://assets/fonts/Rubik-Italic.ttf" type="DynamicFontData" id=10]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.235294 )
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="Theme" id=2]
+Panel/styles/panel = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 100
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=6]
+default_font = SubResource( 5 )
+Label/colors/font_color = Color( 0.941176, 1, 0.478431, 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=8]
+default_font = SubResource( 7 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 35
+font_data = ExtResource( 10 )
+
+[sub_resource type="Theme" id=10]
+default_font = SubResource( 9 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 45
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=4]
+default_font = SubResource( 3 )
+
+[node name="Credits" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 1500.0
+margin_bottom = 911.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
+margin_right = 150.0
+margin_bottom = 911.0
+custom_constants/margin_right = 25
+custom_constants/margin_left = 25
+
+[node name="CenterContainer2" type="CenterContainer" parent="HBoxContainer/MarginContainer2"]
+margin_left = 25.0
+margin_right = 125.0
+margin_bottom = 911.0
+size_flags_vertical = 3
+
+[node name="Player-left" type="TextureButton" parent="HBoxContainer/MarginContainer2/CenterContainer2"]
+self_modulate = Color( 0.905882, 0.286275, 0.286275, 1 )
+margin_top = 405.0
+margin_right = 100.0
+margin_bottom = 505.0
+focus_mode = 0
+theme = ExtResource( 6 )
+toggle_mode = true
+enabled_focus_mode = 0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+stretch_mode = 5
+flip_h = true
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/MarginContainer2/CenterContainer2/Player-left"]
+anchor_left = 0.901
+anchor_top = 0.451
+anchor_right = 0.901
+anchor_bottom = 0.451
+margin_left = -50.0
+margin_top = -25.0
+margin_bottom = 25.0
+size_flags_horizontal = 9
+texture = ExtResource( 5 )
+
+[node name="LeftTimer" type="Timer" parent="HBoxContainer/MarginContainer2/CenterContainer2/Player-left"]
+wait_time = 0.1
+one_shot = true
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+margin_left = 154.0
+margin_right = 1346.0
+margin_bottom = 911.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_top = 50
+custom_constants/margin_bottom = 50
+
+[node name="Panel" type="Panel" parent="HBoxContainer/MarginContainer"]
+margin_top = 50.0
+margin_right = 1192.0
+margin_bottom = 861.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource( 2 )
+
+[node name="MusicCredits" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
+margin_top = 50.0
+margin_right = 1192.0
+margin_bottom = 861.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/MusicCredits"]
+margin_right = 1192.0
+margin_bottom = 189.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 50
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/MusicCredits/MarginContainer"]
+margin_left = 20.0
+margin_top = 50.0
+margin_right = 1172.0
+margin_bottom = 169.0
+theme = SubResource( 6 )
+text = "Music"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/MusicCredits"]
+margin_top = 193.0
+margin_right = 1192.0
+margin_bottom = 811.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme = SubResource( 8 )
+text = "Music by https://www.steven-obrien.net/
+Popcorn - Menu Theme - Steven O'Brien
+
+
+Music by https://www.steven-obrien.net/
+Popcorn - Main Loop - Steven O'Brien"
+align = 1
+valign = 1
+
+[node name="SFXCredits" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
+visible = false
+margin_top = 50.0
+margin_right = 1192.0
+margin_bottom = 861.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/SFXCredits"]
+margin_right = 1192.0
+margin_bottom = 189.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 50
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/SFXCredits/MarginContainer"]
+margin_left = 20.0
+margin_top = 50.0
+margin_right = 1172.0
+margin_bottom = 169.0
+theme = SubResource( 6 )
+text = "SFX by FreeSound"
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="HBoxContainer/MarginContainer/SFXCredits"]
+margin_top = 193.0
+margin_right = 1192.0
+margin_bottom = 344.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme = SubResource( 10 )
+text = "\"Vidrios_Rotos.wav\" by Thingy17
+ (https://freesound.org/s/470898)
+licensed under CC BY 3.0"
+align = 1
+valign = 1
+
+[node name="Label4" type="Label" parent="HBoxContainer/MarginContainer/SFXCredits"]
+margin_top = 348.0
+margin_right = 1192.0
+margin_bottom = 500.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme = SubResource( 10 )
+text = "\"Click_Standard_05.wav\" by LittleRobotSoundFactor 
+(https://freesound.org/s/288917)
+licensed under CC BY 4.0"
+align = 1
+valign = 1
+
+[node name="Label5" type="Label" parent="HBoxContainer/MarginContainer/SFXCredits"]
+margin_top = 504.0
+margin_right = 1192.0
+margin_bottom = 655.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme = SubResource( 10 )
+text = "\"menu move3\" by Tissman 
+(https://freesound.org/s/574592) 
+licensed under CC0 1.0"
+align = 1
+valign = 1
+
+[node name="Label6" type="Label" parent="HBoxContainer/MarginContainer/SFXCredits"]
+margin_top = 659.0
+margin_right = 1192.0
+margin_bottom = 811.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme = SubResource( 10 )
+text = "\"UI Pop Up\" by EminYILDIRIM 
+(https://freesound.org/s/540568)
+licensed under CC BY 4.0"
+align = 1
+valign = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer"]
+margin_left = 1350.0
+margin_right = 1500.0
+margin_bottom = 911.0
+custom_constants/margin_right = 25
+custom_constants/margin_left = 25
+
+[node name="CenterContainer2" type="CenterContainer" parent="HBoxContainer/MarginContainer3"]
+margin_left = 25.0
+margin_right = 125.0
+margin_bottom = 911.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Player-right" type="TextureButton" parent="HBoxContainer/MarginContainer3/CenterContainer2"]
+self_modulate = Color( 0.905882, 0.286275, 0.286275, 1 )
+margin_top = 405.0
+margin_right = 100.0
+margin_bottom = 505.0
+focus_mode = 0
+theme = ExtResource( 6 )
+toggle_mode = true
+enabled_focus_mode = 0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/MarginContainer3/CenterContainer2/Player-right"]
+anchor_left = 0.086
+anchor_top = 0.451
+anchor_right = 0.086
+anchor_bottom = 0.451
+margin_top = -25.0
+margin_right = 50.0
+margin_bottom = 25.0
+texture = ExtResource( 9 )
+
+[node name="RightTimer" type="Timer" parent="HBoxContainer/MarginContainer3/CenterContainer2/Player-right"]
+wait_time = 0.1
+one_shot = true
+
+[node name="ControlsMargin" type="MarginContainer" parent="."]
+margin_top = 915.0
+margin_right = 1500.0
+margin_bottom = 1000.0
+custom_constants/margin_top = 15
+custom_constants/margin_bottom = 15
+
+[node name="Controls" type="HBoxContainer" parent="ControlsMargin"]
+margin_top = 15.0
+margin_right = 1500.0
+margin_bottom = 70.0
+alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="ControlsMargin/Controls"]
+margin_left = 433.0
+margin_right = 1066.0
+margin_bottom = 55.0
+custom_constants/margin_right = 35
+custom_constants/margin_left = 35
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ControlsMargin/Controls/MarginContainer2"]
+margin_left = 35.0
+margin_right = 598.0
+margin_bottom = 55.0
+
+[node name="TextureRect3" type="TextureRect" parent="ControlsMargin/Controls/MarginContainer2/HBoxContainer"]
+margin_right = 50.0
+margin_bottom = 55.0
+texture = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="ControlsMargin/Controls/MarginContainer2/HBoxContainer"]
+margin_left = 54.0
+margin_right = 563.0
+margin_bottom = 55.0
+theme = SubResource( 4 )
+text = "BACK_BUTTON_WORD"
+
+[connection signal="pressed" from="HBoxContainer/MarginContainer2/CenterContainer2/Player-left" to="." method="_on_Playerleft_pressed"]
+[connection signal="timeout" from="HBoxContainer/MarginContainer2/CenterContainer2/Player-left/LeftTimer" to="." method="_on_LeftTimer_timeout"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer3/CenterContainer2/Player-right" to="." method="_on_Playerright_pressed"]
+[connection signal="timeout" from="HBoxContainer/MarginContainer3/CenterContainer2/Player-right/RightTimer" to="." method="_on_RightTimer_timeout"]

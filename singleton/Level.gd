@@ -2,7 +2,11 @@ extends Node
 
 #### Level propierties
 
-# Example:  1-800-4500-1500-1800-0.5-3.5-90
+# Example:  1-800-4500-1500-1800-0.5-3.5-90-1
+
+# 2-800-4500-700-1000-1-5-90-3
+# 2-800-3000-1000-1400-0.8-3.5-60-2
+# 1-1000-5000-1800-2000-0.5-1.5-10-1
 
 # === Game modes Types ===
 #   1 = Last standing (Play until all players dead)
@@ -14,8 +18,14 @@ var bulletsVelRange = Vector2(1500, 1800)
 var bulletsControllCooldown = Vector2(0.5, 3.5)
 # If gamemode is 2, the duration of the game in seconds
 var gameTimeTrialDuration = 90
+var specialTimesUses = 1
 
 
+# Characters ID
+#  0 = Square
+#  1 = Hexagon
+#  2 = Pentagon
+var playerCharacters = [0, 1, 2, 0]
 var validGameModesTypes = [1, 2]
 var gameEnded = false
 var playersPoints = [0, 0, 0, 0]
@@ -71,6 +81,9 @@ func loade_stage_code(code):
 	if (float(splittedCode[7]) <= 0):
 		print("error, gameTimeTrialDuration need to be up to 0")
 		return
+	if (int(splittedCode[8]) <= 0):
+		print("error, specialTimesUses need to be up to 0")
+		return
 	
 	gameModeType = int(splittedCode[0])
 	playersMaxSpeed = float(splittedCode[1])
@@ -78,3 +91,5 @@ func loade_stage_code(code):
 	bulletsVelRange = Vector2(float(splittedCode[3]), float(splittedCode[4]))
 	bulletsControllCooldown = Vector2(float(splittedCode[5]), float(splittedCode[6]))
 	gameTimeTrialDuration = float(splittedCode[7])
+	specialTimesUses = int(splittedCode[8])
+	print(bulletsVelRange)

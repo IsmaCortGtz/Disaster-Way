@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player2.svg-9a79a5f5994f9dec6352e3d5a9af18a1.stex"
+path="res://.import/hexagon.svg-f0e9461265dac3dd0f545ca58e3beecc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/Player/player2.svg"
-dest_files=[ "res://.import/player2.svg-9a79a5f5994f9dec6352e3d5a9af18a1.stex" ]
+source_file="res://objects/Player/hexagon.svg"
+dest_files=[ "res://.import/hexagon.svg-f0e9461265dac3dd0f545ca58e3beecc.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

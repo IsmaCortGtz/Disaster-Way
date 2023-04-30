@@ -1,17 +1,17 @@
 extends Node
 
 var defaultvarSettings = {
-	"generalVolume": 0,
-	"musicVolume": 0,
-	"sfxVolume": 0,
+	"generalVolume": 1,
+	"musicVolume": 1,
+	"sfxVolume": 1,
 	"fullScreen": false,
 	"language": "es"
 }
 
 var settingsSavedValues = {
-	"generalVolume": 0,
-	"musicVolume": 0,
-	"sfxVolume": 0,
+	"generalVolume": 1,
+	"musicVolume": 1,
+	"sfxVolume": 1,
 	"fullScreen": false,
 	"language": TranslationServer.get_locale()
 }
@@ -65,7 +65,8 @@ func load_config():
 	if err != OK:
 		print(err)
 		return
-	print(configFile.to_string())
+	
+		
 	load_value("generalVolume")
 	load_value("musicVolume")
 	load_value("sfxVolume")

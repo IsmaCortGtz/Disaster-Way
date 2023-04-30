@@ -161,5 +161,7 @@ margin_bottom = 57.0
 theme = SubResource( 4 )
 text = "SELECT_BUTTON_WORD"
 
+[connection signal="focus_entered" from="MarginContainer/VBoxContainer/MarginContainer/Resume" to="." method="_on_button_focus_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="focus_entered" from="MarginContainer/VBoxContainer/MarginContainer2/Exit" to="." method="_on_button_focus_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer2/Exit" to="." method="_on_Exit_pressed"]

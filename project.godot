@@ -16,6 +16,7 @@ run/low_processor_mode=true
 boot_splash/image="res://assets/images/splash.png"
 boot_splash/bg_color=Color( 0.0862745, 0.0862745, 0.0862745, 1 )
 config/icon="res://assets/images/app-icon/icon_64.png"
+config/windows_native_icon="res://assets/images/app-icon/icon.ico"
 config/quit_on_go_back=false
 
 [autoload]
@@ -110,6 +111,7 @@ pointing/emulate_mouse_from_touch=false
 translation_remaps={
 "res://assets/images/icons/modes-buttons/back.svg": PoolStringArray( "res://assets/images/icons/modes-buttons/back.en.svg:en" ),
 "res://assets/images/icons/modes-buttons/exit.svg": PoolStringArray( "res://assets/images/icons/modes-buttons/exit.en.svg:en" ),
+"res://assets/images/icons/modes-buttons/guide.svg": PoolStringArray( "res://assets/images/icons/modes-buttons/guide.en.svg:en" ),
 "res://assets/images/icons/modes-buttons/last-standing.svg": PoolStringArray( "res://assets/images/icons/modes-buttons/last-standing.en.svg:en" ),
 "res://assets/images/icons/modes-buttons/more.svg": PoolStringArray( "res://assets/images/icons/modes-buttons/more.en.svg:en" ),
 "res://assets/images/icons/modes-buttons/settings.en.svg": PoolStringArray(  ),

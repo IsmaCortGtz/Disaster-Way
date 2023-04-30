@@ -23,6 +23,7 @@ func _input(event):
 	
 	if event.is_action_released("ui_cancel"):
 		if (not GameInput.isReadySelecting[0]):
+			Music.outSFX.play()
 			if get_tree().change_scene_to(Preloader.scenes_GameMode) != OK: print("error changing scene")
 		else:
 			player1.player_not_ready()
@@ -44,6 +45,7 @@ func _ready():
 			add_player(i)
 
 func add_player(playerN):
+	Music.clickSFX.play()
 	if playerN == 1:
 		player2.player_joined(playerN)
 	if playerN == 2:

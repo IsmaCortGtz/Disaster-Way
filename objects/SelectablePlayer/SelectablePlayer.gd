@@ -6,6 +6,7 @@ var playerIndex = 0
 
 signal player_ready_signal
 
+onready var clickSound = get_node("ClickSound")
 var leftButton: TextureButton
 var rightButton: TextureButton
 
@@ -16,9 +17,11 @@ func _input(event):
 		if (event.scancode == KEY_A) and (not event.is_pressed() and (not GameInput.isReadySelecting[playerIndex])):
 			leftButton.pressed = true
 			leftButton.emit_signal("pressed")
+			
 		if (event.scancode == KEY_D) and (not event.is_pressed() and (not GameInput.isReadySelecting[playerIndex])):
 			rightButton.pressed = true
 			rightButton.emit_signal("pressed")
+			
 		if (event.scancode == KEY_ENTER) and (not event.is_pressed()):
 			player_ready()
 		if (event.scancode == KEY_ESCAPE) and (not event.is_pressed() and (playerIndex != 0)):
@@ -27,6 +30,7 @@ func _input(event):
 		if (event.button_index == 4) and (not event.is_pressed() and (not GameInput.isReadySelecting[playerIndex])):
 			leftButton.pressed = true
 			leftButton.emit_signal("pressed")
+			
 		if (event.button_index == 5) and (not event.is_pressed() and (not GameInput.isReadySelecting[playerIndex])):
 			rightButton.pressed = true
 			rightButton.emit_signal("pressed")
@@ -35,22 +39,43 @@ func _input(event):
 		if (event.button_index == 1) and (not event.is_pressed() and (playerIndex != 0)):
 			player_not_ready()
 
+func change_character_left():
+	if Level.playerCharacters[playerIndex] <= 0:
+		Level.playerCharacters[playerIndex] = Preloader.characters_sprite.size() - 1
+	else:
+		Level.playerCharacters[playerIndex] -= 1
+	update_character_sprite()
+
+func change_character_right():
+	if Level.playerCharacters[playerIndex] >= (Preloader.characters_sprite.size() - 1):
+		Level.playerCharacters[playerIndex] = 0
+	else:
+		Level.playerCharacters[playerIndex] += 1
+	update_character_sprite()
+
+func update_character_sprite():
+	get_node("HBoxContainer/VBoxContainer/MarginContainer/Player-image").texture = Preloader.characters_sprite[Level.playerCharacters[playerIndex]]
+
 func _ready():
+	update_character_sprite()
 	joinLabel = get_node("MarginContainer/Label")
 	leftButton = get_node("HBoxContainer/CenterContainer/Player-left")
 	rightButton = get_node("HBoxContainer/CenterContainer2/Player-right")
 
 func player_ready():
 	if (not GameInput.isReadySelecting[playerIndex]):
+		Music.clickSFX.play()
 		GameInput.isReadySelecting[playerIndex] = true
 		GameInput.numberPlayersReady += 1
 		get_node("ReadyContainer").visible = true
 		emit_signal("player_ready_signal")
 	elif playerIndex == 0 and GameInput.readyToStart:
+		Music.clickSFX.play()
 		if get_tree().change_scene_to(Preloader.scenes_GameRoom) != OK: print("error changing scene")
 
 func player_not_ready():
 	if (GameInput.isReadySelecting[playerIndex]):
+		Music.outSFX.play()
 		GameInput.isReadySelecting[playerIndex] = false
 		GameInput.numberPlayersReady -= 1
 		get_node("ReadyContainer").visible = false
@@ -75,10 +100,14 @@ func player_joined(index):
 
 
 func _on_Playerleft_pressed():
+	clickSound.play()
+	change_character_left()
 	get_node("HBoxContainer/CenterContainer/Player-left/TimerLeft").start()
 
 
 func _on_Playerright_pressed():
+	clickSound.play()
+	change_character_right()
 	get_node("HBoxContainer/CenterContainer2/Player-right/TimerRight").start()
 
 

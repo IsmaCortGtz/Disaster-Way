@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
-   width="42"
-   height="42"
+   width="128"
+   height="128"
+   viewBox="0 0 33.866666 33.866666"
    version="1.1"
-   id="svg556"
-   sodipodi:docname="player2.svg"
+   id="svg5"
+   inkscape:export-filename=".\hexagon.svg"
+   inkscape:export-xdpi="192"
+   inkscape:export-ydpi="192"
+   sodipodi:docname="square.svg"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
-     id="namedview140"
+     id="namedview7"
      pagecolor="#ffffff"
      bordercolor="#111111"
      borderopacity="1"
@@ -19,16 +25,25 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
      showgrid="false"
-     inkscape:zoom="7.46875"
-     inkscape:cx="-11.648536"
-     inkscape:cy="25.974895"
+     inkscape:zoom="1.84375"
+     inkscape:cx="45.016949"
+     inkscape:cy="64"
      inkscape:window-width="1366"
      inkscape:window-height="697"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg556" />
+     inkscape:current-layer="svg5" />
   <defs
-     id="defs560" />
+     id="defs2" />
+  <rect
+     style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:26.3305;stroke-linecap:round;stroke-linejoin:round"
+     id="rect3147"
+     width="33.866665"
+     height="33.866665"
+     x="4.7625003"
+     y="4.7624998"
+     transform="translate(-4.7625002,-4.7624999)" />
 </svg>

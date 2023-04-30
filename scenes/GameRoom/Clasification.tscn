@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/fonts/Rubik-Bold.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://objects/Player/player.svg" type="Texture" id=2]
+[ext_resource path="res://objects/Player/square.svg" type="Texture" id=2]
 [ext_resource path="res://assets/themes/buttons-green.tres" type="Theme" id=3]
 [ext_resource path="res://assets/themes/buttons-red.tres" type="Theme" id=4]
 [ext_resource path="res://assets/images/icons/text-icons/deads.svg" type="Texture" id=5]
@@ -80,6 +80,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MarginContainer0" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+visible = false
 margin_right = 1524.0
 margin_bottom = 449.0
 size_flags_horizontal = 3
@@ -190,29 +191,30 @@ stretch_mode = 4
 
 [node name="MarginContainer1" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 visible = false
-margin_right = 2161.0
-margin_bottom = 147.0
+margin_top = 226.0
+margin_right = 1524.0
+margin_bottom = 449.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer1"]
-margin_right = 2161.0
-margin_bottom = 147.0
+margin_right = 1524.0
+margin_bottom = 223.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer1/HBoxContainer"]
-margin_right = 537.0
-margin_bottom = 147.0
+margin_right = 520.0
+margin_bottom = 223.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 50
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer1/HBoxContainer/MarginContainer2"]
 modulate = Color( 0.890196, 0.85098, 0.85098, 1 )
-margin_top = 43.0
-margin_right = 487.0
-margin_bottom = 103.0
+margin_top = 81.0
+margin_right = 470.0
+margin_bottom = 141.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 theme = SubResource( 4 )
@@ -221,9 +223,9 @@ align = 2
 valign = 1
 
 [node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer1/HBoxContainer"]
-margin_left = 541.0
-margin_right = 1078.0
-margin_bottom = 147.0
+margin_left = 524.0
+margin_right = 854.0
+margin_bottom = 223.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 20
@@ -234,25 +236,25 @@ custom_constants/margin_bottom = 20
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer1/HBoxContainer/MarginContainer4"]
 margin_left = 20.0
 margin_top = 20.0
-margin_right = 517.0
-margin_bottom = 127.0
+margin_right = 310.0
+margin_bottom = 203.0
 rect_min_size = Vector2( 80, 0 )
 size_flags_horizontal = 3
 texture = ExtResource( 2 )
 stretch_mode = 6
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer1/HBoxContainer"]
-margin_left = 1082.0
-margin_right = 1619.0
-margin_bottom = 147.0
+margin_left = 858.0
+margin_right = 1189.0
+margin_bottom = 223.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_left = 50
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer1/HBoxContainer/MarginContainer"]
 margin_left = 50.0
-margin_right = 537.0
-margin_bottom = 147.0
+margin_right = 331.0
+margin_bottom = 223.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 theme = SubResource( 4 )
@@ -260,28 +262,28 @@ text = "Jugador 1"
 valign = 1
 
 [node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer1/HBoxContainer"]
-margin_left = 1173.0
+margin_left = 1193.0
 margin_right = 1524.0
-margin_bottom = 449.0
+margin_bottom = 223.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_left = 50
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer1/HBoxContainer/MarginContainer3"]
 margin_left = 50.0
-margin_right = 351.0
-margin_bottom = 449.0
+margin_right = 331.0
+margin_bottom = 223.0
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer1/HBoxContainer/MarginContainer3/HBoxContainer"]
-margin_right = 207.0
-margin_bottom = 449.0
+margin_right = 281.0
+margin_bottom = 223.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 10
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer1/HBoxContainer/MarginContainer3/HBoxContainer/MarginContainer"]
-margin_right = 197.0
-margin_bottom = 449.0
+margin_right = 271.0
+margin_bottom = 223.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 theme = SubResource( 4 )
@@ -300,29 +302,30 @@ stretch_mode = 4
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 visible = false
-margin_right = 2161.0
-margin_bottom = 222.0
+margin_top = 344.0
+margin_right = 1524.0
+margin_bottom = 512.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2"]
-margin_right = 2161.0
-margin_bottom = 222.0
+margin_right = 1524.0
+margin_bottom = 168.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
-margin_right = 537.0
-margin_bottom = 222.0
+margin_right = 468.0
+margin_bottom = 168.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 50
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer2"]
 modulate = Color( 0.788235, 0.623529, 0.509804, 1 )
-margin_top = 81.0
-margin_right = 487.0
-margin_bottom = 141.0
+margin_top = 54.0
+margin_right = 418.0
+margin_bottom = 114.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 theme = SubResource( 4 )
@@ -331,9 +334,9 @@ align = 2
 valign = 1
 
 [node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
-margin_left = 541.0
-margin_right = 1078.0
-margin_bottom = 222.0
+margin_left = 472.0
+margin_right = 820.0
+margin_bottom = 168.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 20
@@ -344,25 +347,25 @@ custom_constants/margin_bottom = 20
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer4"]
 margin_left = 20.0
 margin_top = 20.0
-margin_right = 517.0
-margin_bottom = 202.0
+margin_right = 328.0
+margin_bottom = 148.0
 rect_min_size = Vector2( 80, 0 )
 size_flags_horizontal = 3
 texture = ExtResource( 2 )
 stretch_mode = 6
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
-margin_left = 1082.0
-margin_right = 1619.0
-margin_bottom = 222.0
+margin_left = 824.0
+margin_right = 1172.0
+margin_bottom = 168.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_left = 50
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer"]
 margin_left = 50.0
-margin_right = 537.0
-margin_bottom = 222.0
+margin_right = 348.0
+margin_bottom = 168.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 theme = SubResource( 4 )
@@ -370,28 +373,28 @@ text = "Jugador 1"
 valign = 1
 
 [node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
-margin_left = 1173.0
+margin_left = 1176.0
 margin_right = 1524.0
-margin_bottom = 449.0
+margin_bottom = 168.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_left = 50
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer3"]
 margin_left = 50.0
-margin_right = 351.0
-margin_bottom = 449.0
+margin_right = 348.0
+margin_bottom = 168.0
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer3/HBoxContainer"]
-margin_right = 207.0
-margin_bottom = 449.0
+margin_right = 298.0
+margin_bottom = 168.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 10
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer3/HBoxContainer/MarginContainer"]
-margin_right = 197.0
-margin_bottom = 449.0
+margin_right = 288.0
+margin_bottom = 168.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 theme = SubResource( 4 )
@@ -632,5 +635,7 @@ text = "SELECT_BUTTON_WORD"
 one_shot = true
 
 [connection signal="visibility_changed" from="." to="." method="_on_Clasification_visibility_changed"]
+[connection signal="focus_entered" from="MarginContainer/VBoxContainer/Buttons/MarginContainer/PlayAgain" to="." method="_on_button_focus_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Buttons/MarginContainer/PlayAgain" to="." method="_on_PlayAgain_pressed"]
+[connection signal="focus_entered" from="MarginContainer/VBoxContainer/Buttons/MarginContainer2/Menu" to="." method="_on_button_focus_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Buttons/MarginContainer2/Menu" to="." method="_on_Menu_pressed"]
