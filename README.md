@@ -66,7 +66,7 @@ You can download this version using [this link](https://downloads.tuxfamily.org/
 
 ### Installation
 
-You should use a pre-built binaty, is the easier way to install the game and play it inmediatly, you can download the bin failes from [this link](https://github.com/IsmaCortGtz/Disaster-Way/releases).
+You should use a pre-built binaty, is the easier way to install the game and play it inmediatly, you can download the bin files from [this link](https://github.com/IsmaCortGtz/Disaster-Way/releases).
 
 The game are compiled for this plattaforms:
   * Windows
