@@ -119,6 +119,7 @@ size_flags_vertical = 3
 theme = SubResource( 2 )
 
 [node name="MusicCredits" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
+visible = false
 margin_top = 50.0
 margin_right = 1192.0
 margin_bottom = 861.0
@@ -161,7 +162,6 @@ align = 1
 valign = 1
 
 [node name="SFXCredits" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
-visible = false
 margin_top = 50.0
 margin_right = 1192.0
 margin_bottom = 861.0
