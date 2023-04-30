@@ -21,6 +21,7 @@ func load_score():
 		get_node("MarginContainer/VBoxContainer/VBoxContainer/MarginContainer" + str(index) + "/HBoxContainer/MarginContainer4/TextureRect").modulate = GameInput.playerColors[Level.positions[index]]
 
 func _ready():
+	if (GameInput.playersType[0] == 2): get_node("MarginContainer/VBoxContainer/MarginContainer").visible = false
 	get_node("MarginContainer/VBoxContainer/MarginContainer/Controls/MarginContainer/HBoxContainer/TextureRect3").texture = GameInput.get_button_icon_image("move")
 	get_node("MarginContainer/VBoxContainer/MarginContainer/Controls/MarginContainer2/HBoxContainer/TextureRect3").texture = GameInput.get_button_icon_image("accept")
 

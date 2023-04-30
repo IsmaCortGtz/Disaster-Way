@@ -30,6 +30,7 @@ func _input(event):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if (GameInput.playersType[0] == 2): get_node("MarginContainer/VBoxContainer/Controls").visible = false
 	GameInput.isReadySelecting = [false, false, false, false]
 	GameInput.numberPlayersReady = 0
 	get_node("MarginContainer/VBoxContainer/Controls/MarginContainer/HBoxContainer/MarginContainer/TextureRect").texture = GameInput.get_button_icon_image("accept")

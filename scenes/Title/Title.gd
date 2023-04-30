@@ -14,6 +14,10 @@ func _input(event):
 	if (event is InputEventJoypadButton) and (not event.is_pressed()):
 		GameInput.new_player(0, 1, event.device)
 		if get_tree().change_scene_to(Preloader.scenes_GameMode) != OK: print("error changing scene")
+	
+	if (event is InputEventScreenTouch) and (not event.is_pressed()):
+		GameInput.new_player(0, 2, 0)
+		if get_tree().change_scene_to(Preloader.scenes_GameMode) != OK: print("error changing scene")
 
 func _ready():
 	GameInput.reset_player()

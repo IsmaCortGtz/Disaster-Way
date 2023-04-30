@@ -6,7 +6,7 @@ var playersAlive = GameInput.playersNumber
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	if GameInput.playersType[0] == 2: get_node("InputLayer").visible = true
 	var playersRelativePosition = Vector2((get_viewport().size.x - 400) / 2, (get_viewport().size.y - 400) / 2)
 	var playerPositions = [
 		playersRelativePosition,

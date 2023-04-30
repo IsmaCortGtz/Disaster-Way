@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/GameRoom/GameRoom.gd" type="Script" id=1]
 [ext_resource path="res://objects/BulletSpawn_control/controll.gd" type="Script" id=2]
 [ext_resource path="res://assets/fonts/Rubik-Bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://scenes/Pause/Pause.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/GameRoom/Clasification.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objects/joystick/virtual_joystick.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 400
@@ -135,9 +136,15 @@ align = 1
 valign = 1
 
 [node name="PausedLayer" type="CanvasLayer" parent="."]
+layer = 2
 
 [node name="PausedMenu" parent="PausedLayer" instance=ExtResource( 4 )]
 visible = false
 
 [node name="Clasification" parent="PausedLayer" instance=ExtResource( 5 )]
 visible = false
+
+[node name="InputLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Virtual joystick" parent="InputLayer" instance=ExtResource( 6 )]

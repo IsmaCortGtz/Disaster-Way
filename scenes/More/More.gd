@@ -7,6 +7,7 @@ func _input(event):
 		if get_tree().change_scene_to(Preloader.scenes_GameMode) != OK: print ("error changing scene")
 
 func _ready():
+	if (GameInput.playersType[0] == 2): get_node("ControlsMargin").visible = false
 	get_node("MarginContainer/ScrollContainer/VBoxContainer/ExtraPage/Button").grab_focus()
 	get_node("ControlsMargin/Controls/MarginContainer/HBoxContainer/TextureRect3").texture = GameInput.get_button_icon_image("move")
 	get_node("ControlsMargin/Controls/MarginContainer2/HBoxContainer/TextureRect3").texture = GameInput.get_button_icon_image("accept")

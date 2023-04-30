@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Control",
+"class": "VirtualJoystick",
+"language": "GDScript",
+"path": "res://objects/joystick/virtual_joystick.gd"
+} ]
+_global_script_class_icons={
+"VirtualJoystick": ""
+}
+
 [application]
 
 config/name="Disaster Way"
@@ -17,6 +27,7 @@ boot_splash/image="res://assets/images/splash.png"
 boot_splash/bg_color=Color( 0.0862745, 0.0862745, 0.0862745, 1 )
 config/icon="res://assets/images/app-icon/icon_64.png"
 config/windows_native_icon="res://assets/images/app-icon/icon.ico"
+config/auto_accept_quit=false
 config/quit_on_go_back=false
 
 [autoload]
@@ -39,6 +50,7 @@ window/stretch/aspect="expand"
 [global]
 
 Idioma=false
+Android=false
 
 [gui]
 
@@ -100,6 +112,22 @@ player_down={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
+}
+touch_left={
+"deadzone": 0.5,
+"events": [  ]
+}
+touch_right={
+"deadzone": 0.5,
+"events": [  ]
+}
+touch_up={
+"deadzone": 0.5,
+"events": [  ]
+}
+touch_down={
+"deadzone": 0.5,
+"events": [  ]
 }
 
 [locale]

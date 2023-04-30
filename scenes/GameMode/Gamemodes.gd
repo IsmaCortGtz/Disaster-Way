@@ -8,6 +8,7 @@ func _input(event):
 
 func _ready():
 	GameInput.remap_ui_first_player()
+	if (GameInput.playersType[0] == 2): get_node("GlobalMargin/VBoxContainer/MarginContainer").visible = false
 	get_node("GlobalMargin/VBoxContainer/MainHBox/MarginButton/LastStand").grab_focus()
 	get_node("GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer/HBoxContainer/TextureRect3").texture = GameInput.get_button_icon_image("move")
 	get_node("GlobalMargin/VBoxContainer/MarginContainer/Controls/MarginContainer2/HBoxContainer/TextureRect3").texture = GameInput.get_button_icon_image("accept")

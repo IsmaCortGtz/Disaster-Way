@@ -17,6 +17,10 @@ onready var menuNode = get_node("/root/GameRoom/PausedLayer/PausedMenu")
 
 
 func _input(event):
+	
+	if ((event is InputEventKey) and (not Level.gameEnded) and (GameInput.playersType[playerIndex - 1] == 2) and (not GameInput.keyboardUsed) and (event.scancode == KEY_0) and (not event.is_pressed())):
+		menuNode.game_paused(playerIndex - 1)
+	
 	if ((event is InputEventKey) and (not Level.gameEnded) and (GameInput.playersType[playerIndex - 1] == 0) and (GameInput.keyboardUsed) and (event.scancode == KEY_ESCAPE) and (not event.is_pressed())):
 		menuNode.game_paused(playerIndex - 1)
 	

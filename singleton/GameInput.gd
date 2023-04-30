@@ -4,6 +4,7 @@ extends Node
 # 1 = Playstation
 # 2 = Xbox
 var joiyMoveIcon = preload("res://assets/images/icons/buttons/joy.move.svg")
+var emptySVG = preload("res://assets/images/empty.svg")
 var buttons = {
 	"accept": [
 		preload("res://assets/images/icons/buttons/key.enter.svg"),
@@ -69,6 +70,9 @@ var newJoyDownEvent
 var newJoyAcceptEvent
 var newJoyCancelEvent
 
+var newKeyTouchCancelEvent
+var newKeyTouchAcceptEvent
+
 
 func reset_player():
 	playersNumber = 0
@@ -97,6 +101,11 @@ func reset_player_exept_first():
 
 
 func _ready():
+	
+	newKeyTouchCancelEvent = InputEventKey.new()
+	newKeyTouchAcceptEvent = InputEventKey.new()
+	newKeyTouchCancelEvent.set_scancode(KEY_0)
+	newKeyTouchAcceptEvent.set_scancode(KEY_9)
 
 	newKeyLeftEvent = InputEventKey.new()
 	newKeyRightEvent = InputEventKey.new()
@@ -139,6 +148,10 @@ func new_player(index, inputType, inputIndex):
 	for x in isPlaying:
 		if x: playersNumber += 1
 
+
+
+
+
 func get_axis(player):
 	if (playersType[player - 1] == -1): return null
 	if (playersType[player - 1] == 0):
@@ -150,9 +163,17 @@ func get_axis(player):
 		if abs(axis.y) < gamepadDeadzone:
 			axis.y = 0
 		return axis.normalized()
+	if (playersType[player - 1] == 2): 
+		return Vector2(
+			Input.get_action_strength("touch_right") - Input.get_action_strength("touch_left"),
+			Input.get_action_strength("touch_down") - Input.get_action_strength("touch_up")
+		).normalized()
+
 
 
 func get_button_icon_image(action, index = 0):
+	if (playersType[index] == 2):
+		return emptySVG
 	if (playersType[index] == 0):
 		return buttons[action][0]
 	var name = Input.get_joy_name(playersIndex[index])
@@ -193,8 +214,22 @@ func remap_ui_first_player(playerIndex = 0):
 		InputMap.action_add_event("ui_right", newJoyRightEvent)
 		InputMap.action_add_event("ui_accept", newJoyAcceptEvent)
 		InputMap.action_add_event("ui_cancel", newJoyCancelEvent)
+	
+	if (newMappedType == 2):
+		InputMap.action_add_event("ui_accept", newKeyTouchAcceptEvent)
+		InputMap.action_add_event("ui_cancel", newKeyTouchCancelEvent)
 
 
 func _input(event):
 	if (event is InputEventKey) and (event.scancode == KEY_F11) and (not event.is_pressed()):
 		OS.window_fullscreen = !OS.window_fullscreen
+
+func _notification(what):
+	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+		if get_tree().current_scene.name == "TitleScreen":
+			get_tree().quit()
+			return
+		
+		var ev = InputEventKey.new()
+		ev.scancode = KEY_0
+		get_tree().input_event(ev)

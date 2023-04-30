@@ -28,6 +28,7 @@ func get_locale():
 
 
 func _ready():
+	if (GameInput.playersType[0] == 2): get_node("ControlsMargin").visible = false
 	if GameInput.playersType[0] == 1: sliderStep = 0.1
 	masterVolumeSlider.step = sliderStep
 	musicVolumeSlider.step = sliderStep

@@ -3,6 +3,7 @@ extends MarginContainer
 var joinLabel: Label
 var joined = false
 var playerIndex = 0
+var mouseInZone = false
 
 signal player_ready_signal
 
@@ -13,6 +14,11 @@ var rightButton: TextureButton
 func _input(event):
 	if not joined:
 		return
+	
+	if (GameInput.playersType[playerIndex] == 2) and (event is InputEventKey):
+		if (event.scancode == KEY_0) and (not event.is_pressed() and (playerIndex != 0)):
+			player_not_ready()
+
 	if (GameInput.playersType[playerIndex] == 0) and (event is InputEventKey):
 		if (event.scancode == KEY_A) and (not event.is_pressed() and (not GameInput.isReadySelecting[playerIndex])):
 			leftButton.pressed = true
@@ -39,6 +45,9 @@ func _input(event):
 		if (event.button_index == 1) and (not event.is_pressed() and (playerIndex != 0)):
 			player_not_ready()
 
+
+
+
 func change_character_left():
 	if Level.playerCharacters[playerIndex] <= 0:
 		Level.playerCharacters[playerIndex] = Preloader.characters_sprite.size() - 1
@@ -54,13 +63,14 @@ func change_character_right():
 	update_character_sprite()
 
 func update_character_sprite():
-	get_node("HBoxContainer/VBoxContainer/MarginContainer/Player-image").texture = Preloader.characters_sprite[Level.playerCharacters[playerIndex]]
+	get_node("HBoxContainer/VBoxContainer/MarginContainer/Player-image").set_normal_texture(Preloader.characters_sprite[Level.playerCharacters[playerIndex]])
 
 func _ready():
 	update_character_sprite()
 	joinLabel = get_node("MarginContainer/Label")
 	leftButton = get_node("HBoxContainer/CenterContainer/Player-left")
 	rightButton = get_node("HBoxContainer/CenterContainer2/Player-right")
+
 
 func player_ready():
 	if (not GameInput.isReadySelecting[playerIndex]):
@@ -73,6 +83,7 @@ func player_ready():
 		Music.clickSFX.play()
 		if get_tree().change_scene_to(Preloader.scenes_GameRoom) != OK: print("error changing scene")
 
+
 func player_not_ready():
 	if (GameInput.isReadySelecting[playerIndex]):
 		Music.outSFX.play()
@@ -81,8 +92,10 @@ func player_not_ready():
 		get_node("ReadyContainer").visible = false
 		emit_signal("player_ready_signal")
 
+
 func label_alpha(alpha: float):
 	joinLabel.modulate.a = alpha
+
 
 func player_joined(index):
 	playerIndex = index
@@ -118,3 +131,15 @@ func _on_TimerLeft_timeout():
 
 func _on_TimerRight_timeout():
 	rightButton.pressed = false
+
+
+func _on_VBoxContainer_mouse_entered():
+	mouseInZone = true
+
+
+func _on_VBoxContainer_mouse_exited():
+	mouseInZone = false
+
+
+func _on_Playerimage_pressed():
+	player_ready()

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1"
+   height="1"
+   version="1.1"
+   id="svg134"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs138">
+    <linearGradient
+       id="linearGradient9067">
+      <stop
+         style="stop-color:#cc5b00;stop-opacity:0.40000001;"
+         offset="0.04347826"
+         id="stop9063" />
+      <stop
+         style="stop-color:#ff7608;stop-opacity:0.10857143;"
+         offset="1"
+         id="stop9065" />
+    </linearGradient>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath8546">
+      <g
+         id="use8548">
+        <path
+           style="fill:url(#linearGradient201);fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round"
+           id="path197"
+           d="M 47.273882,11.441169 18.978287,18.930133 -13.230989,44.101505 -5.5688237,15.852319 -11.263233,-24.627418 9.3701972,-3.8671959 Z"
+           transform="matrix(-2.4160764,0,0,0.75697036,115.9441,24.301996)" />
+      </g>
+    </clipPath>
+    <linearGradient
+       xlink:href="#linearGradient9067"
+       id="linearGradient9069"
+       x1="-13.230989"
+       y1="9.7370434"
+       x2="47.273884"
+       y2="9.7370434"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient9067"
+       id="linearGradient201"
+       gradientUnits="userSpaceOnUse"
+       x1="-13.230989"
+       y1="9.7370434"
+       x2="47.273884"
+       y2="9.7370434" />
+  </defs>
+</svg>

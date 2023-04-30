@@ -5,7 +5,7 @@ onready var resumeButton = get_node("MarginContainer/VBoxContainer/MarginContain
 func game_paused(playerIndex = 0):
 	Music.outSFX.play()
 	GameInput.remap_ui_first_player(playerIndex)
-	print(playerIndex)
+	if (GameInput.playersType[0] == 2): get_node("MarginContainer/VBoxContainer/MarginContainer3").visible = false
 	get_node("MarginContainer/VBoxContainer/MarginContainer3/Controls/MarginContainer/HBoxContainer/TextureRect3").texture = GameInput.get_button_icon_image("move", playerIndex)
 	get_node("MarginContainer/VBoxContainer/MarginContainer3/Controls/MarginContainer2/HBoxContainer/TextureRect3").texture = GameInput.get_button_icon_image("accept", playerIndex)
 	get_tree().paused = true

@@ -9,6 +9,7 @@ onready var panels = [
 ]
 
 func _ready():
+	if (GameInput.playersType[0] == 2): get_node("ControlsMargin").visible = false
 	get_node("ControlsMargin/Controls/MarginContainer2/HBoxContainer/TextureRect3").texture = GameInput.get_button_icon_image("back")
 	get_node("HBoxContainer/MarginContainer2/CenterContainer2/Player-left/TextureRect").texture = GameInput.get_button_icon_image("left")
 	get_node("HBoxContainer/MarginContainer3/CenterContainer2/Player-right/TextureRect").texture = GameInput.get_button_icon_image("right")
