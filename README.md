@@ -7,6 +7,38 @@
 
 
 
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#description">Description</a></li>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#custom-stage-format">Custom Stage Format</a></li>
+        <li><a href="#building">Building</a></li>
+        <li><a href="#adding-sounds">Adding Sounds</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#credits">Credits</a>
+      <ul>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#sfx">SFX</a></li>
+      </ul>
+    </li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
+
+
+
 
 
 ## About The Project
@@ -39,9 +71,35 @@ You should use a pre-built binaty, is the easier way to install the game and pla
 The game are compiled for this plattaforms:
   * Windows
   * Linux
-  * Android (50%)
+  * Android (70%)
 
 ***DISCLAIMER:*** The game only works with a gamepad or a keyboard, if you wanna play it in android, you will need one of them to do it.
+
+
+
+### Custom Stage Format
+
+The game has a feature to add your own stages changing some variables of the Game room using a specific format, for example, this is the code for the common `Last Standing`:
+
+```sh
+1-800-4500-1500-1800-0.5-3.5-60-1
+```
+
+Each var are splitted with the `-` character, and all for them need to be a valid number up to 0. And an adittional condition, the first and the last numbers need to be an integer. This are the menaings for the vars:
+
+1. `gameModeType`: _`int`_. The type gamemode to play, we have two options here:
+    - `1`: Last Standing
+    - `2`: Time Trial
+2. `playersMaxSpeed`: The max speed the players can get.
+3. `playerAcel`: The acceleration the players will have.
+4. `bulletsVelRange.x`: The min velocity of the bullets.
+5. `bulletsVelRange.y`: The max velocity of the bullets.
+6. `bulletsControllCooldown.x`: The min of time before other bullet will be shotted in the same spot.
+7. `bulletsControllCooldown.y`: The max of time before other bullet will be shotted in the same spot.
+8. `gameTimeTrialDuration`: The duration of the game if the game mode type is Time Trial. (Even if you are using Last Standig gamemode, this number needs to be up to 0)
+9. `specialTimesUses`: _`int`_. The number of times that players can use them special ability.
+
+***DISCLAIMER:*** The game doesn't have any system to limit the max value of any var, use it by your own responsibility.
 
 
 
@@ -58,7 +116,7 @@ This are the instroctions to build for your own the project.
 git clone https://github.com/IsmaCortGtz/Disaster-Way.git
 ``` 
 2. Install Godot 3.5.1 and launch it, you can do it from [this link](https://downloads.tuxfamily.org/godotengine/3.5.1/).
-3. Install the sounds of the proyect.
+3. Install the [sounds of the proyect](#adding-sounds).
 4. Open in Godot the proyect you clone in the step #1.
 5. Install the Godot Export Templates, you can follow [this instructions](https://docs.godotengine.org/en/3.5/tutorials/export/exporting_projects.html).
 6. Configure the porject for the plattaform target, you should check [this reference](https://docs.godotengine.org/en/3.5/tutorials/export/index.html).
