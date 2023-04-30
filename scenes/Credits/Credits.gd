@@ -2,6 +2,7 @@ extends VBoxContainer
 
 var currentPanel = 0
 onready var panels = [
+	get_node("HBoxContainer/MarginContainer/GeneralCredits"),
 	get_node("HBoxContainer/MarginContainer/MusicCredits"),
 	get_node("HBoxContainer/MarginContainer/SFXCredits")
 ]

@@ -118,6 +118,47 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource( 2 )
 
+[node name="GeneralCredits" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
+margin_top = 50.0
+margin_right = 1192.0
+margin_bottom = 861.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/GeneralCredits"]
+margin_right = 1192.0
+margin_bottom = 189.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 50
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/GeneralCredits/MarginContainer"]
+margin_left = 20.0
+margin_top = 50.0
+margin_right = 1172.0
+margin_bottom = 169.0
+theme = SubResource( 6 )
+text = "Dvelopment"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer/MarginContainer/GeneralCredits"]
+margin_top = 193.0
+margin_right = 1192.0
+margin_bottom = 811.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme = SubResource( 8 )
+text = "By Ismael Cortés Gutiérrez
+
+
+Powered by
+Godot Engine 3.5.1"
+align = 1
+valign = 1
+
 [node name="MusicCredits" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
 visible = false
 margin_top = 50.0
@@ -162,6 +203,7 @@ align = 1
 valign = 1
 
 [node name="SFXCredits" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
+visible = false
 margin_top = 50.0
 margin_right = 1192.0
 margin_bottom = 861.0
