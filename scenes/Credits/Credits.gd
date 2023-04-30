@@ -4,7 +4,8 @@ var currentPanel = 0
 onready var panels = [
 	get_node("HBoxContainer/MarginContainer/GeneralCredits"),
 	get_node("HBoxContainer/MarginContainer/MusicCredits"),
-	get_node("HBoxContainer/MarginContainer/SFXCredits")
+	get_node("HBoxContainer/MarginContainer/SFXCredits1"),
+	get_node("HBoxContainer/MarginContainer/SFXCredits2")
 ]
 
 func _ready():
