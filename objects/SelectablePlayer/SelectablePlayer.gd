@@ -86,6 +86,7 @@ func label_alpha(alpha: float):
 
 func player_joined(index):
 	playerIndex = index
+	update_character_sprite()
 	get_node("MarginContainer").visible = false
 	
 	get_node("HBoxContainer/CenterContainer/Player-left/TextureRect").texture = GameInput.get_button_icon_image("left", index)

@@ -25,7 +25,7 @@ var specialTimesUses = 1
 #  0 = Square
 #  1 = Hexagon
 #  2 = Pentagon
-var playerCharacters = [0, 1, 2, 0]
+var playerCharacters = [0, 0, 0, 0]
 var validGameModesTypes = [1, 2]
 var gameEnded = false
 var playersPoints = [0, 0, 0, 0]
@@ -92,4 +92,3 @@ func loade_stage_code(code):
 	bulletsControllCooldown = Vector2(float(splittedCode[5]), float(splittedCode[6]))
 	gameTimeTrialDuration = float(splittedCode[7])
 	specialTimesUses = int(splittedCode[8])
-	print(bulletsVelRange)
