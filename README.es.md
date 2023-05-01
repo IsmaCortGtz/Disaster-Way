@@ -71,9 +71,7 @@ Te recomiendo usar un binary pre-compilado, es la forma más facil de instalar e
 El juego fue compilado para estas plataformas:
   * Windows
   * Linux
-  * Android (70%)
-
-***AVISO:*** El juego solo funciona con un Gamepad o un teclado, si quieres jugarlo en android necesitaras uno para hacerlo.
+  * Android
 
 
 
@@ -85,7 +83,7 @@ El juego cuenta con una mecanica para añadir tus propios escenarios modificando
 1-800-4500-1500-1800-0.5-3.5-60-1
 ```
 
-Cada variable es dividida mediante el caracter `-`, y cada uno necesita ser un valor valido mayor a 0. Además, el primer y ultimo numero necesitan ser enteros. Estos son los significados para las variables:
+Cada variable es dividida mediante el caracter `-`, y cada uno necesita ser un valor valido mayor a 0. Además algunas variables necesitan ser decimales o enteros. Estos son los significados para las variables:
 
 1. `gameModeType`: _`int`_. El modo de juego, aquí tenemos dos opciones:
     - `1`: Ultimo en Pie
@@ -98,6 +96,9 @@ Cada variable es dividida mediante el caracter `-`, y cada uno necesita ser un v
 7. `bulletsControllCooldown.y`: El tiempo maximo antes de que otra bala sea disparada desde el mismo punto.
 8. `gameTimeTrialDuration`: La duración de la partida si el modo de juego es Contrarreloj. (Incluso si estas usando Ultimo en pie, este numero necesita ser mayor a 0).
 9. `specialTimesUses`: _`int`_. El numero de veces que cada jugador puede usar su habilidad especial por partida.
+10. `usingDemonBullets`: _`int`_. 1 o 0, esto determina si la partida tendra Demon Bullets o no.
+11. `demonBulletsFrec`: _`int`_. La frecuencia con la que cada punto de disparo dispara una Demon Bullet. If es 0 todas las balas seran Demon.
+
 
 ***AVISO:*** El juego no cuenta con ningun limite para los valores maximos que cada variable puede tener, usalo bajo tu porpio riesgo.
 
@@ -135,6 +136,7 @@ La música y los SFX no estan incluidos en el proyecto de Github, si quieres com
   - `move.wav` descarga el archivo [de aquí](https://freesound.org/people/Tissman/sounds/574592/).
   - `page.wav` descarga el archivo [de aquí](https://freesound.org/people/LittleRobotSoundFactory/sounds/288917/).
   - `click-pitched.wav` este archivo es el mismo que `click.wav`con un _pitch scale_ de `0.6`.
+  - `split.wav` descarga el archivo [de aquí](https://freesound.org/people/pjhedman/sounds/511388/).
 - `./assets/sounds/soundtrack/`
   - `battle.mp3` descarga el archivo [de aquí](https://www.steven-obrien.net/#popcorn-~-main-loop).
   - `menu.mp3` descarga el archivo [de aquí](https://www.steven-obrien.net/#popcorn-~-menu-theme).
@@ -162,9 +164,12 @@ Popcorn - Main Loop - Steven O'Brien
 
 ["UI Pop Up"](https://freesound.org/s/540568) de [EminYILDIRIM](https://freesound.org/people/EminYILDIRIM/) licenciado bajo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
+["Electronique FX5.wav"](https://freesound.org/s/511388) de [pjhedman](https://freesound.org/people/pjhedman/) licenciado bajo [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
 
 
 ## License
+
+Este juego esta construido en Godot Engine, el cual esta distribuido bajo la [licencia MIT](https://opensource.org/license/mit/). Lee `engine.LICENSE` para mas detalles.
 
 Distibuido bajo la licencia GNU General Public License v3.0. Lee `LICENSE` para mas detalles.
 

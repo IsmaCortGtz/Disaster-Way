@@ -71,9 +71,7 @@ You should use a pre-built binaty, is the easier way to install the game and pla
 The game are compiled for this plattaforms:
   * Windows
   * Linux
-  * Android (70%)
-
-***DISCLAIMER:*** The game only works with a gamepad or a keyboard, if you wanna play it in android, you will need one of them to do it.
+  * Android
 
 
 
@@ -82,10 +80,10 @@ The game are compiled for this plattaforms:
 The game has a feature to add your own stages changing some variables of the Game room using a specific format, for example, this is the code for the common `Last Standing`:
 
 ```sh
-1-800-4500-1500-1800-0.5-3.5-60-1
+1-800-4500-1500-1800-0.5-3.5-90-1-0-0
 ```
 
-Each var are splitted with the `-` character, and all for them need to be a valid number up to 0. And an adittional condition, the first and the last numbers need to be an integer. This are the menaings for the vars:
+Each var are splitted with the `-` character, and all for them need to be a valid number up to 0. And some vars need to be float or integer. This are the menaings for the vars:
 
 1. `gameModeType`: _`int`_. The type gamemode to play, we have two options here:
     - `1`: Last Standing
@@ -98,6 +96,8 @@ Each var are splitted with the `-` character, and all for them need to be a vali
 7. `bulletsControllCooldown.y`: The max of time before other bullet will be shotted in the same spot.
 8. `gameTimeTrialDuration`: The duration of the game if the game mode type is Time Trial. (Even if you are using Last Standig gamemode, this number needs to be up to 0)
 9. `specialTimesUses`: _`int`_. The number of times that players can use them special ability.
+10. `usingDemonBullets`: _`int`_. 1 or 0, it determines if the gameplay will have demon bullets or not.
+11. `demonBulletsFrec`: _`int`_. The frequency at which each bullet point fires demon bullets. If is 0 the whole bullets will be demon ones.
 
 ***DISCLAIMER:*** The game doesn't have any system to limit the max value of any var, use it by your own responsibility.
 
@@ -135,6 +135,7 @@ The Music and SFX aren't included in the Github project, if you want to build it
   - `move.wav` download the file [from here](https://freesound.org/people/Tissman/sounds/574592/).
   - `page.wav` download the file [from here](https://freesound.org/people/LittleRobotSoundFactory/sounds/288917/).
   - `click-pitched.wav` this file is the same that `click.wav` with a pitch scale of `0.6`.
+  - `split.wav` download the file [from here](https://freesound.org/people/pjhedman/sounds/511388/).
 - `./assets/sounds/soundtrack/`
   - `battle.mp3` download the file [from here](https://www.steven-obrien.net/#popcorn-~-main-loop).
   - `menu.mp3` download the file [from here](https://www.steven-obrien.net/#popcorn-~-menu-theme).
@@ -162,9 +163,13 @@ Popcorn - Main Loop - Steven O'Brien
 
 ["UI Pop Up"](https://freesound.org/s/540568) by [EminYILDIRIM](https://freesound.org/people/EminYILDIRIM/) licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
+["Electronique FX5.wav"](https://freesound.org/s/511388) by [pjhedman](https://freesound.org/people/pjhedman/) licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+
 
 
 ## License
+
+The game is powered by Godot Engine, wich one is distributed under the [MIT License](https://opensource.org/license/mit/). See `engine.LICENSE` for more information.
 
 Distributed under the GNU General Public License v3.0. See `LICENSE` for more information.
 
