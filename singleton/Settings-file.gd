@@ -61,12 +61,15 @@ func apply_loaded():
 
 func load_config():
 	var err = configFile.load(settingsFilePath)
-
+	
 	if err != OK:
 		print(err)
 		return
 	
-		
+	if not configFile.has_section("settings"):
+		configFile.save(settingsFilePath)
+		return
+
 	load_value("generalVolume")
 	load_value("musicVolume")
 	load_value("sfxVolume")
@@ -76,5 +79,5 @@ func load_config():
 
 
 func load_value(key):
-	var data = configFile.get_value("settings", key)
+	var data = configFile.get_value("settings", key, defaultvarSettings[key])
 	if data != null: settingsSavedValues[key] = data

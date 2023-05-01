@@ -71,7 +71,6 @@ var newJoyAcceptEvent
 var newJoyCancelEvent
 
 var newKeyTouchCancelEvent
-var newKeyTouchAcceptEvent
 
 
 func reset_player():
@@ -103,9 +102,7 @@ func reset_player_exept_first():
 func _ready():
 	
 	newKeyTouchCancelEvent = InputEventKey.new()
-	newKeyTouchAcceptEvent = InputEventKey.new()
 	newKeyTouchCancelEvent.set_scancode(KEY_0)
-	newKeyTouchAcceptEvent.set_scancode(KEY_9)
 
 	newKeyLeftEvent = InputEventKey.new()
 	newKeyRightEvent = InputEventKey.new()
@@ -216,7 +213,6 @@ func remap_ui_first_player(playerIndex = 0):
 		InputMap.action_add_event("ui_cancel", newJoyCancelEvent)
 	
 	if (newMappedType == 2):
-		InputMap.action_add_event("ui_accept", newKeyTouchAcceptEvent)
 		InputMap.action_add_event("ui_cancel", newKeyTouchCancelEvent)
 
 
@@ -225,7 +221,7 @@ func _input(event):
 		OS.window_fullscreen = !OS.window_fullscreen
 
 func _notification(what):
-	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+	if what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST:
 		if get_tree().current_scene.name == "TitleScreen":
 			get_tree().quit()
 			return

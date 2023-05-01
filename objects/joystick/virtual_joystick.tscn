@@ -33,9 +33,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource( 1 )
 stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Tip" type="TextureRect" parent="Base"]
 anchor_left = 0.5

@@ -27,7 +27,6 @@ boot_splash/image="res://assets/images/splash.png"
 boot_splash/bg_color=Color( 0.0862745, 0.0862745, 0.0862745, 1 )
 config/icon="res://assets/images/app-icon/icon_64.png"
 config/windows_native_icon="res://assets/images/app-icon/icon.ico"
-config/auto_accept_quit=false
 config/quit_on_go_back=false
 
 [autoload]

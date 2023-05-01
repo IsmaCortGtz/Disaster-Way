@@ -18,7 +18,7 @@ onready var menuNode = get_node("/root/GameRoom/PausedLayer/PausedMenu")
 
 func _input(event):
 	
-	if ((event is InputEventKey) and (not Level.gameEnded) and (GameInput.playersType[playerIndex - 1] == 2) and (not GameInput.keyboardUsed) and (event.scancode == KEY_0) and (not event.is_pressed())):
+	if ((event is InputEventKey) and (not Level.gameEnded) and (GameInput.playersType[playerIndex - 1] == 2) and (event.scancode == KEY_0) and (not event.is_pressed())):
 		menuNode.game_paused(playerIndex - 1)
 	
 	if ((event is InputEventKey) and (not Level.gameEnded) and (GameInput.playersType[playerIndex - 1] == 0) and (GameInput.keyboardUsed) and (event.scancode == KEY_ESCAPE) and (not event.is_pressed())):
@@ -26,6 +26,9 @@ func _input(event):
 	
 	if ((event is InputEventJoypadButton) and (not Level.gameEnded) and (GameInput.playersType[playerIndex - 1] == 1) and (GameInput.usedGamepads.has(event.device)) and (event.button_index == 11) and (not event.is_pressed())):
 		menuNode.game_paused(playerIndex - 1)
+	
+	if ((event is InputEventKey) and (not Level.gameEnded) and (GameInput.playersType[playerIndex - 1] == 2) and (event.scancode == KEY_9) and (not event.is_pressed())):
+		start_special()
 	
 	if ((event is InputEventKey) and (not Level.gameEnded) and (GameInput.playersType[playerIndex - 1] == 0) and (GameInput.keyboardUsed) and (event.scancode == KEY_SPACE) and (not event.is_pressed())):
 		start_special()
@@ -63,6 +66,7 @@ func _ready():
 
 
 func start_special():
+	if specialActivated: return
 	if (specialAvailable <= 0) or isColdown or isDestroyed: return
 	if Level.playerCharacters[playerIndex - 1] == 1: specialMulti = 1.6
 	if Level.playerCharacters[playerIndex - 1] == 2: thirdSpecial = true
