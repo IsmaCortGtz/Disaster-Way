@@ -1,11 +1,10 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/themes/buttons-gray.tres" type="Theme" id=1]
 [ext_resource path="res://assets/fonts/Rubik-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/images/icons/buttons/key.enter.svg" type="Texture" id=3]
 [ext_resource path="res://assets/images/icons/buttons/key.move.svg" type="Texture" id=4]
 [ext_resource path="res://assets/images/icons/buttons/key.esc.svg" type="Texture" id=5]
-[ext_resource path="res://objects/ExtraStage/ExtraStage.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/themes/Settings-buttons.tres" type="Theme" id=7]
 [ext_resource path="res://scenes/More/More.gd" type="Script" id=8]
 [ext_resource path="res://assets/themes/buttons-green.tres" type="Theme" id=10]
@@ -55,13 +54,13 @@ follow_focus = true
 scroll_horizontal_enabled = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer"]
-margin_right = 2114.0
-margin_bottom = 1448.0
+margin_right = 2126.0
+margin_bottom = 906.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Subtitle" type="MarginContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
-margin_right = 2114.0
+margin_right = 2126.0
 margin_bottom = 150.0
 mouse_filter = 1
 custom_constants/margin_right = 20
@@ -72,7 +71,7 @@ custom_constants/margin_bottom = 30
 [node name="Label" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/Subtitle"]
 margin_left = 30.0
 margin_top = 30.0
-margin_right = 2094.0
+margin_right = 2106.0
 margin_bottom = 120.0
 mouse_filter = 2
 custom_colors/font_color_disabled = Color( 0.862745, 1, 0.862745, 1 )
@@ -89,7 +88,7 @@ align = 0
 
 [node name="ExtraPage" type="MarginContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 margin_top = 154.0
-margin_right = 2114.0
+margin_right = 2126.0
 margin_bottom = 374.0
 rect_min_size = Vector2( 0, 220 )
 mouse_filter = 1
@@ -101,7 +100,7 @@ custom_constants/margin_bottom = 15
 [node name="Button" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ExtraPage"]
 margin_left = 15.0
 margin_top = 15.0
-margin_right = 2099.0
+margin_right = 2111.0
 margin_bottom = 205.0
 mouse_filter = 1
 theme = ExtResource( 1 )
@@ -111,7 +110,7 @@ expand_icon = true
 
 [node name="Subtitle2" type="MarginContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 margin_top = 378.0
-margin_right = 2114.0
+margin_right = 2126.0
 margin_bottom = 522.0
 mouse_filter = 1
 custom_constants/margin_right = 20
@@ -123,7 +122,7 @@ custom_constants/margin_bottom = 30
 modulate = Color( 0.835294, 1, 0.835294, 1 )
 margin_left = 30.0
 margin_top = 30.0
-margin_right = 2094.0
+margin_right = 2106.0
 margin_bottom = 114.0
 theme = SubResource( 11 )
 text = "MORE_EXTRA_STAGES_TITLE"
@@ -131,33 +130,13 @@ valign = 1
 
 [node name="StageContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 margin_top = 526.0
-margin_right = 2114.0
-margin_bottom = 1224.0
-
-[node name="ExtraStage" parent="MarginContainer/ScrollContainer/VBoxContainer/StageContainer" instance=ExtResource( 6 )]
-margin_right = 2114.0
-margin_bottom = 230.0
-stageCode = "2-800-4500-700-1000-1-5-90-3-0-0"
-stageName = "Easy Peasy"
-
-[node name="ExtraStage2" parent="MarginContainer/ScrollContainer/VBoxContainer/StageContainer" instance=ExtResource( 6 )]
-margin_top = 234.0
-margin_right = 2114.0
-margin_bottom = 464.0
-stageCode = "2-800-3000-1000-1400-0.8-3.5-60-2-1-10"
-stageName = "Middle"
-
-[node name="ExtraStage3" parent="MarginContainer/ScrollContainer/VBoxContainer/StageContainer" instance=ExtResource( 6 )]
-margin_top = 468.0
-margin_right = 2114.0
-margin_bottom = 698.0
-stageCode = "1-1000-5000-1800-2000-0.5-1.5-10-1-1-3"
-stageName = "Demon"
+margin_right = 2126.0
+margin_bottom = 526.0
 
 [node name="AddStage" type="MarginContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
-margin_top = 1228.0
-margin_right = 2114.0
-margin_bottom = 1448.0
+margin_top = 530.0
+margin_right = 2126.0
+margin_bottom = 750.0
 rect_min_size = Vector2( 0, 220 )
 mouse_filter = 1
 custom_constants/margin_right = 15
@@ -165,14 +144,13 @@ custom_constants/margin_top = 15
 custom_constants/margin_left = 15
 custom_constants/margin_bottom = 15
 
-[node name="Button" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/AddStage"]
+[node name="AddButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/AddStage"]
 margin_left = 15.0
 margin_top = 15.0
-margin_right = 2099.0
+margin_right = 2111.0
 margin_bottom = 205.0
 mouse_filter = 1
 theme = ExtResource( 10 )
-disabled = true
 text = "Agregar"
 icon_align = 1
 expand_icon = true
@@ -266,4 +244,5 @@ text = "BACK_BUTTON_WORD"
 
 [connection signal="focus_entered" from="MarginContainer/ScrollContainer/VBoxContainer/ExtraPage/Button" to="." method="_on_Button_focus_entered"]
 [connection signal="pressed" from="MarginContainer/ScrollContainer/VBoxContainer/ExtraPage/Button" to="." method="_on_Button_pressed"]
-[connection signal="focus_entered" from="MarginContainer/ScrollContainer/VBoxContainer/AddStage/Button" to="." method="_on_Button_focus_entered"]
+[connection signal="focus_entered" from="MarginContainer/ScrollContainer/VBoxContainer/AddStage/AddButton" to="." method="_on_Button_focus_entered"]
+[connection signal="pressed" from="MarginContainer/ScrollContainer/VBoxContainer/AddStage/AddButton" to="." method="_on_AddButton_pressed"]

@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=16 format=2]
+[gd_resource type="Theme" load_steps=18 format=2]
 
 [ext_resource path="res://assets/fonts/Rubik-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/images/icons/setting-inputs/slider-focus.svg" type="Texture" id=2]
@@ -21,6 +21,20 @@ expand_margin_left = 30.0
 expand_margin_right = 30.0
 expand_margin_top = 20.0
 expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.286275, 0.286275, 0.286275, 0.980392 )
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.192157, 0.192157, 0.192157, 0.980392 )
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
 
 [sub_resource type="StyleBoxFlat" id=14]
 draw_center = false
@@ -111,6 +125,8 @@ CheckButton/icons/on = ExtResource( 3 )
 CheckButton/styles/focus = SubResource( 12 )
 HSlider/icons/grabber = ExtResource( 5 )
 HSlider/icons/grabber_highlight = ExtResource( 2 )
+LineEdit/styles/focus = SubResource( 19 )
+LineEdit/styles/normal = SubResource( 18 )
 OptionButton/styles/focus = SubResource( 14 )
 OptionButton/styles/hover = SubResource( 15 )
 OptionButton/styles/normal = SubResource( 13 )

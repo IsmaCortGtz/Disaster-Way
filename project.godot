@@ -36,6 +36,7 @@ Level="*res://singleton/Level.gd"
 Music="*res://singleton/Music.tscn"
 Preloader="*res://singleton/Preloader.gd"
 Settings="*res://singleton/Settings-file.gd"
+CustomStages="*res://singleton/CustomStages.gd"
 
 [display]
 
