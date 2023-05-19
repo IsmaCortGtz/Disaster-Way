@@ -72,6 +72,7 @@ El juego fue compilado para estas plataformas:
   * Windows
   * Linux
   * Android
+  * [Navegador Web](https://ismacortgtz.github.io/Disaster-Way/)
 
 
 

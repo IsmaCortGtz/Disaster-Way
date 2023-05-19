@@ -72,6 +72,7 @@ The game are compiled for this plattaforms:
   * Windows
   * Linux
   * Android
+  * [Web Browser](https://ismacortgtz.github.io/Disaster-Way/)
 
 
 
